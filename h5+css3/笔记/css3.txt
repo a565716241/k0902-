@@ -1,0 +1,70 @@
+边框：
+border-radius:用于创建圆角
+
+border-image:使用图片创建边框：
+border-image-source：边框图片的路径
+border-image-slice:图片边框向内偏移
+border-image-width:图片边框的宽度
+border-image-outset:边框图像区域超出边框的量
+border-image-repeat:图像是否应该平铺、铺满或拉伸
+
+box-shadow:用来添加阴影
+
+背景：
+background-size:背景图片的尺寸
+
+	cover：完全覆盖图片定位区域的最小大小
+	contain：会保持图像的纵横比并将图像缩放成将适合背景定位区域的最大大小  
+
+background-origin:背景图片的定位区域
+
+padding-box 相对于内边距框来定位
+border-box 相对于边框盒来定位
+content-box 相对于内容框来定位
+
+background-clip：背景图片的绘制区域
+
+padding-box 相对于内边距框来裁剪
+border-box 相对于边框盒来裁剪
+content-box 相对于内容框来裁剪
+
+css3渐变：
+线性渐变：Linear Gradients
+
+语法：background：Linear Gradients（to bottom,red,blue 从上到下）;
+	  background:Linear Gradients (to left,red,blue)从右到左
+	  background:Linear Gradients(to bottom right,red blue)从左上角到右下角
+
+径向渐变：Radial Gradients 
+
+background：radial Gradients（默认椭圆）;
+
+
+css3文本效果
+
+text-shadow：向文本添加阴影
+h-shadow 水平阴影的位置
+v-shadow 垂直阴影的位置
+blur 模糊距离
+color 阴影的颜色
+
+word-wrap：允许长单词换到下一行
+
+值：
+normal 只在允许的断字点换行
+break-word 在长单词或url地址内部进行换行
+
+text-overflow：当文本溢出包含元素发生的事情
+white-space:nowrap 文本不会换行 在同一行继续
+overflow：hidden  溢出隐藏
+text-overflow:ellipsis 用省略号来代表被修剪过的文本
+
+css3字体
+ @font-face{
+ font-family 规定字体的名称
+ src：url() 定义字体文件的url
+ font-weight 字体的粗细
+ font-style 字体的样式
+ }	
+
+

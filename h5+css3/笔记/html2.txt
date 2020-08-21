@@ -1,0 +1,114 @@
+标题：
+<h1></h1>
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6>
+
+段落
+    <p></p>
+
+图片标记
+     <img src="路径地址">    
+
+   水平线：
+
+   <hr color="水平线颜色">
+
+   强制换行
+
+   <br>
+
+
+   列表
+
+   无序列表：
+   <ul type="none|circle|square">
+
+   <li>xxxxxxx<li>
+   <li>xxxxxxx<li>
+   <li>xxxxxxx<li>
+   <li>xxxxxxx<li>
+   <li>xxxxxxx<li>
+   <li>xxxxxxx<li>
+
+</ul>
+
+   有序列表:
+   <ol type="1|A|a|i|I" start="5(起始值)">
+   
+   <ol>xxxxxxx</ol>
+   <ol>xxxxxxx</ol>
+   <ol>xxxxxxx</ol>
+   <ol>xxxxxxx</ol>
+   <ol>xxxxxxx</ol>
+   <ol>xxxxxxx</ol>
+
+ </ol>
+
+
+   超链接（使用量最大的元素）
+
+   超链接有多种表现形式
+
+
+  1. 页面跳转与交互<a href="路径地址"></a>
+
+   2. 直接执行js的代码段 <a href="javascript:js代码"></a>
+
+   <a href="javascript:confirm('我执行了吗？')">执行js</a>
+   <a href="javascript:alert('弹框')">执行js</a>
+  
+  3.唤醒 客户端 安装邮箱的客户端
+
+  4.锚点链接
+       锚点（标识）
+       定义锚点（做暗号）  <a name="名字"></a>
+
+       寻找锚点（找暗号）  <a href="名字|#memeda"></a>
+
+       跨页面寻找锚点   <a href="路径#名字"></a>
+
+
+
+       快捷键：ctrl+A  全选
+
+
+
+html元素：
+块级元素：能够自动折行的元素    h1-h6
+内联元素：不能够自动折行的元素   b i  s  u  sup  sub
+
+属性：
+    color：调整文本的颜色
+    size：调整文本的大小（font），hr（高度），宽度...
+    face：调整文本的风格
+    aligin：left|center|right   调整文本的水平对齐方向
+    src:图片的路径
+    width：调整图片的宽度
+    height：调整图片的高度
+    alt：图片的描述信息（兼容低版本的ie）
+    title：图片的描述信息
+
+
+
+
+    html 注释：将不想参与浏览器解析或者编译的文本或者代码段，通过指定方式给包裹起来  
+      <!--  
+      注释的内容
+      -->
+
+      快捷键：ctrl+/
+        
+       html  实体符
+
+       解决特殊符号在编辑过程中与html标记产生冲突的问题
+
+       &gt；  >
+       &lt;   <
+       &nbsp; 空格
+       &yen   ￥
+
+
+

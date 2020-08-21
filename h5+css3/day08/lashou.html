@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			background: #F0F0F0;
+			/*display: flex;*/
+
+		}
+		/*logo部分*/
+		.logo{
+			border: 0px solid;
+			width: 60%;
+			height: 60px;
+			margin: 0 auto;
+			/*display: flex;*/
+		}
+		.logo>img{
+			max-width: 100%;
+			height: 60px;
+		}
+		/*导航部分*/
+		.nav{
+			border: 0px solid red;
+			width: 60%;
+			height: 40px;
+			margin: 0 auto;
+			background: #FF8800;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			/*align-items: center;	*/
+			
+		}
+		.nav>div{
+			border: 0px solid black;
+			height: 40px;
+			line-height: 40px;
+			
+		}
+		
+		.nav>div>a{
+			border: 0px solid blue;
+			text-decoration: none;
+			color: white;
+			font-weight: bold;
+			font-size: 14px;
+		}
+		/*商品部分*/
+		.main{
+			border: 0px solid red;
+			width: 60%;
+			margin: 0 auto;
+			background: white;
+			
+			
+		}
+		.main-box{
+			border: 0px solid green;
+			width: 100%;
+			/*height: 280px;*/
+			display: flex;
+			flex-direction: row;
+		}
+		.main-box>div{
+			border: 0px solid pink;
+			/*width: 30%;*/
+			/*height: 240px;*/
+			margin: 20px;
+
+			flex-grow: 1;
+		}
+		.main-box>div>img{
+			max-width: 100%;
+			height: auto;
+		}
+		.footer{
+			border: 0px solid green;
+			width: 60%;
+			
+			margin: 30px auto;
+		}
+		.footer-top>ul{
+			display: flex;
+			flex-direction: row;
+
+			
+		}
+		.footer-top>ul>li{
+			list-style: none;
+			border: 0px solid;
+			flex-grow: 1;
+			font-size: 14px;
+			font-weight: bold;
+			text-align: center;
+
+		}
+		.footer-bottom{
+			display: flex;
+			flex-direction: row;
+
+			margin-top: 20px;
+		}
+		.footer-bottom>ul{
+			flex-grow: 1;
+			margin-left: 50px;
+			/*text-align: center;*/
+			border: 0px solid;
+		}
+		.footer-bottom>ul>li{
+			font-size: 12px;
+			border: 0px solid;
+
+		}
+		.footer-pic{
+			border: 0px solid gold;
+			display: flex;
+			flex-direction: row;
+
+			justify-content: center;
+		}
+
+			
+
+		
+	</style>
+</head>
+<body>
+	<!-- logo部分 -->
+	<div class="logo">
+		<img src="作业/imgs/logo02.png">
+	</div>
+	<!-- 导航部分 -->
+	<div class="nav">
+		<div><a href="">团购</a></div>
+		<div><a href="">身边团购</a></div>
+		<div><a href="">美食</a></div>
+		<div><a href="">电影</a></div>
+		<div><a href="">KTV</a></div>
+		<div><a href="">酒店机票</a></div>
+		<div><a href="">购物</a></div>
+		<div><a href="">品牌特卖</a></div>
+		<div><a href="">教育培训</a></div>
+
+
+	</div>
+	<!-- 商品部分 -->
+	<div class="main">
+		<div class="main-box">
+			<div>
+				<img src="作业/imgs/1.jpg">
+				<p style="font-size: 12px;font-weight: bold;">【管庄】 龙娃碳烤羊腿：现金抵用1次，节假日通用</p><br>
+				<div style="width: 100%;border: 0px solid;">
+				<span style="font-size: 24px;color: #FF8805;margin-left: 10px;">¥79</span>
+				<span style="font-size: 14px;">市场价 ¥100</span>       
+				<span style="color: #FF8805;font-size: 20px;font-weight: bold;margin-left: 20px;">去看看</span></div>
+			</div>
+			<div>
+				<img src="作业/imgs/2.jpg">
+				<p style="font-size: 12px;font-weight: bold;">【管庄】 龙娃碳烤羊腿：现金抵用1次，节假日通用</p><br>
+				<span style="font-size: 24px;color: #FF8805;margin-left: 10px;">¥79</span>
+				<span style="font-size: 14px;">市场价 ¥100</span>       
+				<span style="color: #FF8805;font-size: 20px;font-weight: bold;margin-left: 20px;">去看看</span>
+			</div>
+			<div>
+				<img src="作业/imgs/3.jpg">
+				<p style="font-size: 12px;font-weight: bold;">【管庄】 龙娃碳烤羊腿：现金抵用1次，节假日通用</p><br>
+				<span style="font-size: 24px;color: #FF8805;margin-left: 10px;">¥79</span>
+				<span style="font-size: 14px;">市场价 ¥100</span>       
+				<span style="color: #FF8805;font-size: 20px;font-weight: bold;margin-left: 20px;">去看看</span>
+			</div>
+
+		</div>
+		<div class="main-box">
+			<div>
+				<img src="作业/imgs/4.jpg">
+				<p style="font-size: 12px;font-weight: bold;">【管庄】 龙娃碳烤羊腿：现金抵用1次，节假日通用</p><br>
+				<div style="width: 100%;border: 0px solid;">
+				<span style="font-size: 24px;color: #FF8805;margin-left: 10px;">¥79</span>
+				<span style="font-size: 14px;">市场价 ¥100</span>       
+				<span style="color: #FF8805;font-size: 20px;font-weight: bold;margin-left: 20px;">去看看</span></div>
+			</div>
+			<div>
+				<img src="作业/imgs/5.jpg">
+				<p style="font-size: 12px;font-weight: bold;">【管庄】 龙娃碳烤羊腿：现金抵用1次，节假日通用</p><br>
+				<span style="font-size: 24px;color: #FF8805;margin-left: 10px;">¥79</span>
+				<span style="font-size: 14px;">市场价 ¥100</span>       
+				<span style="color: #FF8805;font-size: 20px;font-weight: bold;margin-left: 20px;">去看看</span>
+			</div>
+			<div>
+				<img src="作业/imgs/6.jpg">
+				<p style="font-size: 12px;font-weight: bold;">【管庄】 龙娃碳烤羊腿：现金抵用1次，节假日通用</p><br>
+				<span style="font-size: 24px;color: #FF8805;margin-left: 10px;">¥79</span>
+				<span style="font-size: 14px;">市场价 ¥100</span>       
+				<span style="color: #FF8805;font-size: 20px;font-weight: bold;margin-left: 20px;">去看看</span>
+			</div>
+
+		</div>
+		<div class="main-box">
+			<div>
+				<img src="作业/imgs/7.jpg">
+				<p style="font-size: 12px;font-weight: bold;">【管庄】 龙娃碳烤羊腿：现金抵用1次，节假日通用</p><br>
+				<div style="width: 100%;border: 0px solid;">
+				<span style="font-size: 24px;color: #FF8805;margin-left: 10px;">¥79</span>
+				<span style="font-size: 14px;">市场价 ¥100</span>       
+				<span style="color: #FF8805;font-size: 20px;font-weight: bold;margin-left: 20px;">去看看</span></div>
+			</div>
+			<div>
+				<img src="作业/imgs/8.jpg">
+				<p style="font-size: 12px;font-weight: bold;">【管庄】 龙娃碳烤羊腿：现金抵用1次，节假日通用</p><br>
+				<span style="font-size: 24px;color: #FF8805;margin-left: 10px;">¥79</span>
+				<span style="font-size: 14px;">市场价 ¥100</span>       
+				<span style="color: #FF8805;font-size: 20px;font-weight: bold;margin-left: 20px;">去看看</span>
+			</div>
+			<div>
+				<img src="作业/imgs/9.jpg">
+				<p style="font-size: 12px;font-weight: bold;">【管庄】 龙娃碳烤羊腿：现金抵用1次，节假日通用</p><br>
+				<span style="font-size: 24px;color: #FF8805;margin-left: 10px;">¥79</span>
+				<span style="font-size: 14px;">市场价 ¥100</span>       
+				<span style="color: #FF8805;font-size: 20px;font-weight: bold;margin-left: 20px;">去看看</span>
+			</div>
+
+		</div>
+		<div class="main-box">
+			<div>
+				<img src="作业/imgs/10.jpg">
+				<p style="font-size: 12px;font-weight: bold;">【管庄】 龙娃碳烤羊腿：现金抵用1次，节假日通用</p><br>
+				<div style="width: 100%;border: 0px solid;">
+				<span style="font-size: 24px;color: #FF8805;margin-left: 10px;">¥79</span>
+				<span style="font-size: 14px;">市场价 ¥100</span>       
+				<span style="color: #FF8805;font-size: 20px;font-weight: bold;margin-left: 20px;">去看看</span></div>
+			</div>
+			<div>
+				<img src="作业/imgs/11.jpg">
+				<p style="font-size: 12px;font-weight: bold;">【管庄】 龙娃碳烤羊腿：现金抵用1次，节假日通用</p><br>
+				<span style="font-size: 24px;color: #FF8805;margin-left: 10px;">¥79</span>
+				<span style="font-size: 14px;">市场价 ¥100</span>       
+				<span style="color: #FF8805;font-size: 20px;font-weight: bold;margin-left: 20px;">去看看</span>
+			</div>
+			<div>
+				<img src="作业/imgs/12.jpg">
+				<p style="font-size: 12px;font-weight: bold;">【管庄】 龙娃碳烤羊腿：现金抵用1次，节假日通用</p><br>
+				<span style="font-size: 24px;color: #FF8805;margin-left: 10px;">¥79</span>
+				<span style="font-size: 14px;">市场价 ¥100</span>       
+				<span style="color: #FF8805;font-size: 20px;font-weight: bold;margin-left: 20px;">去看看</span>
+			</div>
+
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer-top">
+			<ul>
+				<li>服务保障</li>
+				<li>用户帮助</li>
+				<li>用户帮助</li>
+				<li>用户帮助</li>
+				<li>用户帮助</li>
+
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<ul>
+				<li>团购三包</li>
+				<li>退换货服务</li>
+				<li>支付方式</li>
+
+			</ul>
+			<ul>
+				<li>答疑反馈</li>
+				<li>常见问题</li>
+				<li>往期团购</li>
+				<li>抽奖活动</li>
+
+			</ul>
+			<ul>
+				<li>答疑反馈</li>
+				<li>常见问题</li>
+				<li>往期团购</li>
+				<li>抽奖活动</li>
+
+			</ul>
+			<ul>
+				<li>答疑反馈</li>
+				<li>常见问题</li>
+				<li>往期团购</li>
+				<li>抽奖活动</li>
+
+			</ul>
+			<ul>
+				<li>答疑反馈</li>
+				<li>常见问题</li>
+				<li>往期团购</li>
+				<li>抽奖活动</li>
+
+			</ul>
+		</div>
+
+	</div>
+	<div class="footer-pic">
+		<img style="max-width: 100%;height: auto;" src="作业/imgs/footer.jpg">
+	</div>
+	<div style="border: 0px solid; text-align: center;margin-top: 40px;">
+		<span style="font-size: 12px;">&copy;2018北大课工厂网络技术有限公司LaShou.com京ICP证100571号京ICP备11004895号京公网安备110105001181号</span>
+	</div>
+	<hr style="width: 60%; margin-bottom: 10px;margin: 0 auto;">
+		
+
+</body>
+</html>

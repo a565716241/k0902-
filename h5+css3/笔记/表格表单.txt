@@ -1,0 +1,78 @@
+表格：
+行
+列
+
+
+<table border="边框线" bordercolor="边线颜色" align="" width="宽度" height="高度"
+bgcolor="背景色" background="背景图片|图片路径（和背景色同时使用时优先应用）"cellpadding="内边距" cellspaing="内间距">
+   
+   内边距：单元格与其内容之间的距离
+
+   内间距：单元格与单元格之间的距离
+
+   单元格合并：
+           colspan=""  列合并
+           rowspan=""  跨行列合并
+
+
+<tr>
+<td>
+
+
+
+</td>
+
+</tr>
+  
+
+</table>
+
+***html表单元素***
+
+作用：收集客户端数据信息，提交至服务器（java,php,asp）与服务器进行数据的交互
+
+
+表单
+<form action="提交到服务器端的路径地址" method="get|post">
+
+    文本框：<input type="text" name="">
+
+    密码框：<input type="password" name="">
+
+    邮箱：<input type="email" name="">
+
+    数值：<input type="number" name="">
+
+    时间日期：<input type="date" name="">
+
+    单选框：<input type="radio" name="">
+
+    复选框：
+    		<input type="checkbox" name="">
+    		<input type="checkbox" name="">
+    		<input type="checkbox" name="">
+    		<input type="checkbox" name="">
+
+    下拉框：
+
+    <select name="">
+    		<option>请选择</option>
+    		<option>18-25周岁</option>
+    		<option>26-35周岁</option>
+    		<option>36岁以上</option>
+
+
+    </select>
+
+    文本域：
+    		<textarea></textarea>
+
+
+
+
+
+
+
+
+     表单元素
+</form>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			background: url(https://imgcache.gtimg.cn/ACT/svip_act/act_img/toeshe/201601/1452587517_bg_index.jpg) no-repeat top center ;
+			
+
+		}
+		/*导航部分*/
+		.navbar{
+			border: 0px solid red;
+			width: 100%;
+			
+			background: rgba(0,0,0,0.5);
+			position: fixed;
+			top: 0;
+		}
+		.navbar-body{
+			border: 0px solid gold;
+			
+			width: 90%;
+			margin: 0 auto;
+		}
+		.navbar-body>div{
+			border: 0px solid yellow;
+			float: left;
+		}
+		.navbar-body:after{
+			content:"";
+			height: 0;
+			display: block;
+			clear: both;
+		}
+		.navbar-body-link>div{
+			border: 0px solid blue;
+			float: left;
+			line-height: 90px;
+		}
+		.navbar-body-link>div>a{
+			border: 0px solid pink;
+            height: 90px;
+			color: white;
+			text-decoration: none;
+			margin-right: 20px;
+			display: inline-block;
+		}
+		.navbar-body-link{
+			margin-left: 4%;
+			height: px;
+			
+			
+		}
+		.navbar-body-btn{
+			margin-left: 0
+		}
+		.navbar-body-link-menu{
+			border:0px solid green;
+			height: 40px;
+			width: 100%;
+			line-height: 40px;
+			position: absolute;
+			left: 0;
+			top: 90px;
+			background: rgba(0,0,0,0.3);
+			color: white;
+			font-size: 0.9em;
+			display: none;
+
+		}
+		.navbar-body-link-menu2{
+			border:0px solid green;
+			height: 40px;
+			width: 100%;
+			line-height: 40px;
+			position: absolute;
+			left: 0;
+			top: 90px;
+			background: rgba(0,0,0,0.3);
+			color: white;
+			font-size: 0.9em;
+			display: none;
+
+		}
+		.navbar-body-link-menu3{
+			border:0px solid green;
+			height: 40px;
+			width: 100%;
+			line-height: 40px;
+			position: absolute;
+			left: 0;
+			top: 90px;
+			background: rgba(0,0,0,0.3);
+			color: white;
+			font-size: 0.9em;
+			display: none;
+		}
+		
+		/*导航特效*/
+		.navbar-body-link>div:hover{
+			cursor: pointer;
+		}
+		.navbar-body-link>div:hover a{
+			color: red;
+		}
+		.navbar-body-link>:hover .navbar-body-link-menu{
+			display: block;
+
+		}
+		.navbar-body-link>:hover .navbar-body-link-menu2{
+			display: block;
+		}
+		.navbar-body-link>:hover .navbar-body-link-menu3{
+			display: block;
+		}
+		
+			/*导航按钮*/
+		.navbar-body-btn1{
+			height: 45px;
+			width: 100px;
+			border-radius: 20px;
+			color: #FAD65C;
+			background: rgba(0,0,0,0.3);
+			border:1px solid #FAD65C;
+		    cursor: pointer
+		}
+		.navbar-body-btn2{
+			width: 140px;
+			height: 45px;
+			border-radius: 20px;
+			background: #FBD74F;
+			color: #986b0d;
+			font-weight: bold;
+			font-size: 1em;
+			border: none;
+		}
+		.navbar-body-btn1:hover{
+			background: #FFE78B;
+		}
+		.navbar-body-btn2:hover{
+			background: #FFE78B;
+		}
+		.pic{
+			border: 0px solid blue;
+			width: 100%;
+			height: 407px;
+			margin-top: 100px;
+			position: relative;
+			
+
+
+		}
+		.four{
+			border: 0px solid blue;
+			height: 12px;
+
+		}
+		.four>ul{
+			margin-left:650px;
+			margin-top: 30px;
+		}
+		.four>ul>li{
+			float: left;
+			list-style: none;
+			margin-right: 5px;
+			background: url(https://qzonestyle.gtimg.cn/vipstyle/vipportal/v4/img/my/sprites_index.png)-250px -15px;
+		    width:12px; 
+		    height:12px;
+		}
+		.four>ul>li:hover{
+			cursor: pointer;
+			background-position: -250px 0;
+
+		}
+		.onerror{
+			border: 0px solid pink;
+			margin-top: 10px;
+			height: 260px;
+			
+		}
+		.onerror-both{
+			border: 0px solid blue;
+			height: 235px;
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+			
+
+		}
+		.onerror-both-one{
+			float: left;
+			border: 0px solid yellow;
+			width: 180px;
+			height: 230px;
+			border-bottom: 5px solid #FAD65C;
+			position: relative;
+			margin-left: 70px;	
+			position: relative;
+			background: #292731;
+			padding-top: 10px;
+			
+			
+		}
+		.onerror-both-one>div{
+			margin: 0 auto;
+		}
+		.onerror-both-one>img:hover{
+			cursor: pointer;
+			margin-top: -10px;
+			
+		}
+		.footer{
+			border: 0px solid yellow;
+			height: 224px;
+		}
+		.footer-big{
+			border: 0px solid green;
+			width: 900px;
+			height: 104px;
+			margin: 60px auto;
+			
+		}
+		.footer-big-body{
+			border: 0px solid gold;
+			width: 100px;
+			height: 104px;
+			float: left;
+			background: url(https://qzonestyle.gtimg.cn/vipportal/v4/img/common/sprites_footer.png);
+			margin-left: 10px;
+			position: relative;
+
+
+		}
+		.footer-big-body:nth-child(2){
+			background-position: 0 -100px;
+		}
+		.footer-big-body:nth-child(3){
+			background-position: 0 -200px;
+		}
+		.footer-big-body:nth-child(4){
+			background-position: 0 -300px;
+		}
+		.footer-big-body:nth-child(5){
+			background-position: 0 -400px;
+		}
+		.footer-big-body:nth-child(6){
+			background-position: 0 -500px;
+		}
+		.footer-big-body:nth-child(7){
+			background-position: 0 -600px;
+		}
+		
+		.footer-big-body:hover{
+			background: url(https://qzonestyle.gtimg.cn/vipportal/v4/img/common/sprites_footer.png);
+			background-position: -100px 0px;
+			cursor: pointer;
+		}
+		.footer-big-body:nth-child(2):hover{
+			background: url(https://qzonestyle.gtimg.cn/vipportal/v4/img/common/sprites_footer.png);
+			background-position: -100px -100px;
+		}
+		.footer-big-body:nth-child(3):hover{
+			background: url(https://qzonestyle.gtimg.cn/vipportal/v4/img/common/sprites_footer.png);
+			background-position: -100px -200px;
+		}
+		.footer-big-body:nth-child(4):hover{
+			background: url(https://qzonestyle.gtimg.cn/vipportal/v4/img/common/sprites_footer.png);
+			background-position: -100px -300px;
+		}
+		.footer-big-body:nth-child(5):hover{
+			background: url(https://qzonestyle.gtimg.cn/vipportal/v4/img/common/sprites_footer.png);
+			background-position: -100px -400px;
+		}
+		.footer-big-body:nth-child(6):hover{
+			background: url(https://qzonestyle.gtimg.cn/vipportal/v4/img/common/sprites_footer.png);
+			background-position: -100px -500px;
+		}
+		.footer-big-body:nth-child(7):hover{
+			background: url(https://qzonestyle.gtimg.cn/vipportal/v4/img/common/sprites_footer.png);
+			background-position: -100px -600px;
+		}
+		.footer-big-body>div{
+			font-size: 14px;
+			color: #7e7e7e;
+			border: 0px solid pink;
+			text-align: center;
+			margin-top:80px;
+		}
+		.last{
+			border: 0px solid blue;
+			height: 75px;
+			width: 100%;
+			background: #27252C;
+			position: fixed;
+			bottom: 0;
+			
+
+		}
+		.last-big{
+			border: 0px solid green;
+			width: 80%;
+			margin-left: 120px;
+
+			height: 75px;
+			
+		}
+		.last-big>div{
+			border: 0px solid pink;
+			float: left;
+			height: 75px;
+		}
+
+		
+		}
+		.qrcode{
+			width: 172px;
+			padding: 15px;
+			background: white;
+			position: absolute;
+			left: -55px;
+			top:-200px;
+			border-radius: 10px;
+			display: none;
+
+			
+
+		}
+		.qrcode{
+			width: 172px;
+			padding: 15px;
+			background: white;
+			position: absolute;
+			left: -55px;
+			top:-270px;
+			border-radius: 10px;
+			display: none;
+
+
+		}
+		.sjx{
+
+       	  width: 0px;
+
+       	  border-top: 5px solid white;
+       	  border-left: 5px solid transparent;
+       	  border-right: 5px solid transparent;
+       	  border-bottom: 5px solid transparent;
+       	  position: absolute;
+       	  left:50%;
+       	  bottom:-10px;
+       	 transform: translateX(-50%);
+       	}
+       	.footer-big-body:hover .qrcode{
+       		display: block;
+       	}
+		.last-one{
+
+
+		color:#ec3833;font-size: 18px;
+		}
+		.last-two{
+			width: 250px;height: 75px;background: #FAD65C;color: #7A4702;border: none;font-size: 24px;
+		}
+		.last-one:hover{
+			cursor: pointer;
+			color:#D42A34;
+		}
+		.last-two:hover{
+			cursor: pointer;
+			background: #FEE691;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="navbar">
+		<div style="width: 100%; height: 90px; position: relative;">
+		<div class="navbar-body">
+			<div class="navbar-body-logo"><img style="float: left;" src="https://i.gtimg.cn/vipstyle/vipportal/v4/img/common/logo.png" height="90"></div>
+				<div class="navbar-body-link">
+				<div><a href="">功能特权</a>
+					<div class="navbar-body-link-menu">
+						<span style="margin-left: 265px;">全部特权</span>
+						<span style="margin-left: 40px;">分等级特权</span>
+
+					</div>
+				</div>
+				<div><a href="">游戏特权</a></div>
+				<div><a href="">生活特权</a></div>
+				<div><a href="">装扮特权</a></div>
+				<div><a href="">会员活动</a>
+					<div class="navbar-body-link-menu2">
+						<span style="margin-left: 600px;" >全部活动</span>
+						<span style="margin-left: 25px;">靓号站</span>
+					</div>
+				</div>
+				<div><a href="">成长体系</a>
+					<div class="navbar-body-link-menu3">
+					<span style="margin-left: 710px;">任务中心</span>
+					<span style="margin-left: 20px;">积分乐园</span>
+					<span style="margin-left: 40px;">排名中心</span>
+				</div>
+				</div>
+				<div><a href="">年费专区</a></div>
+				<div><a href="">免流量特权</a></div>
+
+			</div>
+			<div class="navbar-body-btn" style="float: left; height: 90px;line-height: 90px;" >
+				<button class="navbar-body-btn1" type="button">登录</button>
+				<button class="navbar-body-btn2" type="button">开通超级会员</button>
+
+			</div>
+
+		</div>
+	</div>
+	</div>
+		<div class="pic">
+			<img style=" position: absolute; top: 170px;left: 190px; " src="left.png">
+			<img style="height: 407px;width: 800px; position: absolute;left: 300px;top:10px;" src="https://imgcache.gtimg.cn/ACT/svip_act/act_img/public/202006/1591084820_1180x600.png?max_age=31536000">
+			<img style="position: absolute;top: 170px;right: 160px;" src="right.png">
+		</div>
+		<div class="four">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+
+			</ul>
+		</div>
+		<div class="onerror">
+			<div class="onerror-both">
+				<div class="onerror-both-one"><img style="width: 180px;height: 230px;background-size: 90%; " src="https://imgcache.qq.com/ACT/svip_act/act_img/yuzhongyuan/201508/1440471640_banner3.png?max_age=31536000">
+					<div style="position: absolute;top: 30px; left: 50px; color:white; font-size: 1.2em; ">功能特权</div>
+					<div style="position: absolute;top: 55px; left: 20px; color: white;">超级会员 特权王者</div>
+				</div>
+				<div class="onerror-both-one"><img style="width: 180px;height: 230px;" src="https://imgcache.qq.com/ACT/svip_act/act_img/yuzhongyuan/201508/1440471634_banner1.png?max_age=31536000">
+					<div style="position: absolute;top: 30px;left: 50px;color: white;font-size: 1.2em;">装扮特权</div>
+					<div style="position: absolute;top: 55px;left: 10px;color: white;">超级会员 我有我风采</div>
+
+				</div>
+				<div class="onerror-both-one"><img style="width: 180px;height: 230px;" src="https://imgcache.qq.com/ACT/svip_act/act_img/yuzhongyuan/201508/1440471831_banner2.png?max_age=31536000">
+					<div style="position: absolute;top: 30px;left: 50px;color: white;font-size: 1.2em;">游戏特权</div>
+					<div style="position: absolute;top: 55px;left: 20px;color: white;">游戏礼包 专属福利</div>
+
+				</div>
+				<div class="onerror-both-one"><img style="width: 180px;height: 230px;"  src="https://imgcache.qq.com/ACT/svip_act/act_img/v_sfquan/201509/1442397406_shtq.jpg?max_age=31536000">
+					<div style="position: absolute;top: 30px;left: 50px;color: white;font-size: 1.2em;">生活特权</div>
+					<div style="position: absolute;top: 55px;left: 40px;color: white;">超多优惠福利</div>
+
+				</div>
+
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer-big">
+				<div class="footer-big-body">
+					<div>官方手Q帐号</div>
+					<div class="qrcode"><img src="https://imgcache.gtimg.cn/vipstyle/vipportal/v3/img/common/qq_qrcode_preview.jpg">
+						<div class="sjx"></div>
+					</div>
+
+				</div>
+				<div class="footer-big-body">
+					<div>官方微信帐号</div>
+					<div class="qrcode"><img src="https://imgcache.qq.com/ACT/svip_act/act_img/kiddyhuang/201402/1392709767_big.png">
+						<div class="sjx"></div>
+					</div>
+				</div>
+				<div class="footer-big-body">
+					<div>兴趣部落</div>
+				</div>
+				<div class="footer-big-body">
+					<div>官方空间</div>
+				</div>
+				<div class="footer-big-body">
+					<div>话费开通专区</div>
+				</div>
+				<div class="footer-big-body">
+					<div>兑换中心</div>
+				</div>
+				<div class="footer-big-body">
+					<div>客服中心</div>
+				</div>
+
+			</div>
+		</div>
+		<div style="text-align: center;font-size: 12px;color: #9D9D9D">copyright © 1998 - 2020 Tencent . All Rights Reserved</div>
+		<div style="text-align: center;font-size: 12px;color: #9D9D9D">腾讯公司 版权所有</div>
+		<div class="last">
+			<div class="last-big">
+				<div style="margin-top: -37px;margin-left: 0px;"><img src="last1.png"></div>
+				<div style="line-height: 75px; margin-left: 40px;">
+					<span style="color: white;font-size: 1.3em;">开通超级会员，做特权王者</span>
+					
+				</div>
+				<div style="float: right;">
+					<span class="last-one">开通QQ会员</span>
+					<button class="last-two" type="button">开通超级会员&gt;</button>
+				</div>
+
+			</div>
+
+		</div>
+</body>
+</html>

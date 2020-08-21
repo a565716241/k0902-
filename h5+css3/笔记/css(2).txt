@@ -1,0 +1,141 @@
+常用的css样式属性
+
+
+background-images：url（图片地址）
+
+background-size：100%；（设置背景图片的依次比例）
+
+width：宽度
+
+height：高度
+
+外边距：在元素的外围添加指定的间隙距离，视觉上元素自身发生偏移
+
+注意：内联元素 无法承载垂直方向上的外边距
+
+margin：50px;(上下左右  各填充50px  间隙)
+
+margin：10px;(4个方向) |10px （上下）10px；（左右）|10px（上） 10px（左右） 10px（下）|10px（上）  10px（右）  10px（下）  10px（左）
+
+margin-left：左外
+
+margin-right：右外
+
+margin-top：上外
+
+margin-bottom：下外
+
+内边距：在元素的边框与实际可用区域之间填充的间隙，视觉上元素会被拉伸
+
+注意：内联元素 无法承载垂直方向上的内边距不进行占位
+
+padding：25px;(上下左右)
+
+padding-left:左内
+
+padding-right:右内
+
+padding-top:上内
+
+padding-bottom:下内
+
+
+文本系列：
+color：
+
+font-size：15px|em （倍率）
+
+文本默认大小 16px；
+
+font-weight：bold：加粗
+
+font-style：italic；倾斜
+
+font-family:字体；设置字体风格
+
+text-decoration：none; 去掉超链下划线
+
+text-decoration:underline;加下划线
+
+text-decoration:line-through;删除线
+
+letter-spacing:10px;中文文字之间的间隔
+
+word-spacing:10px 英文单词之间的间隔
+
+line-height ：80px； 行高，行间距（垂直居中）
+
+text-align：justify；两端对齐
+
+text-align:center|left|right 
+
+text-indent:2em  ;首行文本的缩进距离
+
+outline:none(去掉轮廓  ipunt)
+
+cursor:pointer;鼠标变手
+
+背景：
+background：背景色|背景图片；  集合属性
+background-image：url 背景图
+background-color  背景色
+background-repeat:no repeat|repeat-x|repeat-y|repeat;(背景图的平铺方式)
+background-position：center|right|left|top|buttom|left top|left buttom|right top|right buttom|50px(水平) 100px（垂直）；调整背景图片的位置
+简写模式：
+background:url(xxx.png) no repeat center 
+
+边框：
+
+border：
+
+border-left|right|top|bottom:
+
+border-radius: 倒角
+
+
+
+
+块元素：正常
+
+内联元素：左右生效，上下失效（b  s  i  a）
+
+内联块元素：img  正常
+
+<div></div>:布局容器（没有任何功能的块元素）
+
+首选块元素为布局主容器
+
+块元素：支持宽度，高度的设置
+
+内联元素：不支持宽度，高度的设置
+
+伪类选择器
+
+：focus 当元素获取焦点的时候（鼠标光标）
+
+show:focus
+
+hover: 鼠标移入到元素上
+
+背景：
+background:背景颜色、背景图片
+
+background-image:url(路径)；
+
+background-repeat:no-repeat|repeat-x|repeat-y;
+
+background-position:center|top|left|bottom|30px(x轴)50px（y轴）
+
+background-size:图片的拉伸比例
+
+表单元素
+outline：none；去掉轮廓
+
+***精灵图***
+
+元素转换：
+display:block|inline|inline- block(内联块)|none(隐藏)
+
+布局：
+浮动布局
+转换布局

@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		/*导航区*/
+		.navbar{
+			border: 0px solid red;
+			height: 75px;
+
+		}
+		.navbar-body{
+			border: 0px solid blue;
+			height: 75px;
+			width: 90%;
+			margin: 0 auto;
+			background: #FFFFFF;
+
+		}
+		/*图片*/
+		.navbar-body-1{
+			border: 0px solid black;
+			height: 75px;
+			margin-right: 50px;
+			float: left;
+			line-height: 75px;
+			position: relative;
+		}
+		.navbar-body-1:hover{
+			cursor: pointer;
+		}
+		/*文字*/
+		.navbar-body-2{
+			border: 0px solid #F8F8F8;
+			height: 75px;
+			cursor: pointer;
+			float: left;
+			line-height: 75px;
+			position: relative;
+		}
+		.navbar-body-2:hover .navbar-body-2-city{
+			display: block;
+		}
+		.navbar-body-2-city{
+			border: 1px solid #F8F8F8;
+			height: 370px;
+			width: 670px;
+		 	position: absolute;
+		 	left: -110px;
+		 	top: 60px;
+		 	z-index: 2;
+		 	background:white;
+		 	display: none;
+		}
+		.city1{
+			border: 0px solid black;
+			height: 60px;
+			width: 80px;
+			float: left;
+			margin-bottom: 20px;
+			margin-top: 20px;
+			line-height: 15px;
+
+		}
+		.city2{
+			border: 0px solid green;
+			height: 60px;
+			width: 550px;
+			float: right;
+			margin-bottom: 20px;
+			margin-top: 20px;
+			line-height: 15px;
+		}
+		.city2>div>span:hover{
+			color: #FF1268;
+		}
+		
+		.city2>div>span{
+			margin-top: 20px;
+			display: inline-block;
+		}
+		
+		.city2>span>div>span{
+			color: #FF1268;
+		}
+		
+		.city2>span:hover{
+			/*color: #FF1268;*/
+			/*margin-top: 20*/
+		}
+		.city3{
+			border: 0px solid yellow;
+			height: 243px;
+			width: 80px;
+			float: left;
+			line-height: 15px;
+		}
+		.city4{
+			border: 0px solid pink;
+			height: 243px;
+			width: 550px;
+			float: right;
+			line-height: 15px;
+		}
+		.city4>span{
+			display: inline-block;
+			margin-bottom: 15px;
+			margin-right: 10px;
+		}
+		.city4>span:hover{
+			color: #FF1268;
+		}
+		
+		.navbar-body-2-hover:hover{
+			color: red;
+		}
+		/*搜索框*/
+		.navbar-body-3{
+			border: 0px solid black;
+			height: 75px;
+			margin-left: 200px;
+			float: left;
+			line-height: 75px;
+			position: relative;
+
+		}
+
+		/*末尾*/
+		.navbar-body-4{
+			border: 0px solid orange;
+			height: 75px;
+			float: right;
+			line-height: 75px;
+			margin-left: 10px;
+			position: relative;
+		}
+		.navbar-body-4-show{
+			border: 0px solid pink;
+			position: absolute;
+			z-index: 3;
+			left: -30px;
+			top: 60px;
+			height: 159px;
+			width: 135px;
+			background: white;
+			display: none;
+		}
+		.navbar-body-4-show1{
+			border: 1px solid #F2F2F2;
+			width: 135px;
+			height: 53px;
+			text-align:center;
+			line-height: 53px;
+			font-size: 14px;
+		}
+		.navbar-body-4-show1:hover{
+			color: #FF1268;
+			background: #FFF4F8;
+		}
+		.navbar-body-4-show2{
+			border: 1px solid #F2F2F2;
+			width: 135px;
+			height: 53px;
+			text-align:center;
+			line-height: 53px;
+			font-size: 14px;
+		}
+		.navbar-body-4-show2:hover{
+			color: #FF1268;
+			background: #FFF4F8;
+		}
+		.navbar-body-4-show3{
+			border: 1px solid #F2F2F2;
+			width: 135px;
+			height: 53px;
+			text-align:center;
+			line-height: 53px;
+			font-size: 14px;
+		}
+		.navbar-body-4-show3:hover{
+			color: #FF1268;
+			background: #FFF4F8;
+		}
+		.navbar-body-4-1{
+			border: 0px solid red;
+			float: left;
+
+
+		}
+		.navbar-body-4-1:hover .navbar-body-4-show{
+			display: block;
+		}
+		
+		.navbar-body-4-2{
+			border: 0px solid red;
+			float: left;
+		}
+		.navbar-body-4-2:hover .navbar-body-4-2-show{
+			display: block;
+		}
+		.navbar-body-4-2-show{
+			border: 1px solid #F8F8F8;
+			position: absolute;
+			left: 50px;
+			top: 60px;
+			z-index: 2;
+			height: 80px;
+			display: none;
+
+
+		}
+		.navbar-body-4-3{
+			border: 0px solid red;
+			float: left;
+		}
+		.navbar-body-4:hover{
+			cursor: pointer;
+		}
+		.navbar-body-4>span:hover{
+
+			color: red;
+		}
+			
+		
+		.navbar-body-4>img{
+			vertical-align: middle;
+		}
+		input:nth-child(1){
+			/*outline-color: #FF1268;*/
+			outline: none;
+			height: 50px;
+			width: 410px;
+			text-indent: 5em;
+			border-radius: 46PX;
+			 border-bottom-left-radius: 46px;
+			 border-top-left-radius: 46px;
+			 background: #F8F8F8;
+			 border: 0; 
+			 font-size: 14px;
+		}
+		#navbar-body-3-1:focus{
+			border: 1px solid #FF1268;
+		}
+		#navbar-body-3-1{
+			border: 1px solid transparent;
+		}
+		
+		[type="button"]{
+			height: 52px;
+			width: 100px;
+			background: #FF1268;
+			border: 0;
+			border-top-right-radius: 46px;
+			border-bottom-right-radius: 46px;
+			position: absolute;
+			right: 0px;
+			top: 14px;
+		}
+		.pic{
+			border: 1px solid white;
+			width: 90%;
+			height: 320px;
+			margin: 0 auto;
+			background: url(https://img.alicdn.com/tps/i4/TB1DLYKIQL0gK0jSZFxSutWHVXa.jpg);
+			position: relative;
+		}
+		.pic2{
+			border: 0px solid yellow;
+			width: 56px;
+			height: 64px;
+			position: absolute;
+			top: 130px;
+		}
+		.pic2:hover{
+			cursor: pointer;
+			background: #800934;
+		}
+		.pic3{
+			border: 0px solid yellow;
+			width: 56px;
+			height: 64px;
+			position: absolute;
+			right: 3px;
+			top: 130px;
+		}
+		.pic3:hover{
+			cursor: pointer;
+			background: #800934;
+		}
+		.pic4{
+			border: 0px solid yellow;
+			width: 80px;
+			height: 30px;
+			margin-top: 280px;
+			margin-left: 1120px;
+
+		}
+		.pic4>ul{
+			list-style: none;
+
+		}
+		.pic4>ul>li{
+			background: url(https://i.gtimg.cn/vipstyle/vipportal/v4/img/my/sprites_index.png)-250px -15px;
+			border: 0px solid red;
+			height: 20px;
+			width: 20px;
+			display: inline-block;
+
+			
+		}
+		.pic4>ul>li:hover{
+			cursor: pointer;
+			background-position: -250px 0;
+		}
+		.pic-cut{
+			border: 1px solid#EBEBEB;
+			height: 118px;
+			width: 90%;
+			margin: 0 auto;	
+			margin-top: 15px;
+
+		}
+		.pic-cut2{
+			border: 0px solid red;
+			height: 118px;
+			width: 95%;
+			margin: 0 auto;
+		}
+		.pic-cut2>div{
+			width: 48px;
+			height: 48px;
+			border: 0px solid blue;
+			float: left;
+			margin-left: 60px;
+			margin-top: 30px;
+			background: url(https://img.alicdn.com/tfs/TB1U9R8GY9YBuNjy0FgXXcxcXXa-146-1822.png)no-repeat -5px 0;
+			background-size:50px;
+			position: relative;
+
+		}
+		.pic-cut2>div:nth-child(2){
+			background-position: 0 -70px;
+		}
+		.pic-cut2>div:nth-child(3){
+			background-position: 0 -130px;
+		}
+		.pic-cut2>div:nth-child(4){
+			background-position: 0 -195px;
+		}
+		.pic-cut2>div:nth-child(5){
+			background-position: 0 -250px;
+		}
+		.pic-cut2>div:nth-child(6){
+			background-position: 0 -310px;
+		}
+		.pic-cut2>div:nth-child(7){
+			background-position: 0 -375px;
+		}
+		.pic-cut2>div:nth-child(8){
+			background-position: 0 -440px;
+		}
+		.pic-cut2>div:nth-child(9){
+			background-position: 0 -500px;
+		}
+		.pic-cut2>div:nth-child(10){
+			background-position: 0 -560px;
+		}
+		.pic-cut2>div>span{
+			border: 0px solid red;
+			height: 21px;
+			width: 70px;
+			text-align: center;
+			margin-left: -15px;
+		}
+		.pic-cut2>div>span:hover{
+			color: red;
+			cursor: pointer;
+		}
+		.center-body{
+			border: 1px solid #EBEBEB;
+			width: 90%;
+			height: 460px;
+			margin:  auto;
+			margin-top: 15px;
+			
+
+		}
+		.center-body-top{
+			border: 0px solid blue;
+			width: 95%;
+			height: 40px;
+			margin: 0 auto;
+			margin-top: 15px;
+			
+			line-height: 40px;
+		}
+		.center-body-top>span:nth-child(1){
+			font-size: 24px;
+			color: #111;
+		}
+		.center-body-top>span:nth-child(2){
+			font-size: 14px;
+			color: #9B9B9B;
+			margin-left: 995px;
+		}
+		.center-body-top>span:nth-child(2):hover{
+			cursor: pointer;
+			color: #FF1268;
+		}
+		.center-body-bottom{
+			border: 0px solid green;
+			width: 95%;
+			height: 375px;
+			margin: 0 auto;
+			margin-top: 15px;
+		}
+		.center-body-bottom-left{
+			border: 0px solid yellow;
+			width: 272px;
+			height: 345px;
+			margin-top: 15px;
+			margin-left: 15px;
+			float: left;
+			position: relative;
+		}
+		.center-body-bottom-left-bottom{
+			border: 0px solid purple;
+			width: 272px;
+			height: 120px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			background: rgba(0,0,0,.5);
+			color: white;
+		}
+		.center-body-bottom-left-bottom1{
+			margin-top: 15px;
+			text-indent: 1em;
+		}
+		.center-body-bottom-left-bottom2{
+			margin-top: 15px;
+			font-size: 20px;
+			text-indent: 0.5em;
+		}
+		.center-body-bottom-left-bottom1:hover{
+			cursor: pointer;
+			color: #FF1268;
+		}
+		.center-body-bottom-left-bottom2:hover{
+			cursor: pointer;
+			color: #FF1268;
+		}
+		.center-body-bottom-right{
+			border: 0px solid pink;
+			width: 838px;
+			height: 345px;
+			float: right;
+			margin-top: 15px;
+			margin-right: 15px;
+
+		}
+		.center-body-bottom-right-top{
+			border: 0px solid orange;
+			width: 833px;
+			height: 162.5px;
+			margin-bottom: 17px;
+			margin-left: 5px;
+		}
+		.center-body-bottom-right-bottom{
+			border: 0px solid gold;
+			width: 833px;
+			height: 162.5px;
+			margin-left: 5px;
+		}
+		.center-body-bottom-right-top1{
+			border: 0px solid black;
+			float: left;
+			margin-right:  10px;
+			height: 160px;
+			width: 262.6px;
+		}
+		.center-body-bottom-right-top1-div1{
+			border: 1px solid #9B9B9B;
+			width: 120px;
+			height: 160px;
+			float: left;
+
+
+		}
+		.center-body-bottom-right-top1-div2{
+			border: 0px solid red;
+			width: 132.6px;
+			height: 160px;
+			float: right;
+		}
+		.center-body-bottom-right-top1-div2-1{
+			border: 0px solid blue;
+			width: 132.6px;
+			height: 40px;
+			font-size: 14px;
+			overflow: hidden;
+		}
+		.center-body-bottom-right-top1-div2-1:hover{
+			cursor: pointer;
+			color:#FF1268;
+		}
+		.center-body-bottom-right-top1-div2-2{
+			border: 0px solid blue;
+			width: 132.6px;
+			height: 16px;
+			margin-top: 10px;
+			font-size: 12px;
+			color: #9B9B9B;
+		}
+		.center-body-bottom-right-top1-div2-2:hover{
+			cursor: pointer;
+			color:#FF1268;
+		}
+		.center-body-bottom-right-top1-div2-3{
+			border: 0px solid blue;
+			width: 132.6px;
+			height: 16px;
+			margin-top: 10px;
+			font-size: 12px;
+			color: #9B9B9B;
+		}
+		.center-body-bottom-right-top1-div2-3:hover{
+			cursor: pointer;
+			color:#FF1268;
+		}
+		.center-body-bottom-right-top1-div2-4{
+			border: 0px solid blue;
+			width: 132.6px;
+			height: 21px;
+			margin-top: 40px;
+			color: #FF1268;
+
+		}
+		.center-body-bottom-right-top1-div2-4:hover{
+			cursor: pointer;
+			color:#FF1268;
+		}
+
+
+		.center-body-bottom-right-bottom1{
+			border: 0px solid black;
+			float: left;
+			margin-right:10px;
+			height: 160px;
+			width: 262.6px;
+		}
+		.last{
+			border: 0px solid red;
+			width: 100%;
+			height: 350px;
+			background: #F8F8F8;
+			margin-top: 30px;
+		}
+		.last-body{
+			border: 0px solid blue;
+			width: 90%;
+			height: 350px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		.last-body-top{
+			border: 0px solid yellow;
+			width: 70%;
+			height: 20px;
+			margin: 0 auto;
+			margin-top: 30px;
+			overflow: hidden;
+
+		}
+		.last-body-top>ul>li{
+			float: left;
+			font-size: 13px;
+			border: 0px solid orange; 
+			text-align: center;
+			margin-right: 14px;	
+			list-style: none;
+			color: black;
+		}
+		.last-body-top>ul>li>a{
+			color: black;
+			text-decoration: none;
+			font-size: 13px;
+		}
+		.last-body-top>ul>li>a:hover{
+			color: #FF1268;
+			text-decoration: underline;
+		}
+		.last-body2{
+			border: 0px solid pink;
+			height: 255px;
+			width: 90%;
+			margin: 0 auto;
+			margin-top: 40px;
+			overflow: hidden;
+			zoom:1;
+			
+
+		}
+		.last-body2-left{
+			border: 0px solid black;
+			width: 300px;
+			height: 255px;
+			float: left;
+		}
+		.last-body2-left-pic1{
+			border: 0px solid gold;
+			height: 60px;
+			width: 167px;
+			float: left;
+			margin-left: 20px;
+		}
+		.last-body2-left-pic2{
+			border: 0px solid red;
+			height: 87px;
+			width: 87px;
+			float: right;
+
+		}
+		
+		.last-body2-right{
+			border: 0px solid green;
+			height: 255px;
+			width: 70%;
+			float: right;	
+			
+		}
+		.last-body2-right-btn{
+			border: 0px solid pink;
+			height: 30px;
+		}
+		.last-body2-right-btn>ul>li{
+			font-size: 13px;
+			float: left;
+			list-style: none;
+			margin-right: 10px;
+		}
+		.last-body2-right-btn>ul{
+			border: 0px solid black;
+			height: 20px;
+		}
+		.last-body2-right-text1>li:hover{
+			cursor: pointer;
+			color: #FF1268;
+		}
+		.last-body2-right-text2>li:hover{
+			cursor: pointer;
+			color: #FF1268;
+		}
+		.last-body2-right-text3>li:nth-child(2):hover{
+			cursor: pointer;
+			color: #FF1268;
+		}
+		.right{
+			border: 1px solid #EBEBEB;
+			width: 82px;
+			height: 214px;
+			position: fixed;
+			bottom: 50px;
+			right: 10px;
+			
+		}
+		.right1{
+			border: 1px solid #EBEBEB;
+			width: 80px;
+			height: 80px;
+			background-position:
+
+
+		}
+		.right1:hover{
+			color: #FF1268;
+			cursor: pointer;
+		}
+		.right1-small{
+			border: 0px solid red;
+			width: 80px;
+			height: 50px;
+			margin-top: 10px;
+			background: url(https://img.alicdn.com/tfs/TB1u1U9xmzqK1RjSZFHXXb3CpXa-64-180.png)no-repeat;
+			background-size: 35px;
+			background-position: 25px -20px;
+
+		}
+		.right2{
+			border: 1px solid #EBEBEB;
+			width: 80px;
+			height: 80px;
+			position: relative;
+		}
+		.right2:hover .right2-show{
+			display: block;
+		}
+		.right2-show{
+			border: 0px solid red;
+			width: 72px;
+			height: 72px;
+			position: absolute;
+			background: white;
+			left: -90px;
+			bottom: 0px;
+			padding: 5px;
+			display: none;
+
+		}
+		.right2:hover{
+			color: #FF1268;
+			cursor: pointer;
+		}
+		.right2-small{
+			border: 0px solid red;
+			width: 80px;
+			height: 50px;
+			margin-top: 10px;
+			background: url(https://img.alicdn.com/tfs/TB1u1U9xmzqK1RjSZFHXXb3CpXa-64-180.png)no-repeat;
+			background-size: 35px;
+			background-position: 25px 20px;
+		}
+		.right3{
+			border: 1px solid #EBEBEB;
+			width: 80px;
+			height: 80px;
+		}
+		.right3:hover{
+			color: #FF1268;
+			cursor: pointer;
+		}
+		.right3-small{
+			border: 0px solid red;
+			width: 80px;
+			height: 50px;
+			margin-top: 10px;
+			background: url(https://img.alicdn.com/tfs/TB1u1U9xmzqK1RjSZFHXXb3CpXa-64-180.png)no-repeat;
+			background-size: 35px;
+			background-position: 25px -60px;
+		}
+		.navbar-body-3>input:nth-child(1){
+			border: 0px solid black;
+		}
+
+
+		
+
+		
+	</style>
+
+</head>
+<body>
+	<div class="navbar">
+		<div class="navbar-body">
+			<div class="navbar-body-1"><img src="https://img.alicdn.com/tfs/TB1fbVFfu3tHKVjSZSgXXX4QFXa-230-104.png" align="center" width="92"></div>
+			<div class="navbar-body-2">
+				<span><img src="https://img.alicdn.com/tfs/TB1XHDuxNGYBuNjy0FnXXX5lpXa-28-32.png" width="12" ></span>
+				<span class="show1">全国 <img style="vertical-align: middle;width: 9px;" src="https://img.alicdn.com/tfs/TB1vnUBxStYBeNjSspaXXaOOFXa-20-12.png"></span>
+				<span style="color: #FF1268;margin-right: 10px;margin-left: 30px;">首页</span>
+				<span class="navbar-body-2-hover">分类</span>
+				<div class="navbar-body-2-city">
+					<div class="city1">
+						<span style="display: inline-block;">当前城市：</span>
+						<span style="margin-top: 20px;display: inline-block;">热门城市：</span>
+					</div>
+					<div class="city2">
+						<span style="color: #FF1268;background: #FFF4F8; padding-left: 10px;padding-right: 10px;">全国</span>
+					      <br>
+					<div>
+						<span>全国</span>
+						<span>北京</span>
+						<span>上海</span>
+						<span>深圳</span>
+						<span>广州</span>
+						<span>杭州</span>
+						<span>天津</span>
+						<span>重庆</span>
+						<span>成都</span>
+						<span>中国香港</span>
+					
+					</div>
+					</div>
+					<hr style="width: 95%;margin: 0 auto;margin-bottom: 20px;">
+					<div class="city3">
+						<span>其他城市：</span>
+					</div>
+					<div class="city4">
+						<span>上海</span>
+						<span>北京</span>
+						<span>杭州</span>
+						<span>深圳</span>
+						<span>成都</span>
+						<span>广州</span>
+						<span>天津</span>
+						<span>苏州</span>
+						<span>重庆</span>
+						<span>西安</span><br>
+						<span>南京</span>
+						<span>济南</span>
+						<span>武汉</span>
+						<span>郑州</span>
+						<span>昆明</span>
+						<span>青鸟</span>
+						<span>宁波</span>
+						<span>厦门</span>
+						<span>长沙</span>
+						<span>佛山</span><br>
+						<span>呼和浩特</span>
+						<span>贵阳</span>
+						<span>沈阳</span>
+						<span>石家庄</span>
+						<span>宜昌</span>
+						<span>哈尔滨</span>
+						<span>无锡</span>
+						<span>常州</span>
+						<span>大连</span><br>
+						<span>合肥</span>
+						<span>泉州</span>
+						<span>太原</span>
+						<span>兴安盟</span>
+						<span>长春</span>
+						<span>东莞</span>
+						<span>金华</span>
+						<span>南昌</span>
+						<span>绍兴</span><br>
+						<span>中国香港</span>
+						<span>福州</span>
+						<span>海口</span>
+						<span>江门</span>
+						<span>兰州</span>
+						<span>舟山</span>
+						<span>阿坝</span>
+						<span>鄂尔多斯</span>
+						<span>桂林</span><br>
+						<span>湖州</span>
+						<span>廊坊</span>
+						<span>柳州</span>
+						<span>洛阳</span>
+						<span>南通</span>
+						<span>三亚</span>
+						<span>温州</span>
+						<span>乌鲁木齐</span>
+						<span>蚌埠</span>
+						<span>大理</span><br>
+						<span>鹤壁</span>
+						<span>黄石</span>
+						<span>惠州</span>
+						<span>荆州</span>
+						<span>乐山</span>
+						<span>丽水</span>
+						<span>连云港</span>
+						<span>南宁</span>
+						<span>宿州</span>
+						<span>烟台</span><br>
+						<span>银川</span>
+						<span>岳阳</span>
+						<span>张家口</span>
+						<span>中山</span>
+						<span>珠海</span>
+						<span>株洲</span>
+						<span>遵义</span>
+						<span>国际及港澳台</span>
+						
+
+					</div>
+
+				</div>
+				
+			</div>
+			<div class="navbar-body-3">
+				<input id="navbar-body-3-1" type="" placeholder=" 搜索明星、演出、体育赛事" name="">
+				<input style="color: white;font-size: 18px;letter-spacing: 4px;" type="button" name="" value="搜索">
+				<img style=" width: 20px; position: absolute;left: 20px;top: 30px; " src="https://img.alicdn.com/tfs/TB1qv3jxGmWBuNjy1XaXXXCbXXa-34-36.png">
+			</div>
+			<div class="navbar-body-4">
+				<div class="navbar-body-4-1">
+					<img style="vertical-align: middle;" src="https://img.alicdn.com/tfs/TB14UKCGQyWBuNjy0FpXXassXXa-54-54.png" width="26">
+					<span>登录</span>
+					<div class="navbar-body-4-show">
+						<div class="navbar-body-4-show1">个人信息</div>
+						<div class="navbar-body-4-show2">帐号设置</div>
+						<div class="navbar-body-4-show3">订单管理</div>
+
+					</div>
+				</div>
+				<div class="navbar-body-4-2">
+					<img style="vertical-align: middle;" src="https://img.alicdn.com/tfs/TB1A9eIGKuSBuNjy1XcXXcYjFXa-54-54.png" width="26">
+					<span>下载</span>
+					<div class="navbar-body-4-2-show">
+						<img style="padding: 5px;background: white;" src="https://img.alicdn.com/tfs/TB1TBEJSkvoK1RjSZFNXXcxMVXa-280-280.jpg" width="80">
+					</div>
+				</div>
+				<div class="navbar-body-4-3">
+					<img style="vertical-align: middle;" src="https://img.alicdn.com/tfs/TB13UKCGQyWBuNjy0FpXXassXXa-54-54.png" width="26">
+					<span>English</span>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="pic">
+		<div class="pic2">
+			<span class="iconfont icon-zuojiantou-01" style=" font-size: 60px;  color: white; background: rgba(0,0,0,.5);"></span>
+		</div>
+		<div class="pic3">
+			<span class="iconfont icon-iconfontjiantou3" style="color: white;font-size: 60px; background: rgba(0,0,0,.5);"></span>
+		</div>
+		<div class="pic4">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+
+			</ul>
+		</div>
+
+	</div>
+	<div class="pic-cut">
+		<div class="pic-cut2">
+			<div>
+				<span style="position: absolute;top: 50px;">演唱会</span>
+			</div>
+			<div>
+				<span style="position: absolute;top: 50px;margin-left: -12px;">话剧歌剧</span>
+				
+			</div>
+			<div>
+				<span style="position: absolute;top: 50px;margin-left: -12px;">体育</span>
+				
+			</div>
+			<div>
+				<span style="position: absolute;top: 50px;margin-left: -12px;">儿童亲子</span>
+				
+			</div>
+			<div>
+				<span style="position: absolute;top: 50px; margin-left: -12px;">展览休闲</span>
+				
+			</div>
+			<div>
+				<span style="position: absolute;top: 50px; margin-left: -12px;">音乐会</span>
+				
+			</div>
+			<div>
+				<span style="position: absolute;top: 50px; margin-left: -12px;">曲苑杂坛</span>
+				
+			</div>
+			<div>
+				<span style="position: absolute;top: 50px; margin-left: -12px;">舞蹈芭蕾</span>
+				
+			</div>
+			<div>
+				<span style="position: absolute;top: 50px; margin-left: -12px;">二次元</span>
+				
+			</div>
+			<div>
+				<span style="position: absolute;top: 50px; margin-left: -12px; ">旅游展览</span>
+				
+			</div>
+			
+
+
+		</div>
+	</div>
+	<div class="center-body">
+		<div class="center-body-top">
+			<span>演唱会</span>
+			<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看全部</span>
+		</div>
+		<div class="center-body-bottom">
+			<div class="center-body-bottom-left">
+				<img src="https://img.alicdn.com/bao/uploaded/i2/2251059038/O1CN01ZYFxKt2GdSEWTMcjm_!!0-item_pic.jpg" height="345" width="272">
+				<div class="center-body-bottom-left-bottom">
+					<div class="center-body-bottom-left-bottom1">
+						"My Love刘德华巡回演唱会<br>2020" 官方周边商品
+					</div>
+					<div class="center-body-bottom-left-bottom2">
+						¥295起
+					</div>
+						
+				</div>
+			</div>
+			<div class="center-body-bottom-right">
+				<div class="center-body-bottom-right-top">
+					<div class="center-body-bottom-right-top1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i3/2251059038/O1CN01a89g5r2GdSDs44jUJ_!!2251059038.jpg" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								2020任贤齐 "奇迹"<br>巡回演唱会呼和浩特站
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								内蒙古体育馆
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.08.01 周六 19:30
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥399起
+							</div>
+
+						</div>
+						
+
+					</div>
+					<div class="center-body-bottom-right-top1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i4/2251059038/O1CN01l8LToq2GdSEmSQi2W_!!2251059038.png" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								一呼万应！失踪人口<br>专场
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								MAO Livehouse长沙
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.06.27 周六 20:30
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥70起
+							</div>
+
+						</div>
+					</div>
+					<div class="center-body-bottom-right-top1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i1/2251059038/O1CN01PVB2712GdSE9RDgYr_!!2251059038.png" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								2020.9.5赤时代I<br>Need You演唱会 Live In XI' AN
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								西演LIVE·光圈CLUB
+
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.09.05 周六
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥180起
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<div class="center-body-bottom-right-bottom">
+					<div class="center-body-bottom-right-bottom1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/i1/2251059038/O1CN01D5PAMm2GdSEeUIgWO_!!0-item_pic.jpg" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								曹轩宾「我」2020年<br>巡回演唱会 深圳站
+
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								深圳 HOU LIVE
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.08.01 周五 20:30
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥150起
+							</div>
+
+						</div>
+					</div>
+					<div class="center-body-bottom-right-bottom1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/i3/2251059038/O1CN01CF298x2GdSEeKWT0o_!!0-item_pic.jpg" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								GREEN DAY – LIVE IN HONG KONG, CHINA 2021
+
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								亚洲国际博览馆
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2021.03.19 周五 20:00
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥588起
+							</div>
+
+						</div>
+					</div>
+					<div class="center-body-bottom-right-bottom1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/i3/2251059038/O1CN01ASDpJd2GdSEWXjyjX_!!0-item_pic.jpg" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								Madilyn Bailey<br> Tastes Like Karma Tour 2020 巡演-长沙站
+
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								46LIVEHOUSE
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.04.03-12.31
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥380起
+							</div>
+
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+
+
+	</div>
+	<div class="center-body">
+		<div class="center-body-top">
+			<span>话剧歌剧</span>
+			<span>查看全部</span>
+		</div>
+		<div class="center-body-bottom">
+			<div class="center-body-bottom-left">
+				<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i2/2251059038/O1CN01yLR7WL2GdSEe9pxRD_!!2251059038.jpg" height="345" width="272">
+				<div class="center-body-bottom-left-bottom">
+					<div class="center-body-bottom-left-bottom1" style="text-indent: 0">
+						&nbsp;孟京辉戏剧作品 摇滚音乐剧《空中<br>&nbsp;花园谋杀案》
+					</div>
+					<div class="center-body-bottom-left-bottom2">
+						¥180起
+					</div>
+						
+				</div>
+			</div>
+			<div class="center-body-bottom-right">
+				<div class="center-body-bottom-right-top">
+					<div class="center-body-bottom-right-top1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/i1/2251059038/O1CN01KKUrV12GdSEWbfLCD_!!0-item_pic.jpg" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								老舍原著*郭麒麟阎鹤<br>祥主演话剧《牛天赐》-天赐家族系列纪念周边
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								天桥艺术中心-中剧场
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2019.12.26-2020.12.31
+
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥60起
+							</div>
+
+						</div>
+						
+
+					</div>
+					<div class="center-body-bottom-right-top1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i3/2251059038/O1CN01e00rN12GdSDqpHCTm_!!2251059038.jpg" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								聚橙制作|法语音乐剧<br>《摇滚红与黑》
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								上汽上海文化广场
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.08.13-08.15
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥80起
+							</div>
+
+						</div>
+					</div>
+					<div class="center-body-bottom-right-top1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i2/2251059038/O1CN01ukmFkQ2GdSEAuQKxw_!!2251059038.jpg" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								阿加莎惊悚悬疑小说<br>改编话剧《无人生还》
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								宁波文化广场大剧院
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.08.21-08.22
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥80起
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<div class="center-body-bottom-right-bottom">
+					<div class="center-body-bottom-right-bottom1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i4/2251059038/O1CN011Qvrzz2GdSE0kYu2I_!!2251059038.png" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								香港话剧团授权 有趣<br>戏剧作品话剧《最后晚餐》 武汉站
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2" style="height: 32px;">
+								403国际艺术中心·红椅剧<br>场
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.12.03-12.06
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4" style="margin-top: 24px;">
+								¥80起
+							</div>
+
+						</div>
+					</div>
+					<div class="center-body-bottom-right-bottom1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i1/2251059038/O1CN01NapWK42GdSEf9iVPL_!!2251059038.jpg" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								陕西人艺经典巨献·话<br>剧《白鹿原》
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								余杭大剧院
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.09.22 周二 19:30
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥280起
+							</div>
+
+						</div>
+					</div>
+					<div class="center-body-bottom-right-bottom1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i2/2251059038/O1CN01VdiQm02GdSFKC2okr_!!2251059038.png" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								音乐剧《第一次约<br>会》
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								杭州剧院
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.12.05 周六
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥100起
+							</div>
+
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+
+
+	</div>
+	<div class="center-body">
+		<div class="center-body-top">
+			<span>体育比赛</span>
+			<span>查看全部</span>
+		</div>
+		<div class="center-body-bottom">
+			<div class="center-body-bottom-left">
+				<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i3/2251059038/O1CN01azreXu2GdSF9rIkGV_!!2251059038.jpg" height="345" width="272">
+				<div class="center-body-bottom-left-bottom">
+					<div class="center-body-bottom-left-bottom1" style="text-indent: 0.5em;">
+						2020 FORMULA1 中国大奖赛（帽<br>&nbsp;&nbsp;品）
+					</div>
+					<div class="center-body-bottom-left-bottom2">
+						¥150起
+					</div>
+						
+				</div>
+			</div>
+			<div class="center-body-bottom-right">
+				<div class="center-body-bottom-right-top">
+					<div class="center-body-bottom-right-top1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i1/2251059038/O1CN01Ns9MZj2GdSFIp2udB_!!2251059038.png" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								加速北京跳伞俱乐部<br>高空跳伞体验	
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2" style="height: 32px;">
+								北京市平谷区马坊镇通航<br>产业基地
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.06.05-06.30
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4" style="margin-top: 24px;">
+								¥3180起
+							</div>
+
+						</div>
+						
+
+					</div>
+					<div class="center-body-bottom-right-top1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i4/2251059038/O1CN01bCCNuc2GdSDzL4g7K_!!2251059038.jpg" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								2020赛季重庆当代<br>力帆足球俱乐部套票
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								重庆奥体中心体育场
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.10.31-11.30
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥350起
+							</div>
+
+						</div>
+					</div>
+					<div class="center-body-bottom-right-top1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i3/2251059038/O1CN01ZusbUY2GdSENL0iIN_!!2251059038.jpg" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								2020 FORMULA1 中<br>国大奖赛（周边衍生品）
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2" style="height: 32px;">
+								上汽国际赛车场(上海国际赛车场)
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.03.11-12.31
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4" style="margin-top: 24px;">
+								¥35起
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<div class="center-body-bottom-right-bottom">
+					<div class="center-body-bottom-right-bottom1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i4/2251059038/O1CN01rCUhkT2GdSDypUD0p_!!2251059038.jpg" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								【年票】贵州恒丰足球俱乐部2020赛季中国足<br>球甲级联赛主场赛事
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								贵阳奥体中心体育场
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.07.31 周五 19:30
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥299起
+							</div>
+
+						</div>
+					</div>
+					<div class="center-body-bottom-right-bottom1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i1/2251059038/O1CN01xIWkUp2GdSE3AS8XR_!!2251059038.jpg" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								2020赛季江苏苏宁足<br>球俱乐部全年套票
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								南京奥体中心体育场
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.02.22-10.31
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥588起
+							</div>
+
+						</div>
+					</div>
+					<div class="center-body-bottom-right-bottom1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/i3/2251059038/O1CN01RTvlyT2GdSCFNVcsY_!!0-item_pic.jpg" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								18.8元秒杀4课时育华篮球活动课（16家校区可选）
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								河西跃动空间篮球馆
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2019.08.24-2020.08.25
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥18.8起
+							</div>
+
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+
+
+	</div>
+	<div class="center-body">
+		<div class="center-body-top">
+			<span>儿童亲子</span>
+			<span>查看全部</span>
+		</div>
+		<div class="center-body-bottom">
+			<div class="center-body-bottom-left">
+				<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i2/2251059038/O1CN01CwqS4B2GdSEun49e3_!!2251059038.jpg" height="345" width="272">
+				<div class="center-body-bottom-left-bottom">
+					<div class="center-body-bottom-left-bottom1" style="text-indent: 0.5em;">
+						印象观澜湖全息剧
+					</div>
+					<div class="center-body-bottom-left-bottom2" style="margin-top: 40px;">
+						¥19.9起
+					</div>
+						
+				</div>
+			</div>
+			<div class="center-body-bottom-right">
+				<div class="center-body-bottom-right-top">
+					<div class="center-body-bottom-right-top1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i1/2251059038/O1CN01yOsmzi2GdSE5fWGWl_!!2251059038.png" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								宫崎骏经典· 暖心成长音乐剧《魔女宅急便》
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								江西艺术中心大剧院
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.06.20 周六
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥180起
+							</div>
+
+						</div>
+						
+
+					</div>
+					<div class="center-body-bottom-right-top1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i2/2251059038/O1CN01zyqcuX2GdSEjgo9qz_!!2251059038.jpg" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								【适合3-7岁】励步英语价值697元英语启蒙学习大礼，限时免费！
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								嘉汇中心B座
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.04.09-06.30
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥0起
+							</div>
+
+						</div>
+					</div>
+					<div class="center-body-bottom-right-top1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i3/2251059038/O1CN01CkM1UE2GdSE1T8BKo_!!2251059038.jpg" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								「开展营业中」光年<br>之外——航天特展
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								杭州白马湖公园
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.01.21-07.31
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥50起
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<div class="center-body-bottom-right-bottom">
+					<div class="center-body-bottom-right-bottom1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i2/2251059038/O1CN01ZqXlOC2GdSDnj0SyU_!!2251059038.jpg" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								正版授权大型实景舞<br>台剧 《奥特曼：宇宙之光》
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								广州大剧院歌剧厅
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.07.19 周日
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥100起
+							</div>
+
+						</div>
+					</div>
+					<div class="center-body-bottom-right-bottom1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i1/2251059038/O1CN015U7rcV2GdSEQ00ZQP_!!2251059038.png" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								【昆明剧院 · 大剧场】儿童大型实景舞台剧《奥特曼 · 宇宙之光》
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								昆明剧院大剧场
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.11.08 周日 19:30
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥80起
+							</div>
+
+						</div>
+					</div>
+					<div class="center-body-bottom-right-bottom1">
+						<div class="center-body-bottom-right-top1-div1">
+							<img src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i1/2251059038/O1CN01a4eHAV2GdSEpGvwtc_!!2251059038.jpg" height="160" >
+						</div>
+						<div class="center-body-bottom-right-top1-div2">
+							<div class="center-body-bottom-right-top1-div2-1">
+								第十一届CPF广州国际宠博会一起来宠物展狂欢
+							</div>
+							<div class="center-body-bottom-right-top1-div2-2">
+								广州琶洲国际采购中心
+							</div>
+							<div class="center-body-bottom-right-top1-div2-3">
+								2020.09.18-09.20
+							</div>
+							<div class="center-body-bottom-right-top1-div2-4">
+								¥30起
+							</div>
+
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+
+
+	</div>
+	<div class="last">
+		<div class="last-body">
+			<div class="last-body-top">
+				<ul>
+					<li>
+						<a href="">帮助中心</a>
+						<li>|</li>
+					</li>
+					<li>
+						<a href="">公司介绍</a>
+						<li>|</li>
+					</li>
+					<li>
+						<a href="">品牌识别</a>
+						<li>|</li>
+					</li>
+					<li>
+						<a href="">公司大事记</a>
+						<li>|</li>
+					</li>
+					<li>
+						<a href="">协议及隐私权政策</a>
+						<li>|</li>
+					</li>
+					<li>
+						<a href="">廉正举报</a>
+						<li>|</li>
+					</li>
+					<li>
+						<a href="">联系合作</a>
+						<li>|</li>
+					</li>
+					<li>
+						<a href="">招聘信息</a>
+						<li>|</li>
+					</li>
+					<li>
+						<a href="">防骗秘籍</a>
+						
+					</li>
+				</ul>
+
+			</div>
+			<div class="last-body2">
+				<div class="last-body2-left">
+					<div class="last-body2-left-pic1">
+						<img src="https://img.alicdn.com/tfs/TB1otMASmzqK1RjSZPxXXc4tVXa-167-60.png">
+					</div>
+					<div class="last-body2-left-pic2">
+						<img src="https://img.alicdn.com/tfs/TB1TBEJSkvoK1RjSZFNXXcxMVXa-280-280.jpg" width="87">
+						<span style="margin-left: 10px;">APP下载</span>
+					</div>
+
+				</div>
+				<div class="last-body2-right">
+					<div class="last-body2-right-btn">
+						<button style="height: 30px;width: 100px;border-radius: 20px;color: white;background: #FF1268;border: 0;outline: none;cursor: pointer;">在线客服</button>
+						<ul class="last-body2-right-text1" style="margin-top: 10px;">
+							<li>
+								京ICP证031057号
+								<li>|</li>
+							</li>
+							<li>
+								京ICP备11043884号
+								<li>|</li>
+							</li>
+							<li>
+								京公网安备11010502037341号
+								<li>|</li>
+							</li>
+							<li>
+								广播电视节目制作经营许可证(京)字第02253号
+							</li>
+						</ul>
+							<ul style="margin-top: 10px;" class="last-body2-right-text2">
+						<li>
+							网络文化经营许可证 京网文[2019]4082-420号
+							<li>|</li>
+						</li>
+						<li>
+							营业性演出许可证京市演587号
+						</li>
+					</ul>
+						</ul>
+							<ul style="margin-top:10px;" class="last-body2-right-text3">
+						<li>
+							北京红马传媒文化发展有限公司 版权所有
+							
+						</li>
+						<li>
+							大麦网
+						</li>
+						<li>
+							Copyright 2003-2019 All Rights Reserved
+						</li>
+					</ul>
+						<ul style="margin-top:10px;">
+							<li>
+								举报投诉：damai_tousu@member.alibaba.com 浙江省杭州市余杭区文一西路969号
+							</li>
+						</ul>
+							<ul style="margin-top:10px;">
+								<li>
+									违法不良信息举报电话：020-62108294
+								</li>
+							</ul>
+								<ul style="margin-top: 20px;">
+									<li>
+										<img style="height: 30px;" src="https://img.alicdn.com/tfs/TB1ZO80pyOYBuNjSsD4XXbSkFXa-141-41.png">
+										<img style="height: 30px;" src="https://img.alicdn.com/tfs/TB1Y580pyOYBuNjSsD4XXbSkFXa-83-50.png">
+										<img style="cursor: pointer;" src="xin.png">
+									</li>
+								</ul>
+
+
+
+					  
+					</div>
+
+				</div>
+				
+
+			</div>
+
+		</div>
+	</div>
+		<div class="right">
+
+			<div class="right1">
+				<div class="right1-small"></div>
+				<p style="font-size: 12px;margin-left:16px;display: inline-block; ">在线客服</p>
+			</div>
+			<div class="right2">
+				<div class="right2-small"></div>
+				<p style="font-size: 12px;margin-left:16px;display: inline-block; ">APP下载</p>
+				<div class="right2-show">
+					<img src="https://img.alicdn.com/tfs/TB1TBEJSkvoK1RjSZFNXXcxMVXa-280-280.jpg" width="72">
+				</div>
+			</div>
+			<div class="right3">
+				<div class="right3-small"></div>
+				<p style="font-size: 12px;margin-left:16px;display: inline-block; ">回到顶部</p>
+			</div>
+
+		</div>
+	
+
+
+</body>
+</html>

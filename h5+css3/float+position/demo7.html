@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+		div{
+			position: absolute;
+			top:0;
+			left:0;
+			width: 200px;
+			height: 300px;
+
+		}
+        /*div:nth-child(1){}*/
+		div:first-child{
+              
+              background: gray;
+              z-index: 100;
+              opacity: 0.3;
+		}
+		div:nth-child(2){
+			background: yellowgreen;
+			 z-index: 101;
+			  opacity: 0.3;
+		}
+		div:nth-child(3){
+			background: pink;
+			 opacity: 0.3;
+		}
+        div:last-child{
+        	  background: purple;
+        	   opacity: 0.3;
+        }
+
+
+
+	</style>
+</head>
+<body>
+
+	  <div>111111</div>
+	   <div>222222</div>
+	    <div>333333</div>
+	     <div>444444</div>
+
+</body>
+</html>

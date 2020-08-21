@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			background: #F0F0F0;
+			perspective: 1000;
+			-webkit-perspective:1000;
+		}
+		.box{
+			border: 0px solid;
+			width: 600px;
+			height: 400px;
+			position: relative;
+			margin: 100px auto;
+			transform-style: preserve-3d;
+			transform: rotateX(-30deg);
+			animation: lol 3s linear infinite alternate;
+
+		}
+		.box>div{
+			width: 250px;
+			height: 300px;
+			position: absolute;
+			background: white;
+			border: 1px solid;
+			opacity: 0.5;
+			padding: 10px;
+			left: 175px;
+			top: 40px;
+			transition: transform 0.5s linear 0.1s;
+
+		}
+		.box>div:hover{
+			opacity: 1;
+		}
+		.box:hover{
+			animation-play-state: paused;
+		}
+		@keyframes lol{
+			from{
+				transform: rotateX(-30deg) rotateY(0deg);
+			}
+			to{
+				transform:rotateX(-30deg)  rotateY(360deg);
+			}
+		}
+		.box>div:nth-child(1){
+			transform: rotateY(60deg) translateZ(230px);
+		}
+		.box>div:nth-child(1):hover{
+			transform: rotateY(60deg) translateZ(230px) scale(1.3);
+		}
+		.box>div:nth-child(2){
+			transform: rotateY(120deg) translateZ(230px);
+		}
+		.box>div:nth-child(2):hover{
+			transform: rotateY(120deg) translateZ(230px) scale(1.3);
+		}
+		.box>div:nth-child(3){
+			transform: rotateY(180deg) translateZ(230px);
+		}
+		.box>div:nth-child(3):hover{
+			transform: rotateY(180deg) translateZ(230px) scale(1.3);
+		}
+		.box>div:nth-child(4){
+			transform: rotateY(240deg) translateZ(230px);
+		}
+		.box>div:nth-child(4):hover{
+			transform: rotateY(240deg) translateZ(230px) scale(1.3);
+		}
+		.box>div:nth-child(5){
+			transform: rotateY(300deg) translateZ(230px);
+		}
+		.box>div:nth-child(5):hover{
+			transform: rotateY(300deg) translateZ(230px) scale(1.3);
+		}
+		.box>div:nth-child(6){
+			transform: rotateY(0deg) translateZ(230px);
+		}
+		.box>div:nth-child(6):hover{
+			transform: rotateY(0deg) translateZ(230px) scale(1.3);
+		}
+
+		.box>div>img{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div><img src="imags/timg.jpg"></div>
+		<div><img src="imags/timg1.jpg"></div>
+		<div><img src="imags/timg2.jpg"></div>
+		<div><img src="imags/timg3.jpg"></div>
+		<div><img src="imags/timg4.jpg"></div>
+		<div><img src="imags/timg5.jpg"></div>
+
+	</div>
+
+</body>
+</html>

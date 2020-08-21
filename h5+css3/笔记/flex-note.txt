@@ -1,0 +1,43 @@
+
+flex布局
+
+display:flex; （弹性容器：子元素具备可伸缩特性）
+display:inline-flex;
+
+float 、vertical 、clear失效
+块元素
+ul
+div
+
+span
+display:inline-flex;
+
+容器属性:
+flex-direction：   布局方向(主轴与交叉轴设置（x y）)
+flex-wrap:         项目（子元素）是否换行
+flex-flow：row wrap;  集合属性 ：flex-direction+flex-wrap:  
+
+justify-content:  主轴上的对齐方式
+align-items：     交叉轴上的对齐方式
+align-content：   多行子元素在交叉轴对齐方式（ 1行元素 无效）
+
+项目属性：
+
+order:  项目排序
+flex-grow： 拉伸比设置 0 (不拉伸) number; 
+flex-shrink: 0 1（默认值）；是否收缩
+flex-basis： auto ;（width）
+
+flex: 集合属性  flex-grow +flex-shrink:+flex-basis：
+flex:0 1(可选值) auto（可选值）;
+flex:1;(flex-grow:1)
+
+align-self: 调整项目 在 从轴上的对齐方式；
+
+移动端适配：
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+

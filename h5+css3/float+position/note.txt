@@ -1,0 +1,93 @@
+background：red；
+background：url() no-repeat
+
+伪类选择器：
+：hover{
+	
+}
+
+
+浮动：将多个块级元素同行排列
+float:left|right|none; 
+
+问题：浮动后 脱离文档流（不占位），
+1.父元素高度塌陷
+
+     /* 溢出隐藏*/
+          /*   overflow: hidden;
+             zoom:1;*/
+            }
+/*
+
+        /* 万能清除*/   
+            .big:after{
+
+                content:"";
+                height: 0;
+                display: block;
+                clear: both;
+
+            }*/
+
+        /* 增加挡板元素*/
+            .clearfix{
+
+                clear: both;
+                zoom:1;
+            }
+
+        <div class="clearfix"></div>
+
+2.浮动的元素会覆盖没有浮动的元素
+ /* 增加挡板元素*/
+            .clearfix{
+
+                clear: both;
+                zoom:1;
+            }
+
+        <div class="clearfix"></div>
+
+
+3. 图片浮动，文字环绕
+
+
+*********************
+定位position
+position:static(静态);
+position:relative(相对定位); 占标准文档流，占位
+相对元素当前所处的位置来进行定位
+
+position:absolute;(绝对)； 脱离文档流
+默认场景下依据浏览器的左上角来进行定位,如果具备绝对定位的元素存在父元素或者祖先元素且该元素存在
+相对定位,元素不再依据左上角来进行定位而是依据具备相对定位的父元素或者祖先元素来进行定位；
+
+
+position:fixed(固定定位)；脱离文档流
+依据浏览器的窗口来进行定位；
+
+left:
+top:
+right:
+bottom:
+
+
+堆叠次序
+z-index:nubmer;
+
+
+？？？如何居中一个浮动的元素（水平、垂直都居中一个浮动的元素）
+
+
+
+
+
+
+
+
+
+
+
+
+
+

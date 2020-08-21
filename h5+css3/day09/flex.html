@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="flex.css">
+    <link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+    <style type="text/css">
+    	*{
+    		padding: 0;
+    		margin: 0;
+    	}
+    	body{
+    		color: #686868;
+            font-family: "微软雅黑";
+    	}
+    	.nav{
+    		width: 100%;
+    		border-bottom: 1px solid white;
+    		background: #148CCA;
+    		position: fixed;
+    		z-index: 1;
+
+    	}
+    	.nav{
+    		/*display: flex;*/
+    	}
+    	.nav-box{
+    		border: 0px solid blue;
+    		display: flex;
+    		width: 85%;
+    		margin: 0 auto;
+    		justify-content: space-between;
+
+
+    	}
+    	.nav-box>div{
+    		border: 0px solid;
+    		height: 50px;
+    		flex: 1;
+
+
+    	}
+    	.nav-box-left{
+    		display: flex;
+    		border: 0px solid;
+    		
+    	}
+    	.nav-box-left>div:nth-child(2){
+    		width: 404px;
+    		border: 0px solid;
+    	}
+    	.nav-box-left>div>a{
+    		text-decoration: none;
+    		color: #FFF;
+    		font-size: 14px;
+    		font-weight: bold;
+    		display: inline-block;	
+    		width: 58px;
+    		height: 50px;
+    		line-height: 50px;
+    		border: 0px solid;
+    		text-align: center;
+    		
+    	}
+    	.nav-box-right{
+    		display: flex;
+    		justify-content: flex-end;
+    	}
+
+    	.nav-box-right>a{
+    		text-decoration: none;
+    		font-size: 14px;
+    		color: #FFF;
+    		font-weight: bold;
+    		display: inline-block;
+    		width: 58px;
+    		height: 50px;
+    		line-height: 50px;
+    		border: 0px solid;
+    		text-align: center;
+
+    	}
+    	.nav-box-right>a:hover{
+    		text-decoration: underline;
+    	}
+    	@media screen and (min-width: 768px) and (max-width: 991px){
+    		.container{
+    			flex-direction: column;
+    		}
+    		.article{
+    			flex-direction: column;
+    		}
+    		.article-down{
+    			flex-direction: column;
+    		}
+    		.footer{
+    			flex-direction: column;
+    		}
+    		.footer3{
+    			flex-direction: column;
+    		}
+    		.container-pic{
+    			order: 0 !important;
+    		}
+
+
+    		
+    	
+    	}
+    	@media screen and (max-width: 767px){
+    		.nav-box-left>div>a{
+    			display: none;
+    		}
+    		.nav-box-right{
+    			position: absolute;
+    			left: 50%;
+    		}
+    		.nav-box-right>a{
+    			display: inline-block;
+    			width: auto;
+
+    		}
+    		.nav-box-right>a:nth-child(2){
+    			width: 15px;
+    		}
+    		.nav-box-right>span{
+    			display: inline;
+    			position: absolute;
+    			top: 10px;
+    			left: 160%;
+    			flex: 1;
+    		}
+    		.container{
+    			flex-direction: column;
+    		}
+    		.article{
+    			flex-direction: column;
+    		}
+    		.article-down{
+    			flex-direction: column;
+    		}
+    		.footer{
+    			flex-direction: column;
+    		}
+    		.footer3{
+    			flex-direction: column;
+    		}
+    		.container-pic{
+    			order: 0 !important;
+    		}
+    		
+    	}
+    	.main-pic{
+    		width: 100%;
+    		position: relative;
+    	}
+    	.main-pic>img{
+    		max-width: 100%;
+    		
+    	}
+    	.main-pic>ul{
+    		display: flex;
+    		position: absolute;
+    		bottom: 0;
+    		left: 50%;
+
+    	}
+    	.main-pic>ul>li{
+    		width: 10px;
+    		height: 10px;
+    		list-style-type: circle;
+    		font-size: 20px;
+    	}
+    	.icon-caidan{
+    		color: white;
+    		font-size: 1.5em;
+    		text-align: center;
+    		display: none;
+    	}
+    	.container{
+    		border: 0px solid;
+    		width: 70%;
+    		margin: 0 auto;
+    		display: flex;
+    		margin-top: 30px;
+
+    	}
+    	.container-pic{
+    		/*width: 33.3%*/
+    		border: 0px solid red;
+    		flex: 1.2; 
+    		text-align: center;
+    		/*width: 313px;*/
+    		padding: 15px;
+    		/*width: 279px;*/
+    	}
+    	
+    	.container-pic>img{
+    		max-width: 100%;
+    		border: 0px solid green;
+    	}
+    	.container-text{
+    		border: 0px solid blue;
+    		flex: 3;
+    		
+    	}
+    	.container-text>p:nth-child(1){
+    		font-size: 24px;
+    	}
+    	.container-text>p:nth-child(2){
+    		font-size: 14px;
+    		margin-top: 10px;
+    	}
+    	.container-text>div{
+    		display: flex;
+    	}
+    	.container-text>div>ul{
+    		flex: 1;
+    		padding: 15px;
+    		border: 0px solid red;
+    	}
+    	.container-text>div>ul>li{
+    		font-size: 14px;
+    	}
+    	.container-text>div>ul>a{
+    		display: inline-block;
+    		margin-top: 10px;
+    		text-decoration: none;
+    		background: #337ab7;
+    		border: 0px solid;
+    		height: 34px;
+    		line-height: 34px;
+    		color: #fff;
+    		border-radius: 4px;
+    		padding: 0 12px;
+    		font-size: 14px;
+
+
+
+    	}
+    	.container-text>div>ul:nth-child(2)>a{
+    		display: inline-block;
+    		margin-top: 10px;
+    		text-decoration: none;
+    		background: #337ab7;
+    		border: 0px solid;
+    		height: 34px;
+    		line-height: 34px;
+    		color: #fff;
+    		border-radius: 4px;
+    		padding: 0 12px;
+    		font-size: 14px;
+    		display: none;
+    	}
+    	.container-text>div>ul>a:hover{
+    		background: #286090;
+    		color: #333;
+    	}
+    	@media screen and (min-width:992px) and (max-width: 1200px){
+    		.container-text>div>ul>a{
+    			display: none;
+    		}
+    		.container-text>div>ul:nth-child(2)>a{
+    			display: inline-block;
+    		}	
+    	}
+    	.container-video{
+    		width: 85%;
+    		border: 0px solid red;
+    		margin: 0 auto;
+    	}
+    	.container-video>img{
+    		max-width: 100%;
+    	}
+    	.article{
+    		width: 85%;
+    		border: 0px solid;
+    		margin: 20px auto;
+    		display: flex;
+
+    	}
+    	.article-left{
+    		flex: 1;
+    		display: flex;
+    		border: 0px solid red;
+    		margin-bottom: 10px;
+    	}
+    	.article-left>div{
+    		flex:1;
+    		border: 0px solid;
+    		text-align: center;
+    		margin-right: 40px;
+    	}
+    	.article-left>div>p{
+    		font-size: 14px;
+    		text-align: justify;
+    	}
+    	.article-right{
+    		border: 0px solid blue;
+    		flex: 1;
+    		display: flex;
+    	}
+    	.article-right>div{
+    		flex:1;
+    		border: 0px solid;
+    		text-align: center;
+    		margin-right: 40px;
+    	}
+    	.article-right>div>p{
+    		font-size: 14px;
+    		text-align: justify;
+    	}
+    	.article-down{
+    		display: flex;
+    		width: 85%;
+    		margin: 0 auto;
+    		border: 0px solid red;
+    	}
+    	.article-down-left{
+    		/*flex: 1;*/
+    		border: 0px solid;
+    		margin-right: 30px;
+    	}
+    	.article-down-left>img{
+    		/*max-width: 100%;*/
+    	}
+    	.article-down-right{
+    		/*flex: 1;*/
+    		border: 0px solid;
+    		display: flex;
+    		align-items: center;
+    		margin-top: 10px;
+    	}
+    	.article-down-right>span{
+    		font-size: 1.2em;
+    	}
+    	.footer{
+    		width: 85%;
+    		margin: 0 auto;
+    		display: flex;
+    		margin-top: 20px;
+    	}
+    	.footer>div{
+    		flex: 1;
+    		margin-bottom: 30px;
+    	}
+    	.footer1{
+    		display: flex;
+    	}
+    	.footer1>div{
+    		flex: 1;
+    		border: 0px solid;
+    		margin-right: 20px;
+    	}
+    	.footer1>div>ul>li{
+    		list-style: none;
+    	}
+    	.footer1>div>ul>li>a{
+    		text-decoration: none;
+    		list-style: none;
+    		color: #337ab7;
+    		font-size: 14px;
+    	}
+    	.footer1>div>ul>li>a:hover{
+    		text-decoration: underline;
+    	}
+    	.footer2{
+    		display: flex;
+    	}
+    	.footer2>div{
+    		flex: 1;
+    		border: 0px solid;
+    		margin-right: 20px;
+    	}
+    	.footer2>div>ul>li{
+    		list-style: none;
+    	}
+    	.footer2>div>ul>li>a{
+    		text-decoration: none;
+    		list-style: none;
+    		color: #337ab7;
+    		font-size: 14px;
+    	}
+    	.footer2>div>ul>li>a:hover{
+    		text-decoration: underline;
+    	}
+    	.footer3{
+    		display: flex;
+    	}
+    	.footer3>div{
+    		flex: 1;
+    		border: 0px solid;
+    		margin-right: 20px;
+    	}
+    	.footer3>div>p{
+    		margin-bottom: 10px;
+    	}
+    	.footer3>div>a{
+    		/*margin-top: 5px;*/
+    		text-decoration: none;
+    		font-size: 12px;
+    		color: #337ab7;
+    		text-align: justify;
+    	}
+    	.footer3>div>a:hover{
+    		text-decoration: underline;
+    	}
+
+    </style>
+</head>
+<body>
+	<div class="nav">
+		<div class="nav-box">
+			<div class="nav-box-left">
+				<div>
+					<img src="img/logo.png">
+				</div>
+				<div>
+					<a href="">首页</a>
+					<a href="">产品</a>
+					<a href="">支持中心</a>
+					<a href="">价格</a>
+					<a href="">成功案例</a>
+					<a href="">社区</a>
+
+				</div>
+
+			</div>
+			<div class="nav-box-right">
+				<a href="">微博登录</a>
+				<a href="">|</a>
+				<a href="">微博注册</a>
+				<span class="iconfont icon-caidan"></span>
+
+
+			</div>
+
+		</div>
+	</div>
+	<div style="width: 100%;height: 50px;"></div>
+	<div class="main-pic">
+		<img src="img/2.jpg">
+		<!-- <ul>
+			<li></li>
+			<li></li>
+			<li></li>
+
+		</ul> -->
+	</div>
+	<div class="container">
+		<div class="container-pic">
+			<img src="img/cont1.png">
+			<p style="font-size: 24px;color: #2AAAEC;margin-top: 10px;margin-bottom: 10px;">SAE</p>
+			<p style="font-size: 14px;">云应用</p>
+		</div>
+		<div class="container-text">
+			<p>应用开发、优化及运行的PaaS云计算平台</p>
+			<p>国内第一家公有云计算平台，支持PHP、Java、Python语言，提供Web应用开发所需的众多服务，国内最好的PaaS云计算平台</p>
+			<div>
+				<ul>
+					<li>弹性扩展，负载均衡智能应对大数据处理请求</li>
+					<li>沙箱技术隔离应用</li>
+					<li>无需运维管理与架构设计</li>
+					<a href="">了解详情</a>
+
+				</ul>
+				<ul>
+					<li>防火墙防止攻击</li>
+					<li>99.95%SLA，首批可信云认证</li>
+					<li>免费配额，零成本创业</li>
+					<a href="">了解详情</a>
+
+				</ul>
+				
+			</div>
+		</div>
+
+	</div>
+	<div class="container">
+		<div style="order: 1" class="container-pic">
+			<img src="img/cont2.png">
+			<p style="font-size: 24px;color: #2AAAEC;margin-top: 10px;margin-bottom: 10px;">SAE</p>
+			<p style="font-size: 14px;">云应用</p>
+		</div>
+		<div class="container-text">
+			<p>应用开发、优化及运行的PaaS云计算平台</p>
+			<p>国内第一家公有云计算平台，支持PHP、Java、Python语言，提供Web应用开发所需的众多服务，国内最好的PaaS云计算平台</p>
+			<div>
+				<ul>
+					<li>弹性扩展，负载均衡智能应对大数据处理请求</li>
+					<li>沙箱技术隔离应用</li>
+					<li>无需运维管理与架构设计</li>
+					<a href="">了解详情</a>
+				</ul>
+				<ul>
+					<li>防火墙防止攻击</li>
+					<li>99.95%SLA，首批可信云认证</li>
+					<li>免费配额，零成本创业</li>
+					<a href="">了解详情</a>
+
+				</ul>
+				
+			</div>
+		</div>
+
+	</div>
+	<div class="container">
+		<div class="container-pic">
+			<img src="img/cont3.png">
+			<p style="font-size: 24px;color: #2AAAEC;margin-top: 10px;margin-bottom: 10px;">SAE</p>
+			<p style="font-size: 14px;">云应用</p>
+		</div>
+		<div class="container-text">
+			<p>应用开发、优化及运行的PaaS云计算平台</p>
+			<p>国内第一家公有云计算平台，支持PHP、Java、Python语言，提供Web应用开发所需的众多服务，国内最好的PaaS云计算平台</p>
+			<div>
+				<ul>
+					<li>弹性扩展，负载均衡智能应对大数据处理请求</li>
+					<li>沙箱技术隔离应用</li>
+					<li>无需运维管理与架构设计</li>
+					<a href="">了解详情</a>
+
+				</ul>
+				<ul>
+					<li>防火墙防止攻击</li>
+					<li>99.95%SLA，首批可信云认证</li>
+					<li>免费配额，零成本创业</li>
+					<a href="">了解详情</a>
+
+				</ul>
+				
+			</div>
+		</div>
+
+	</div>
+	<div class="container">
+		<div  style="order: 1" class="container-pic">
+			<img src="img/cont4.png">
+			<p style="font-size: 24px;color: #2AAAEC;margin-top: 10px;margin-bottom: 10px;">SAE</p>
+			<p style="font-size: 14px;">云应用</p>
+		</div>
+		<div class="container-text">
+			<p>应用开发、优化及运行的PaaS云计算平台</p>
+			<p>国内第一家公有云计算平台，支持PHP、Java、Python语言，提供Web应用开发所需的众多服务，国内最好的PaaS云计算平台</p>
+			<div>
+				<ul>
+					<li>弹性扩展，负载均衡智能应对大数据处理请求</li>
+					<li>沙箱技术隔离应用</li>
+					<li>无需运维管理与架构设计</li>
+					<a href="">了解详情</a>
+				</ul>
+				<ul>
+					<li>防火墙防止攻击</li>
+					<li>99.95%SLA，首批可信云认证</li>
+					<li>免费配额，零成本创业</li>
+					<a href="">了解详情</a>
+
+				</ul>
+				
+			</div>
+		</div>
+
+	</div>
+	<div class="container">
+		<div class="container-pic">
+			<img src="img/cont5.png">
+			<p style="font-size: 24px;color: #2AAAEC;margin-top: 10px;margin-bottom: 10px;">SAE</p>
+			<p style="font-size: 14px;">云应用</p>
+		</div>
+		<div class="container-text">
+			<p>应用开发、优化及运行的PaaS云计算平台</p>
+			<p>国内第一家公有云计算平台，支持PHP、Java、Python语言，提供Web应用开发所需的众多服务，国内最好的PaaS云计算平台</p>
+			<div>
+				<ul>
+					<li>弹性扩展，负载均衡智能应对大数据处理请求</li>
+					<li>沙箱技术隔离应用</li>
+					<li>无需运维管理与架构设计</li>
+					<a href="">了解详情</a>
+
+				</ul>
+				<ul>
+					<li>防火墙防止攻击</li>
+					<li>99.95%SLA，首批可信云认证</li>
+					<li>免费配额，零成本创业</li>
+					<a href="">了解详情</a>
+
+				</ul>
+				
+			</div>
+		</div>
+
+	</div>
+	<div class="container-video">
+		<img src="img/video.png">
+	</div>
+		<p style="font-size: 24px;width: 85%;margin: 0 auto;">产品特色</p>
+
+	<div class="article">
+		<div class="article-left">
+			<div>
+				<img src="img/icon1.png">
+				<p style="text-align: center;">安全可靠</p>
+				<p style="margin-top: 10px;">多层防护，多级备份，24小时全方位监控，放心托管您的应用与网站。</p>
+			</div>
+			<div>
+				<img src="img/icon2.png">
+				<p style="text-align: center;">安全可靠</p>
+				<p style="margin-top: 10px;">多层防护，多级备份，24小时全方位监控，放心托管您的应用与网站。</p>
+			</div>
+
+		</div>
+		<div class="article-right">
+			<div>
+				<img src="img/icon3.png">
+				<p style="text-align: center;">安全可靠</p>
+				<p style="margin-top: 10px;">多层防护，多级备份，24小时全方位监控，放心托管您的应用与网站。</p>
+				
+			</div>
+			<div>
+				<img src="img/icon4.png">
+				<p style="text-align: center;">安全可靠</p>
+				<p style="margin-top: 10px;">多层防护，多级备份，24小时全方位监控，放心托管您的应用与网站。</p>
+			</div>
+			
+		</div>
+
+	</div>
+	<p style="font-size: 24px;width: 85%;margin: 0 auto;">成功案例</p>
+	<div class="article-down">
+		<div class="article-down-left">
+			<img src="img/typical.png">
+
+		</div>
+		<div class="article-down-right">
+			<span>SAE作为公有云服务，其整体架构具有高可靠性和高安全性，并具备专业的团队来负责安全及运营维护工作 ，因而极大地简化了项目组部署和维护工作，使得项目组能集中精力于核心业务的开发，为用户提供更好的体验。
+			</span>
+		</div>
+
+	</div>
+	<div class="footer">
+		<div class="footer1">
+			<div>
+				<p style="text-align: center;">产品</p>
+				<ul style="text-align: center;">
+					<li><a href="">云应用 SAE</a></li>
+					<li><a href="">云应用 SAE</a></li>
+					<li><a href="">云应用 SAE</a></li>
+					<li><a href="">云应用 SAE</a></li>
+					<li><a href="">云应用 SAE</a></li>
+
+				</ul>
+			</div>
+			<div>
+				<p style="text-align: center;">支持中心</p>
+				<ul style="text-align: center;">
+					<li><a href="">产品文档</a></li>
+					<li><a href="">常见问题</a></li>
+					<li><a href="">工单</a></li>
+					<li><a href="">账户等级</a></li>
+					<li><a href="">新浪云论坛</a></li>
+					<li><a href="">学习资料</a></li>
+					<li><a href="">联系我们</a></li>
+
+				</ul>
+			</div>
+
+		</div>
+		<div class="footer2">
+			<div>
+				<p style="text-align: center;">成功案例</p>
+				<ul style="text-align: center;">
+					<li><a href="">游戏</a></li>
+					<li><a href="">移动</a></li>
+					<li><a href="">教育</a></li>
+					<li><a href="">金融</a></li>
+					<li><a href="">社交</a></li>
+					<li><a href="">传统行业</a></li>
+
+				</ul>
+			</div>
+			<div>
+				<p style="text-align: center;">关注我们</p>
+				<ul style="text-align: center;">
+					<li><a href="">招聘信息</a></li>
+					<li><a href="">备案指引</a></li>
+					<li><a href="">用户协议</a></li>
+					<li><a href="">信息举报</a></li>
+
+				</ul>
+			</div>
+			
+		</div>
+		<div class="footer3">
+			<div>
+				<p>关于新浪云</p>
+				<p>掌上SAE客户端</p>
+				<img src="img/sao.png">
+			</div>
+			<div>
+				<p>可信云认证</p>
+				<img src="img/kexinyun.png">
+				<br><a href="">对象存储服务 NO：02005</a>
+				<a href="">对象存储服务 NO：02005</a>
+				<a href="">对象存储服务 NO：02005</a>
+			</div>
+			
+		</div>
+
+	</div>
+	<hr style="width: 85%;margin: 0 auto;border: 1px solid #eee;">
+	<div style="text-align: center;margin-bottom: 30px;margin-top: 30px;">Copyright&copy;1996-2015 SINA Corporation All Rights Reserved. 京ICP证000007-104</div>
+	
+</body>
+</html>

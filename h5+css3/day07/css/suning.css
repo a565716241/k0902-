@@ -1,0 +1,33 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.navbar{
+	border: 1px solid red;
+	width: 100%;
+}
+.navbar-body{
+	border: 1px solid green;
+	height: 35px;
+	width: 85%;
+	margin: 0 auto;
+
+}
+.clear{
+	content:"";
+	height: 0;
+	display: block;
+	clear: both;	
+}
+.navbar-body-left{
+	border: 1px solid pink;
+	height: 35px;
+	width: 310px;
+	float: left;
+}
+.navbar-body-right{
+	border: 1px solid black;
+	height: 35px;
+	width: 640px;
+	float: right;
+}

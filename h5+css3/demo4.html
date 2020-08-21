@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 10px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="600" height="400"></canvas>
+</body>
+<script>
+    var myCanvas = document.querySelector('canvas')
+    var ctx = myCanvas.getContext('2d')
+
+    //起始坐标 具体从哪个位置开始
+    ctx.moveTo(100, 100) //开始的位置(x,y轴)
+    ctx.lineTo(400, 100) //结束的位置(x,y轴)
+    ctx.strokeStyle = 'red'
+    ctx.stroke() //描边
+    ctx.closePath()
+    ctx.beginPath()
+    ctx.moveTo(100, 200)
+    ctx.lineTo(400, 200)
+
+    ctx.stroke()
+    ctx.moveTo(100, 300)
+    ctx.lineTo(400, 300)
+
+    ctx.stroke()
+</script>
+
+</html>

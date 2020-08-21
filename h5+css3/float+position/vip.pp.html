@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style type="text/css">
+		
+			*{
+				padding: 0;
+				margin: 0;
+			}
+
+			body{
+
+				background: url(https://imgcache.gtimg.cn/ACT/svip_act/act_img/toeshe/201601/1452587517_bg_index.jpg) no-repeat top center;
+
+				padding-bottom: 1000px;
+			}
+
+			.navbar{
+				width: 100%;
+			
+				position: fixed;
+				background: rgba(0,0,0,.5);
+				top:0px;
+			}	
+
+			.navbar-body{
+
+				width: 86%;
+				margin:0 auto;
+				border: 0px solid white;
+				
+			}
+
+			.navbar-body:after{
+				content:"";
+				height: 0;
+				display: block;
+				clear: both;
+			}
+
+			.navbar-body>div{
+
+				border: 1px solid blue;
+				float: left;
+			}
+
+			.navbar-body .navbar-body-btn{
+				float: right;
+			}
+        
+            .navbar-body-link{
+            	height: 90px;
+            	margin-left:4%;
+            }
+             .navbar-body-link>div{
+             	float: left;
+             	line-height: 90px;
+             	border: 0px solid pink;
+             }
+              .navbar-body-link>div>a{
+
+              	color:white;
+              	text-decoration: none;
+              	margin-right: 20px;
+              }
+
+              .navbar-menu{
+
+              	width: 100%;
+              	height: 35px;
+              	line-height: 35px;
+              	position: absolute;
+              	border: 0px solid yellow;
+              	left:0;
+              	top:90px;
+              	background: rgba(0,0,0,0.3);
+              	color:yellow;
+
+              	display: none;
+              }
+               .navbar-body-link>div:hover{
+                    
+                   /* 鼠标变手*/ 
+               	  cursor: pointer;
+               }	
+            /* 鼠标移入*/
+            .navbar-body-link>div:hover a{
+            	color:red;
+            }
+             .navbar-body-link>div:hover .navbar-menu{
+             	display: block;
+             }
+	</style>
+</head>
+<body>
+
+	<!--  导航区域 -->
+	<div class="navbar">
+		
+		<div style="border: 0px solid green;height:90px;position: relative;">
+			<div class="navbar-body">
+				
+				<div class="navbar-body-logo">
+					<img src="https://i.gtimg.cn/vipstyle/vipportal/v4/img/common/logo.png" height="90" style="float:left;">
+				</div>	
+				<div class="navbar-body-link">
+					
+					<div> 
+						<a href="#">功能特权</a>
+							<!--  二级菜单 -->
+						<div class="navbar-menu"> 二级菜单</div>	
+					</div>
+					<div> <a href="#">功能特权</a></div>
+					<div> <a href="#">功能特权</a></div>
+					<div> <a href="#">功能特权</a></div>
+					<div> 
+						<a href="#">会员活动</a>
+						<div class="navbar-menu"> 二级菜单</div>	
+					</div>
+					<div> <a href="#">成长体系</a>
+						<div class="navbar-menu"> 二级菜单</div>	
+					</div>
+					<div> <a href="#">功能特权</a></div>
+					<div> <a href="#">功能特权</a></div>
+
+				</div>
+			<div class="navbar-body-btn">1111</div>
+		</div>
+      </div>
+	</div>
+</body>
+</html>

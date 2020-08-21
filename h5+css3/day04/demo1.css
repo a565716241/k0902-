@@ -1,0 +1,70 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+/*背景图片*/
+body{
+	background: url(imags/bd.jpg);
+	background-size: 100%;
+}
+/*logo部分*/
+.logo{
+	border: 0px solid red;
+	width: 120px;
+	margin-left: 70px;
+	margin-top: 58px;
+}
+/*文字部分*/
+.div1{
+	font-weight: bold;
+	color: white;
+	font-size: 54px;
+	
+}
+.div2{
+	
+	color: white;
+	font-size: 32px;
+	letter-spacing: 5px;
+
+}
+.text{
+	color: white;
+	margin-top:160px;
+	margin-left: 60px;
+	font-size: 15px; 	
+}
+.input1{
+	border: 1px solid red;
+	width: 480px;
+	height: 550px;
+	background: white;
+	border-radius: 15px;
+	margin-right: : 130px;
+	margin-top: -540px;
+
+}
+.tle{
+	border: 0px solid green;
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 40px;
+
+}
+.tle>a{
+	text-decoration: none;
+}
+.inpunt1{
+	border: 1px solid yellow;
+	height: 300px;
+	margin: 0 auto;
+
+}
+input{
+	width: 350px;
+    height: 35px;
+    border-radius: 4px;
+    outline: none;
+    border:1px solid #888;
+    text-indent: 1em;
+}

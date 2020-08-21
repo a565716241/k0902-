@@ -1,0 +1,72 @@
+css3  属性兼容问题
+
+浏览器前缀
+
+-webkit- border-radius
+
+-webkit-  chrome sanfri 360...
+-ms-  ie 浏览器
+-o-  opera  欧鹏
+-moz-  filefox  火狐浏览器
+
+
+开发：
+优雅降级： 向下兼容
+border-radius:50%;(高版本)
+-webkit-border-radius：低版本 chrome；	
+-ms-border-radius
+-o-border-radius
+-moz-border-radius
+
+渐进增强：向上兼容
+-webkit-border-radius：低版本 chrome；	
+-ms-border-radius
+-o-border-radius
+-moz-border-radius
+border-radius:50%(高版本)
+
+
+2d  3d转换：
+平移
+transform:
+translate(x,y) 元素平移 2d
+translateX()    3D
+translateY()    3D
+translateZ()    3D
+
+旋转：
+rotate(30deg角度) 2D
+rotateX(30deg角度) 3D
+rotateY(30deg角度) 3D
+rotateZ(30deg角度) 3D
+
+缩放
+scale（number）； 元素放大缩小的比例
+
+拉伸：
+skew（30deg）了解
+
+3D:
+perspactive:1000   3D视角的视野距离
+transform-style：preserve-3d
+
+过渡：
+transition：简写模式
+transition： 属性  完成时间  动作  延迟时间；
+transition-property：过渡的属性名字
+transition-duration：1s;(完成时间)
+transition-timing-function：linear；（动作） （ease ease-in ease-out linear）
+transition-delay：.3s（延迟时间）
+：hover
+
+动画：
+@keyframes 名{
+	// 播放帧
+
+	form{};
+	to{}
+}
+animation-play-state: paused;停止动画；
+
+
+

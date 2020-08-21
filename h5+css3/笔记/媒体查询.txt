@@ -1,0 +1,80 @@
+视口：视图窗口
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+name="viewport" 
+content="width=device-width, initial-scale=1, shrink-to-fit=no"
+width=device-width（设备宽度）必须加
+initial-scale=1 （缩放比例） 必须
+shrink-to-fit=no
+
+移动端页面: phone (手机) app+ 公众号+ 小程序（不考虑浏览器）
+
+响应式页面：不宜太复杂
+pc+移动端（媒体查询+百分比）
+
+布局框架：
+pc 布局框架：bootstrap ... H ui(后端) vueadmin。。。。
+
+移动布局：mui layui vant
+
+功能性框架：
+小程序 uniapp mpvue
+app : vueJs angularjs reactJs...
+
+js插件：
+fullpage.js
+
+css 媒体查询
+
+@media 适配的终端  条件关键字and | not |or (条件属性){
+
+  
+
+}
+
+all	用于所有的媒体设备。
+aural	用于语音和音频合成器。
+braille	用于盲人用点字法触觉回馈设备。
+embossed	用于分页的盲人用点字法打印机。
+handheld	用于小的手持的设备。
+print	用于打印机。
+projection	用于方案展示，比如幻灯片。
+screen	用于电脑显示器。
+tty	用于使用固定密度字母栅格的媒体，比如电传打字机和终端。
+tv	用于电视机类型的设备。
+
+
+各类设备的屏幕分辨率
+
+超小屏幕（手机） <768px
+
+平板   >= 768px <=991px 
+
+普通电脑屏幕 >=992px <1200px
+
+大型屏幕 >=1200px 
+
+布局：
+ 电脑：左中右 
+ 平板：左右
+ 手机： 左侧
+
+    width:固定宽度
+max-width:最大宽度（<=500px）
+min-width:最小宽度 (>500px) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
