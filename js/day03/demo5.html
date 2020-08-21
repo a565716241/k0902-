@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //验证码
+    //数字   字母   混合   颜色随机  长度可调
+
+    function verify(type = "number", len = 6) {
+
+        //验证码所需的字符串
+        let str1 = "0123456789"
+        let str2 = "qwertyuiopasdfghjklzxcvbnm"
+        let str3 = "0123456789qwertyuiopasdfghjklzxcvbnm"
+
+        let verify = ""; //存储各种类验证码
+        switch (type) {
+            case 'number':
+                //确认取值的下标 随机
+                let numstrlen = str1.length - 1;
+
+                for (let i = 0; i < len; i++) {
+                    let index = Math.round(Math.random() * numstrlen);
+                    let r = parseInt(Math.random() * 255)
+                    let g = parseInt(Math.random() * 255)
+                    let b = parseInt(Math.random() * 255)
+                    let char = str1[index];
+                    //let char = str1.charAt(index)
+                    //verify +="<span style='color:rgb("+r+","+g+","+b+")'>char</span>"
+                    verify += `<span style='color:rgb(${r},${g},${b})'>${char}</span>`
+
+                }
+
+                //返回验证码
+                return verify;
+
+                break;
+
+            case 'string':
+                let strlen = str1.length - 1;
+
+                for (let i = 0; i < len; i++) {
+                    let index = Math.round(Math.random() * numstrlen);
+                    let r = parseInt(Math.random() * 255)
+                    let g = parseInt(Math.random() * 255)
+                    let b = parseInt(Math.random() * 255)
+                    let char = str1[index];
+                    //let char = str1.charAt(index)
+                    //verify +="<span style='color:rgb("+r+","+g+","+b+")'>char</span>"
+                    verify += `<span style='color:rgb(${r},${g},${b})'>${char}</span>`
+
+                }
+                case 'mixin':
+                let mixinstrlen = str1.length - 1;
+
+                for (let i = 0; i < len; i++) {
+                    let index = Math.round(Math.random() * numstrlen);
+                    let r = parseInt(Math.random() * 255)
+                    let g = parseInt(Math.random() * 255)
+                    let b = parseInt(Math.random() * 255)
+                    let char = str1[index];
+                    //let char = str1.charAt(index)
+                    //verify +="<span style='color:rgb("+r+","+g+","+b+")'>char</span>"
+                    verify += `<span style='color:rgb(${r},${g},${b})'>${char}</span>`
+
+                }
+                return verify;
+
+                break;
+
+            default:
+                //抛异常
+                throw new Error("非法参数！")
+        }
+    }
+
+    //调用
+
+    document.write(verify("number",8))
+</script>
+
+</html>

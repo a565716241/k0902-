@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  验证码：<input type="text">
+  <input type="button" value="获取数字验证码" onclick="huoqu()"><br>
+  验证码：<input type="text">
+  <input type="button" value="获取字母验证码" onclick="huode()"><br>
+  验证码：<input type="text">
+  <input type="button" value="获取混合验证码" onclick="huo()">
+    
+    
+</body>
+<script>
+    function huoqu(){
+  
+   var str = "0123456789"
+   
+   var text = "";
+   
+   for(var a=1;a<=6;a++){
+        var r = Math.floor(Math.random()*256)
+        var g = Math.floor(Math.random()*256)
+        var b = Math.floor(Math.random()*256)
+        var strle = str.length
+        var index = parseInt(Math.random()*(strle-1))
+        text += "<span style='color:rgb("+r+","+g+","+b+")'>"+str[index]+"</span>"
+        }
+        document.write(text+"<br>")
+   }
+   function huode(){
+  
+  var str2 = "abcdefghijklmnopqrstuvwxyz"
+  
+  var text2 = "";
+  
+  for(var a=1;a<=6;a++){
+       var r = Math.floor(Math.random()*256)
+       var g = Math.floor(Math.random()*256)
+       var b = Math.floor(Math.random()*256)
+       var strle2 = str2.length
+       var index2 = parseInt(Math.random()*(strle2-1))
+       text2 += "<span style='color:rgb("+r+","+g+","+b+")'>"+str2[index2]+"</span>"
+       }
+       document.write(text2+"<br>")
+  }
+  function huo(){
+  
+  var str3 = "0123456789abcdefghijklmnopqrstuvwxyz"
+  
+  var text3 = "";
+  
+  for(var a=1;a<=6;a++){
+       var r = Math.floor(Math.random()*256)
+       var g = Math.floor(Math.random()*256)
+       var b = Math.floor(Math.random()*256)
+       var strle3 = str3.length
+       var index3 = parseInt(Math.random()*(strle3-1))
+       text3 += "<span style='color:rgb("+r+","+g+","+b+")'>"+str3[index3]+"</span>"
+       }
+       document.write(text3+"<br>")
+  }
+       
+        
+  
+   
+   
+    
+
+   
+    
+</script>
+</html>

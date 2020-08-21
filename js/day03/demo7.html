@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr = [1,2,3,4,5];  //一维索引
+    //添加元素
+    arr[5]="xxxx"
+    console.log(arr);
+
+    //关联数组
+    let arr1 = [];
+    //数组动态加值
+    arr1["userName"] = "admin"
+    arr1["password"] = "123456"
+
+    console.log(arr[5])
+    console.log(arr1['userName'])
+
+    //实例化构造
+    let arr3 = new Array(1,2,3,4,5,6);
+
+    console.log(arr3)
+
+    let str ="ASDFGHJKLQWERTYUIOPZXCVBNM";
+
+    //...扩展运算符
+    let arr4 = [...str]
+
+    arr4["xxxx"] ="cscscscs"
+    arr4["yyyy"] ="cscscscs"
+    arr4[30] ="cscscscs"
+
+    console.log(arr4)
+
+    //arr4 数组的元素 单个获取
+
+    // 获取数组的长度
+        console.log(arr4.length)
+
+        //遍历
+        for(let i=0;i<arr4.length;i++){
+            console.log(arr4[i])
+        }
+
+        //遍历数组的
+        for(k in arr4){
+            console.log(key)
+            console.log(arr4[k])
+
+        }
+        //es6 遍历
+        arr4.forEach(function(v,k)){
+            console.log(v,k)
+        }
+
+        arr4.forEach((v,k)=>{console.log(v,k)})
+
+        let product = [["10232144","xxxxx","￥2999.00"],["10232144","yyyyy","￥2999.00"],["10232144","zzzzz","￥2999.00"]]
+
+        console.log(product[1][1])
+
+        for(k in product){
+            //0 1 2
+            for(kk in product[k]){
+                console.log(product[k][kk])
+                console.log("----------------------")
+            }
+        }
+
+        for(k in product){
+            console.log(product[k][0])
+            console.log(product[k][1])
+            console.log(product[k][2])
+        }
+</script>
+</html>

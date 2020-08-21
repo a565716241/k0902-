@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var type = prompt("请输入加什么类型的油(92/95)")
+        if (type == 92) {
+            var type1 = prompt("请问需要加入多少升的油？")
+        } else if (type == 95) {
+            var type2 = prompt("请问需要加入多少升的油？")
+        } else {
+            alert("参数错误")
+        }
+
+        if (type1 < 20) {
+            var money = 6.5 * type1
+            document.write("您需要支付:" + money + "元")
+        } else if (type1 >= 20) {
+            var money1 = 6.5 * type1 * 0.85
+            document.write("恭喜您可以享受85折优惠" + "<br>")
+            document.write("您还需要支付:" + money1 + "元")
+        } else if (type2 < 30) {
+            var money2 = 6.5 * type2
+            document.write("您需要支付:" + money2 + "元")
+        } else if (type2 >= 30) {
+            var money3 = 6.5 * type2 * 0.8
+            document.write("恭喜您可以享受8折优惠" + "<br>")
+            document.write("您还需要支付:" + money3 + "元")
+        }
+        if (type1 <= 0) {
+            alert("参数错误")
+        } else if (type2 <= 0) {
+            alert("参数错误")
+        }
+    </script>
+</body>
+
+</html>

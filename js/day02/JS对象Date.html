@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var today = new Date();
+        // var tdate = new Date("6 21,2020,15:47:20")
+        // document.write("<br>"+today);
+        // document.write("<br>"+tdate)
+
+        var today = new Date();
+        document.write(today.getFullYear()+"年"+(today.getMonth()+1)+"月"+today.getDate()+"日");
+        document.write(today.getHours()+"："+today.getMinutes()+"："+today.getSeconds());
+        var nums = new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六",)
+        document.write("&nbsp;&nbsp"+nums[today.getDay()])
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

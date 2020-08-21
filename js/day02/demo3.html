@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = prompt("请输入班级总人数");
+        var num = 0;//记录80分以上的学员个数
+        var d = true;
+        for(var b = 1;b<=a;b++){
+            var c = prompt("请输入第"+b+"个学生的成绩")
+            if(c>=80){
+                num++
+            }else if(c<0){
+                d = false;
+                break;
+            }
+        }
+        if(d){
+        document.write("80分以上的学员个数是："+num)
+        }
+        else{
+            document.write("学员成绩不能为负数，无法完成统计！")
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

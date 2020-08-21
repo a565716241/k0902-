@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="button" value="验证码" onclick="selColor()"> -->
+    <script>
+      var str = "0123456789"
+      var str2 = "asdfghjklzxcvbnmqwertyuiopASDFGHJKLQWERTYUIOPZXCVBNM"
+      var str3 = "0123456789asdfghjklzxcvbnmqwertyuiopASDFGHJKLQWERTYUIOPZXCVBNM"
+
+      var type = "mixin"
+   //"1244"
+      //var strlen = str.length; //24
+      var verify = "";
+      console.log(strlen)
+        for(var i =1;i<=6;i++){
+             var r = Math.floor(Math.random()*256)
+             var g = Math.floor(Math.random()*256)
+             var b = Math.floor(Math.random()*256)
+
+            switch(type){
+
+                    case "number":
+                    var strlen= str.length;
+                    var index = parseInt(Math.random()*(strlen-1))
+                         //console.log(index)
+                    verify += "<span style='color:rgb("+r+","+g+","+b+")'>"+str[index]+"</span>";  // 连接
+                    break;
+                    case "string":
+                    var strlen= str2.length;
+                    var index = parseInt(Math.random()*(strlen-1))
+                         //console.log(index)
+                    verify += "<span style='color:rgb("+r+","+g+","+b+")'>"+str2[index]+"</span>";  // 连接
+                    break;
+                    case "mixin":
+                    var strlen= str3.length;
+                    var index = parseInt(Math.random()*(strlen-1))
+                         //console.log(index)
+                    verify += "<span style='color:rgb("+r+","+g+","+b+")'>"+str3[index]+"</span>";  // 连接
+                    break;
+
+                    default:
+                     throw new Error("参数异常!!!")
+            }
+
+            
+            
+            
+            
+
+        }
+
+        document.write(verify)
+
+       
+            
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="选择颜色" onclick="selColor()">
+    <script>
+        function selColor(){
+            var color = new Array("红色","黄色","蓝色","绿色","橙色","青色","紫色",)
+            var num = Math.floor(Math.random()*7)
+            alert("您本次选择的颜色是："+color[num])
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+流程控制语句
+判断语句
+
+if(条件){
+
+}
+条件 = true false
+条件：表达式；
+var a = 1；
+a>b
+逻辑运算
+
+if(exp){
+
+}else{
+
+}
+
+if(exp1){
+
+}else if(exp2){
+
+}
+....
+else{
+
+}
+
+
+用来比对某个变量是否满足某个特定的情况使用：
+var num = 1;
+switch(){
+    case "1";
+    break;
+
+    case "2";
+    break;
+
+    case "3";
+    break;
+
+    default:
+    .....
+}
+
+if(num==1){
+
+}else if(num==2){
+
+}else if(num==3){
+
+}else{
+
+}
+
+
+
+循环
+for:固定次数的循环
+作用：重复执行某些特定代码段
+语法：
+for(起始值；循环的结束条件；循环的模式){
+
+}
+
+
+多重循环
+
+while：不固定次数
+
+
+do :无条件先执行一次
+ while

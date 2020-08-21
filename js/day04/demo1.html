@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var height = prompt("你的身高是？");
+        // if (parseFloat(height).typeof(height) != "number") {
+        //     alert("参数有误")
+
+        var weight = prompt("你的体重是多少千克？")
+            // document.write(height)
+            // if (typeof(weight) != "number") {
+            //     alert("参数有误")
+            // }
+
+        var BMI = weight / (height * 2)
+        document.write(BMI)
+        if (BMI <= 18.5) {
+            alert("您的BMI指数过轻")
+        } else if (BMI >= 18.5 && BMI <= 23.9) {
+            alert("您的BMI指数正常")
+        } else if (BMI >= 24 && BMI <= 27.9) {
+            alert("您的BMI指数过重")
+        } else if (BMI >= 28 && BMI <= 32) {
+            alert("您的BMI指数有点肥胖")
+        } else if (BMI > 32) {
+            alert("您的BMI指数非常肥胖")
+        }
+    </script>
+</body>
+
+</html>

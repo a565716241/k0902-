@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("<table border='1'>");
+        for(var x = 1; x<=9;x++){
+            document.write("<tr>")
+            for(var y = 1; y<=x; y++){
+                document.write("<td>"+x+"*"+y+"="+x*y+"</td>");
+            }
+            for(var m= 1; m <=9-x; m++ ){
+                document.write("<td> </td>");
+            }
+            document.write("</tr>");
+        }
+ 
+        document.write("</table >");
+    </script>
+
+————————————————
+版权声明：本文为CSDN博主「一像素的执着」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/eagle_zcl/java/article/details/78272239
+</head>
+<body>
+    
+</body>
+</html>

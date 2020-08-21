@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        作业名：<input type="text" id="work"><br>
+        邮&nbsp;箱：<input type="text" id="email"><br>
+        <input type="button" value="提交作业" onclick="check()">
+    </form>
+    <script>
+        function check(){
+            var fileName = document.getElementById("work").value;
+            var email = document.getElementById("email").value;
+            var fileflag = false;
+            var emailflag = false;
+            var index = fileName.lastIndexOf(".");
+            if(fileName.length==0){
+                alert("作业名不能为空")
+            }
+            if(email.length==0){
+                alert("邮箱不能为空")
+            }
+            if(index!=-1 && index!=0 && fileName.substring(index)==".html"){
+                fileflag = true;
+            }else{
+                alert("作业名无效")
+            }
+            if(email.indexOf("@")!=-1 && email.indexOf(".")!=-1 &&email.indexOf(".")>email.indexOf("@")){
+                emailflag = true;
+            }else{
+                alert("邮箱名无效")
+            }
+            if(fileflag && emailflag){
+                alert("作业提交成功")
+            }
+            
+        }
+
+    </script>
+    
+</body>
+</html>

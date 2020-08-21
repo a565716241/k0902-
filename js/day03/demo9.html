@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //定义表头内容
+    let arr1 = ["id","name","age","sex","tel","address","set"]
+        //定义表格内容
+    let arr2 = [
+               ["1","张一","20","男","18986126619","武昌区","<input type='button' value='删除'> <input type='button' value='修改'>"],
+               ["2","张二","21","女","18986126620","青山区","<input type='button' value='删除'> <input type='button' value='修改'>"],
+               ["3","张三","22","男","18986126621","汉阳区","<input type='button' value='删除'> <input type='button' value='修改'>"],
+               ["4","张四","23","女","18986126622","蔡甸区","<input type='button' value='删除'> <input type='button' value='修改'>"],
+               ["5","张五","24","男","18986126623","硚口区","<input type='button' value='删除'> <input type='button' value='修改'>"],
+               ["6","张六","25","女","18986126624","武昌区","<input type='button' value='删除'> <input type='button' value='修改'>"],
+               ["7","张七","26","男","18986126625","青山区","<input type='button' value='删除'> <input type='button' value='修改'>"],
+               ["8","张八","27","女","18986126626","汉阳区","<input type='button' value='删除'> <input type='button' value='修改'>"],
+               ["9","张九","28","男","18986126627","蔡甸区","<input type='button' value='删除'> <input type='button' value='修改'>"],
+               ["10","张十","29","女","18986126628","硚口区","<input type='button' value='删除'> <input type='button' value='修改'>"]
+               
+            ];
+            
+            document.write("<table style='margin:0 auto;border:1px solid;text-align:center;'>")
+            document.write("<tr>")
+            //输出表头信息
+            for(let a = 0;a<arr1.length;a++){
+                document.write("<td style='border:1px solid;'>"+arr1[a]+"</td>")
+            }
+            document.write("</tr>")
+            for(let b=0;b<arr2.length;b++){
+                document.write("<tr>")
+                //输出表格信息
+                for(let c=0;c<arr2[b].length;c++){
+                    document.write("<td style='border:1px solid;padding:20px'>"+arr2[b][c]+"</td>")
+                }
+                document.write("</tr>")
+            }
+            document.write("</table>")
+            
+           
+
+    </script>
+</body>
+</html>

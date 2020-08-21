@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //func 参数params
+    //求和
+    // a b 必传参数
+    // c 可选参
+    function sum(a,b,c="+"){
+        // let a = 100;
+        // let b = 100;
+        // console.log(a+b)
+        if(typeof(a) !="number" || typeof(b)!="number"){
+            throw new Error("请输入number类型参数!")
+        }else{
+            if(c=="+"){
+                console.log(a+b)
+            }else if(c=="-"){
+                console.log(a-b)
+            }else if(c=="*"){
+                console.log(a*b)
+            }else if(c=="/"){
+                console.log(a/b)
+            }else{
+                console.log("无法计算")
+            }
+        }
+    }
+            sum(10,10,"*")
+</script>
+</html>

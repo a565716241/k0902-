@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+<p id="today"></p>
+
+<script>
+var myVar = setInterval(function(){ time() }, 1000);
+
+function time() {
+    var d = new Date();
+    var t = d.toLocaleTimeString();
+    document.getElementById("today").innerHTML = t;
+}
+</script>
+
+    
+</body>
+</html>

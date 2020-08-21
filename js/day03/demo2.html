@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //自定义函数：该程序未执行
+    function subExtname(){
+        let fileName = "asjhdkashdhasd.txt"
+
+        //获取 .index
+        let index = fileName.lastIndexOf(".");// number
+
+        let extName=fileName.substring(index)
+
+        console.log(extName)
+    }
+    //调用函数
+    // subExtname()
+    // subExtname()
+    // subExtname()
+    // subExtname()
+    //变量函数
+    let fn = function(){
+        let fileName = "asjhdkashdhasd.txt";
+        //获取.index
+        let index = fileName.lastIndexOf(".");//number
+
+        let extName=fileName.substring(index)
+
+        console.log(extName)
+    }
+    fn();//调用
+</script>
+</html>

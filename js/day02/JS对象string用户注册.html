@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        用户名：<input type="text" value="admin"><br>
+        密&nbsp;码：<input type="password" id="pwd"><br>
+        <input type="button" value="注册" onclick="register()">
+    </form>
+    <script>
+        function register(){
+            var pwd = document.getElementById("pwd").value;
+        
+        if(pwd.length==0){
+            alert("用户密码不能为空")
+        }else if(pwd.length<6){
+            alert("用户密码长度不能小于六位")
+        }else{
+            alert("注册成功")
+        }
+        }
+    </script>
+    
+</body>
+</html>

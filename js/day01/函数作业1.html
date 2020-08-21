@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数作业</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    //定义表头内容数组
+    let arr_title = ["id","name","age","sex","tel","address"];
+    //定义表格内容数组
+    let arr_content = [
+                       [1,"周阳","21","女","15972971128","洪山区"],
+                       [2,"张燕","20","女","15672971128","武昌区"],
+                       [3,"李伟","16","男","13472971128","江夏区"],
+                       [4,"赵萱","28","女","12072971128","江汉区"],
+                       [5,"刘涛","31","女","15972971127","蔡甸区"],
+                       [6,"沈腾","25","男","11972971128","江岸区"],
+                       [7,"赵四","28","男","18972971128","江夏区"],
+                       [8,"王五","12","女","14372971128","洪山区"],
+                       [9,"陈霞","70","女","12172971128","武昌区"],
+                       [10,"叶问","30","男","15972973344","洪山区"]
+    ];
+
+    //表格输出学生信息function
+    function output_students(arr1,arr2) {
+        document.write("<table style='text-align: center;border: 1px solid #666;'>");
+
+        document.write("<tr>");
+        for (let i=0;i<arr1.length;i++) {
+            document.write("<td style='border: 1px solid #666;padding: 5px 10px;font-weight: bold;'>"+arr1[i]+"</td>");
+        }
+        document.write("</tr>");
+        for(let j=0;j<arr2.length;j++) {
+            document.write("<tr>");
+            for(let k=0;k<arr2[j].length;k++) {
+                document.write("<td style='border: 1px solid #666;padding: 5px 10px;color: #555555'>"+arr2[j][k]+"</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    }
+    //调用输出学生信息函数
+    output_students(arr_title,arr_content);
+
+</script>
+
+</html>

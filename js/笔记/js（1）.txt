@@ -1,0 +1,111 @@
+javascript：
+一种基于对象和事件驱动的脚本语言
+
+javascript特点
+交互、脚本语言、解释性语言
+边执行边解释
+
+javascript的组成：
+1.ECMAscript：是一种语法标准，语法,变量和数据类型、运算符、逻辑控制语句、关键字，保留字，对象
+2.BOM:Browser object model（浏览器对象模型）提供了独立于内容与浏览器窗口进行交互的对象
+3.DOM：Document Object Model（文档对象模型）是HTML文档对象模型（HTML DOM）定义的一套标准方法，用来访问和操纵HTML文档
+
+javascript的作用：
+表单验证，减轻服务器压力
+制作页面特效
+动态改变页面内容
+
+使用javascript的三种方式:
+1.使用script标签：<script></script>
+2.外部js文件 <script src"路径地址" text/javascript></script>
+3.直接在html标签中使用
+
+变量：
+1.先声明，再赋值
+var width;
+width=10;
+
+2.同时声明和赋值变量
+var username="六月"
+var i,j,k=15;
+
+3.不声明直接赋值
+username="六月"；
+i=1;
+
+数据类型：
+undefined
+没有初始值，将被赋予值undefined；
+直接赋值undefined；
+
+null
+表示一个空值，与undefined值相等
+
+number
+数字型
+
+boolean
+布尔型：true和false
+var xxx=5>3;
+
+string
+被引号或者双引号括起来的文本
+var string1="this is a string";
+
+object
+对象类型
+
+操作符：
+typeof：检测变量的数据类型
+
+运算符：
+算数运算符：+(连接) - * /（除法  商） %（取余）	 ++（在自身的基础之上+1） --（在自身的基础之上-1）
+赋值运算符：=（给变量赋值）
+比较运算符：< >   >=    <=    ==（相等）    !=（不相等）  都属于布尔型； 使用条件的时候会用到
+逻辑运算符：&&（并且） ||  ！  使用多个条件的时候会用到
+
+程序结构：程序是一系列有序指令的集合
+1.顺序结构
+2.选择结构：存在条件，根据条件判断结果选择后续事宜
+
+if选择结构
+if(条件){
+	//javascript语句；
+}
+
+if else结构：
+if(条件){
+	//javascript语句1;
+}
+else(和第一个条件相反的情况){
+	//javascript语句2;
+}
+
+多重if结构：
+if(条件1){
+	//javascript语句1
+}
+else if(条件2){
+	//javascript语句2
+}
+else{
+	//javascript语句3
+}
+
+
+switch选择结构：
+switch(表达式){
+	case常量1：
+	javascript语句1;
+	break;
+	.....
+
+
+default:
+	javascript语句n;
+	break
+}
+
+
+
+3.循环结构
