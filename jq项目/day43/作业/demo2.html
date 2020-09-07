@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+    <style>
+        ul {
+            overflow: hidden;
+        }
+        
+        li {
+            width: 50px;
+            height: 30px;
+            border: 1px solid skyblue;
+            color: steelblue;
+            list-style: none;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>导航1 <audio style="display: none;" src="./data/云汐-女驸马.mp3" controls autoplay></audio></li>
+            <li>导航2<audio style="display: none;" src="./data/李荣浩-老街.mp3" controls autoplay></audio></li>
+            <li>导航3<audio style="display: none;" src="./data/熊梓淇-体面.mp3" controls autoplay></audio></li>
+            <li>导航4<audio style="display: none;" src="./data/云汐-女驸马.mp3" controls autoplay></audio></li>
+            <li>导航5<audio style="display: none;" src="./data/李荣浩-老街.mp3" controls autoplay></audio></li>
+            <li>导航6<audio style="display: none;" src="./data/熊梓淇-体面.mp3" controls autoplay></audio></li>
+            <li>导航7<audio style="display: none;" src="./data/云汐-女驸马.mp3" controls autoplay></audio></li>
+        </ul>
+    </div>
+    <script>
+        $('audio')[0].pause()
+        $('audio')[1].pause()
+        $('audio')[2].pause()
+        $('audio')[3].pause()
+        $('audio')[4].pause()
+        $('audio')[5].pause()
+        $('audio')[6].pause()
+        $('li').on('mouseover', function() {
+            var audios = $(this).children()[0]
+            var index = $(this).index()
+            if (!audios.paused) {
+                audios.pause(); /*播放*/
+            } else {
+                audios.play();
+                /*暂停*/
+            }
+            // var a = $(this).siblings().children()[].pause()
+            console.log(index)
+        })
+    </script>
+</body>
+
+</html>
