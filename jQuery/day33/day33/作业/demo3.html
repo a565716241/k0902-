@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: cornflowerblue;
+            margin: 100px auto;
+        }
+        
+        button {
+            display: block;
+            margin: 100px auto;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>切换</button>
+    <div></div>
+    <script src="./jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('button').click(function() {
+                $('div').css({
+                    'backgroundColor': 'red'
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

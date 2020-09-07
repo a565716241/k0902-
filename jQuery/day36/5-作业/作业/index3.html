@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: "simsun";
+        }
+        
+        .comment {
+            font-size: 40px;
+            color: #ff1100;
+        }
+        
+        .comment li {
+            float: left;
+            cursor: pointer;
+        }
+        
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="comment">
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+    </ul>
+    <script src="./jquery-1.11.1.js"></script>
+    <script>
+        $(function() {
+            var SX = '★'
+            var KX = '☆'
+            $('.comment>li').on('mouseenter', function() {
+                $(this).text(SX).prevAll('li').text(SX)
+                $(this).nextAll('li').text(KX)
+                $(".comment").on("mouseleave", function() {
+                    //如果有类名，就要以类名为参考点;
+                    if ($(".current").length == 0) {
+                        //等于0就说明没有点击过;
+                        $(".comment>li").text(KX);
+                    } else {
+                        //不等于0，肯定等于1；就说明点击过，那么就以他为参考点;
+                        $(".current").text(SX).prevAll("li").text(SX)
+                        $(".current").nextAll("li").text(KX);
+                    }
+
+                });
+                //需求3：鼠标点击哪个li，这个li就是参考li;(当前的添加类，其他的删除类)
+                $(".comment>li").on("click", function() {
+                    $(this).addClass("current").siblings("li").removeAttr("class");
+                })
+
+            });
+        })
+    </script>
+</body>
+
+</html>

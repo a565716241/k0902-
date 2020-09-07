@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./icon/iconfont.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .navbar {
+            background-color: #F5F5F5;
+            height: 30px;
+            line-height: 30px;
+        }
+        
+        #top {
+            /* border: 1px solid #000; */
+            margin: 0 auto;
+            width: 1000px;
+            background-color: #F5F5F5;
+            overflow: hidden;
+            font-size: 14px;
+        }
+        
+        #top>div:nth-child(1) {
+            float: left;
+        }
+        
+        #top>div:nth-child(2) {
+            float: right;
+        }
+        
+        #top>div:nth-child(2)>span>a {
+            text-decoration: none;
+            color: #2DA5E1;
+        }
+        
+        #header {
+            width: 1000px;
+            /* border: 1px solid #000; */
+            overflow: hidden;
+            margin: 0 auto;
+            height: 90px;
+            line-height: 90px;
+        }
+        
+        #header>div:nth-child(1) {
+            float: left;
+            /* border: 1px solid #000; */
+        }
+        
+        #header>div:nth-child(2) {
+            float: right;
+            /* border: 1px solid #000; */
+        }
+        
+        .header-search-list {
+            position: absolute;
+            top: 95px;
+            background: #F8EDE9;
+            z-index: 10;
+            display: none;
+        }
+        
+        .header-search-list>div {
+            width: 70px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+        }
+        
+        .header-search>button:nth-child(1) {
+            width: 70px;
+            height: 40px;
+            background-color: #FEC009;
+            border: 0;
+            color: white;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+        
+        .header-search>input {
+            height: 40px;
+            width: 220px;
+            border: 1px solid #fec009;
+            text-indent: 0.5em;
+            position: relative;
+            left: -5px;
+            display: inline-block;
+            outline: none;
+        }
+        
+        .header-search>button:nth-child(3) {
+            width: 40px;
+            height: 39px;
+            background-color: #fec009;
+            border: 0;
+            outline: none;
+            color: white;
+            position: relative;
+            left: -10px;
+            top: 3px;
+        }
+        
+        .nav {
+            background-color: #60BFF2;
+            height: 40px;
+            line-height: 40px;
+            /* opacity: 0; */
+        }
+        
+        .nav-menu {
+            width: 1020px;
+            margin: 0 auto;
+            background-color: #60BFF2;
+            /* border: 1px solid #000; */
+            overflow: hidden;
+        }
+        
+        .nav-menu>div {
+            float: left;
+            color: white;
+            text-align: center;
+            width: 125px;
+        }
+        
+        .nav-menu>div:first-child {
+            width: 190px;
+        }
+        
+        .nav-menu>div:last-child {
+            float: right;
+        }
+        
+        .nav-box {
+            width: 1020px;
+            height: 440px;
+            margin: 0 auto;
+            /* border: 1px solid #000; */
+        }
+        
+        .nav-box>div {
+            float: left;
+            /* border: 1px solid red; */
+        }
+        
+        .nav-box-left {
+            width: 190px;
+            height: 430px;
+            background-color: #1FA4F0;
+        }
+        
+        .nav-box-left>div {
+            color: white;
+            margin: 15px auto;
+            text-align: right;
+            text-align: justify;
+            /* border: 1px solid #000; */
+            overflow: hidden;
+        }
+        
+        .text1 {
+            float: left;
+        }
+        
+        .text2 {
+            float: right;
+        }
+        
+        .text1>span:first-child {
+            background: url(./作业3静态页面/img/icon-menu.jpg);
+            color: transparent;
+            display: inline-block;
+            margin-left: 10px;
+            width: 20px;
+        }
+        
+        .text1>span:nth-child(2) {
+            font-size: 15px;
+            /* border: 1px solid #000; */
+        }
+        
+        .text2>span:last-child {
+            font-size: 12px;
+            display: inline-block;
+            margin-right: 10px;
+            /* border: 1px solid #000; */
+        }
+        
+        .nav-box-center {
+            width: 545px;
+            height: 420px;
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+            /* border: 1px solid #000; */
+        }
+        
+        .arrow-left {
+            width: 40px;
+            height: 40px;
+            background: url(./作业3静态页面/img/ui-slider-arrow.png)no-repeat;
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+        
+        .arrow-right {
+            width: 40px;
+            height: 40px;
+            background: url(./作业3静态页面/img/ui-slider-arrow.png)no-repeat;
+            background-position: -40px 0;
+            position: absolute;
+            right: 0;
+            top: 50%;
+        }
+        
+        .slider {
+            position: absolute;
+            width: 100px;
+            bottom: 0px;
+            left: 220px;
+            /* border: 1px solid red; */
+            overflow: hidden;
+        }
+        /* .slider>li:first-child {
+            background: url(./作业3静态页面/img/ui-slider-process.png)no-repeat;
+            background-position: -20px 5px;
+        } */
+        
+        .slider>li {
+            list-style: none;
+            float: left;
+            /* border: 1px solid #000; */
+            background: url(./作业3静态页面/img/ui-slider-process.png)no-repeat;
+            background-position: 5px;
+            color: transparent;
+            margin: 5px;
+        }
+        
+        .nav-box-right {
+            width: 245px;
+            height: 440px;
+        }
+        
+        .nav-box-right-top {
+            text-align: center;
+            width: 260px;
+            margin-top: 10px;
+            background-color: #F5F5F5;
+            /* border: 1px solid #000; */
+        }
+        
+        .nav-box-right-top>span:first-child {
+            background: url(./作业3静态页面/img/icon-help.png)no-repeat;
+            color: transparent;
+        }
+        
+        .nav-box-right-bottom {
+            text-align: center;
+            width: 260px;
+            margin-top: 25px;
+            background-color: #F5F5F5;
+            height: 160px;
+            /* border: 1px solid #000; */
+        }
+        
+        .nav-box-right-bottom>span:first-child {
+            background: url(./作业3静态页面/img/icon-help.png)no-repeat;
+            background-position: 0 -24px;
+            color: transparent;
+        }
+        
+        .nav-box-right-bottom>div>span>a {
+            text-decoration: none;
+            color: #61BDEF;
+            font-size: 14px;
+            /* border: 1px solid #000; */
+        }
+        
+        .content {
+            width: 1020px;
+            /* height: 500px; */
+            /* border: 1px solid; */
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .tab {
+            background: #F5F5F5;
+            height: 40px;
+            line-height: 40px;
+            /* border: 1px solid #000; */
+            overflow: hidden;
+            width: 745px;
+        }
+        
+        .tab-hospital {
+            color: white;
+            width: 115px;
+            text-align: center;
+            float: left;
+            background-color: #61BDEF;
+        }
+        
+        .tab-department {
+            float: left;
+            width: 115px;
+            text-align: center;
+            color: #61BDEF;
+        }
+        
+        .tab-nav {
+            /* border: 1px solid #000; */
+            width: 750px;
+        }
+        
+        .tab-nav>ul {
+            overflow: hidden;
+            margin: 10px auto;
+            font-size: 12px;
+        }
+        
+        .tab-nav>ul>li {
+            float: left;
+            list-style: none;
+            width: 70px;
+            text-align: center;
+        }
+        
+        .tab-nav>ul>li:first-child {
+            background-color: #61BDEF;
+            margin-left: 10px;
+        }
+        
+        .tab-nav>ul>li a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .tab-body-top {
+            /* border: 1px solid #000; */
+            width: 750px;
+            overflow: hidden;
+        }
+        
+        .tab-body-top-left {
+            float: left;
+            width: 350px;
+            /* border: 1px solid red; */
+            overflow: hidden;
+            /* text-overflow: ellipsis; */
+        }
+        
+        .tab-body-top-left>div {
+            float: left;
+            margin: 15px;
+            font-size: 12px;
+            /* border: 1px solid #000; */
+        }
+        
+        .tab-body-top-left>div:nth-child(2) {
+            margin: 15px 0;
+            width: 195px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .tab-body-top-left>div:nth-child(2)>div {
+            margin-bottom: 5px;
+        }
+        
+        .tab-body-top-right {
+            float: left;
+            margin-left: 20px;
+            width: 350px;
+            /* border: 1px solid red; */
+            overflow: hidden;
+            /* text-overflow: ellipsis; */
+        }
+        
+        .tab-body-top-right>div {
+            float: left;
+            margin: 15px;
+            font-size: 12px;
+            /* border: 1px solid #000; */
+        }
+        
+        .tab-body-top-right>div:nth-child(2) {
+            margin: 15px 0;
+            width: 195px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .tab-body-top-right>div:nth-child(2)>div {
+            margin-bottom: 5px;
+        }
+        
+        .tab-body-bottom {
+            overflow: hidden;
+            width: 750px;
+            /* border: 1px solid #000; */
+        }
+        
+        .tab-body-bottom-left {
+            float: left;
+            margin: 5px;
+            width: 358px;
+            /* border: 1px solid #000; */
+        }
+        
+        .tab-body-bottom-right {
+            float: right;
+            margin: 5px;
+            width: 360px;
+            /* border: 1px solid #000; */
+        }
+        
+        .box1 {
+            overflow: hidden;
+            border-bottom: 1px dashed #ccc;
+            margin-bottom: 10px;
+        }
+        
+        .box1>div:first-child {
+            float: left;
+            font-size: 14px;
+        }
+        
+        .box1>div:last-child {
+            float: right;
+            font-size: 12px;
+            color: #ccc;
+        }
+        
+        .bigBox {
+            width: 745px;
+            /* border: 1px solid red; */
+            float: left;
+        }
+        
+        .news {
+            height: 214px;
+            margin-bottom: 10px;
+            /* border: 1px solid #ccc; */
+            margin-right: 5px;
+            float: right;
+            width: 260px;
+        }
+        
+        .news-top {
+            background-color: #f5f5f5;
+            overflow: hidden;
+            height: 40px;
+            line-height: 40px;
+        }
+        
+        .news-top>div:first-child {
+            float: left;
+            color: #F9DB81;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        
+        .news-top>div:last-child {
+            float: right;
+            /* border-left: 1px solid; */
+            font-size: 14px;
+            color: #A7A7A7;
+            margin-right: 20px;
+        }
+        
+        .news-bottom {
+            font-size: 14px;
+            color: #A7A7A7;
+            /* margin-bottom: 10px; */
+        }
+        
+        .news-bottom>div {
+            text-indent: 1em;
+            margin: 10px 5px;
+            /* border: 1px solid #000; */
+        }
+        
+        .news-bottom>div>span {
+            color: transparent;
+            background: url(./作业3静态页面/img/list-yellow.jpg)no-repeat;
+        }
+        
+        .close {
+            height: 214px;
+            /* width: 100px; */
+            /* border: 1px solid #ccc; */
+            width: 260px;
+            float: right;
+            margin-right: 5px;
+        }
+        
+        .close-top {
+            background-color: #f5f5f5;
+            overflow: hidden;
+            height: 40px;
+            line-height: 40px;
+        }
+        
+        .close-top>div:first-child {
+            float: left;
+            color: #F9DB81;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        
+        .close-top>div:last-child {
+            float: right;
+            /* border-left: 1px solid; */
+            font-size: 14px;
+            color: #A7A7A7;
+            margin-right: 20px;
+        }
+        
+        .close-bottom {
+            font-size: 14px;
+            color: #A7A7A7;
+            /* margin-bottom: 10px; */
+        }
+        
+        .close-bottom>div {
+            text-indent: 1em;
+            margin: 10px 5px;
+            /* border: 1px solid #000; */
+        }
+        
+        .close-bottom>div>span {
+            color: transparent;
+            background: url(./作业3静态页面/img/list-blue.jpg)no-repeat;
+        }
+        
+        .current {
+            background: #E6E0DE;
+        }
+        
+        .current2 {
+            color: black !important;
+            background: white;
+        }
+        
+        .current3 {
+            background-position: -20px 5px !important;
+        }
+        
+        .banner {
+            width: 400%;
+            /* border: 1px solid #000; */
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .banner>li {
+            float: left;
+            list-style: none;
+        }
+        
+        .banner>li>img {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div id="top">
+            <div>
+                <span><img style="vertical-align: middle;" src="./作业3静态页面/img/icon-call.png" alt=""></span>
+                <span>010-114/116114电话预约</span>
+            </div>
+            <div>
+                <span>欢迎来到城市预约挂号统一平台 请</span>
+                <span><a href="#">登录</a></span>
+                <span><a href="#">注册</a></span>
+                <span><a href="#">帮助中心</a></span>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="header">
+            <div class="header-logo"><img style="height: 80px;" src="./作业3静态页面/img/logo.png" alt=""></div>
+            <div class="header-search">
+
+                <button id="header-btn">医院 <span style="font-size: 12px; margin-top: 10px;" class="iconfont icon-jiantou9"></span></button>
+                <input style="height: 35px;" type="text" placeholder="请输入搜索内容">
+                <button><span style="font-size: 20px;" class="iconfont icon-fangdajing"></span></button>
+                <div class="header-search-list">
+                    <div>科室</div>
+                    <div>疾病</div>
+                    <div>医院</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="nav-menu">
+            <div>全部科室</div>
+            <div>按医院挂号</div>
+            <div>按科室挂号</div>
+            <div>按疾病挂号</div>
+            <div>最新公告</div>
+            <div>社会知名医院</div>
+        </div>
+    </div>
+    <div class="nav-box">
+        <div class="nav-box-left">
+            <div>
+                <div class="text1">
+                    <span style="background-position: -23px 0;">11</span>
+                    <span>内科</span>
+                </div>
+                <div class="text2">
+                    <span>高血压 冠心病</span>
+                </div>
+            </div>
+            <div>
+                <div class="text1">
+                    <span style="background-position: -23px -22px;">11</span>
+                    <span>外科</span>
+                </div>
+                <div class="text2">
+                    <span>肾结石 脑外伤</span>
+                </div>
+            </div>
+            <div>
+                <div class="text1">
+                    <span style="background-position: -23px -44px;">11</span>
+                    <span>妇产科</span>
+                </div>
+                <div class="text2">
+                    <span>阴道炎 不孕不育</span>
+                </div>
+            </div>
+            <div>
+                <div class="text1">
+                    <span style="background-position: -23px -66px;">11</span>
+                    <span>生殖中心</span>
+                </div>
+                <div class="text2">
+                    <span>男性不育</span>
+                </div>
+            </div>
+            <div>
+                <div class="text1">
+                    <span style="background-position: -23px -88px;">11</span>
+                    <span>儿科</span>
+                </div>
+                <div class="text2">
+                    <span>抽动症 小儿感冒</span>
+                </div>
+            </div>
+            <div>
+                <div class="text1">
+                    <span style="background-position: -23px -110px;">11</span>
+                    <span>骨外科</span>
+                </div>
+                <div class="text2">
+                    <span>关节炎 骨折</span>
+                </div>
+            </div>
+            <div>
+                <div class="text1">
+                    <span style="background-position: -23px -132px;">11</span>
+                    <span>眼科</span>
+                </div>
+                <div class="text2">
+                    <span>近视 白内障</span>
+                </div>
+            </div>
+            <div>
+                <div class="text1">
+                    <span style="background-position: -23px -154px;">11</span>
+                    <span>口腔科</span>
+                </div>
+                <div class="text2">
+                    <span>口腔修复 牙痛</span>
+                </div>
+            </div>
+            <div>
+                <div class="text1">
+                    <span style="background-position: -23px -176px;">11</span>
+                    <span>耳鼻咽喉头颈科</span>
+                </div>
+                <div class="text2">
+                    <span>鼻炎</span>
+                </div>
+            </div>
+            <div>
+                <div class="text1">
+                    <span style="background-position: -23px -198px;">11</span>
+                    <span>肿瘤科</span>
+                </div>
+                <div class="text2">
+                    <span>癌痛</span>
+                </div>
+            </div>
+            <div>
+                <div class="text1">
+                    <span style="background-position: -23px -220px;">11</span>
+                    <span>其他科室</span>
+                </div>
+                <div class="text2">
+                    <span></span>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="nav-box-center">
+            <ul class="banner">
+                <li>
+                    <img style="width: 545px;vertical-align: bottom;height: 420px;" src="./作业3静态页面/img/banner_1.jpg" alt="">
+                </li>
+                <li>
+                    <img style="width: 545px;vertical-align: bottom;height: 420px;" src="./作业3静态页面/img/banner_2.jpg" alt="">
+                </li>
+                <li>
+                    <img style="width: 545px;vertical-align: bottom;height: 420px;" src="./作业3静态页面/img/banner_3.jpg" alt="">
+                </li>
+            </ul>
+            <ul class="slider">
+                <li>11</li>
+                <li>21</li>
+                <li>31</li>
+            </ul>
+            <div class="arrow-left"></div>
+            <div class="arrow-right"></div>
+        </div>
+        <div class="nav-box-right">
+            <div class="nav-box-right-top">
+                <span>11.</span>
+                <span style="color: #FEC009;margin-top: 10px;margin-bottom:10px;display: inline-block;">快速预约</span>
+                <div style="text-align: center;">
+                    <select style="width: 170px;height: 25px;margin-bottom: 10px;" name="" id="">
+               <option value="">医院地区</option>
+               <option value="">医院地区</option>
+               <option value="">医院地区</option>
+           </select>
+                    <select style="width: 170px;height: 25px;margin-bottom: 10px;" name="" id="">
+            <option value="">医院等级</option>
+            <option value="">医院等级</option>
+            <option value="">医院等级</option>
+        </select>
+                    <select style="width: 170px;height: 25px;margin-bottom: 10px;" name="" id="">
+            <option value="">医院名称</option>
+            <option value="">医院名称</option>
+            <option value="">医院名称</option>
+        </select>
+                    <select style="width: 170px;height: 25px;margin-bottom: 10px;position: relative;left: 3px;" name="" id="">
+            <option value="">医院科室</option>
+            <option value="">医院科室</option>
+            <option value="">医院科室</option>
+        </select>
+                    <br>
+
+                    <button style="background:#FECD09;color: white;border: 0;border-radius: 2px;width: 110px;height: 35px;margin: 10px;">快速查询</button>
+                </div>
+            </div>
+
+            <div class="nav-box-right-bottom">
+                <span>11.</span>
+                <span style="color: #61BDEF;margin-top: 10px;margin-bottom:10px;display: inline-block;">帮助中心</span>
+                <div style="text-align: justify;margin-bottom: 20px;">
+                    <span style="display: inline-block;margin-left: 40px;"><a href="#">账号指南</a></span>
+                    <span style="display: inline-block;margin-left: 50px;"><a href="#">预约指南</a></span>
+
+                </div>
+                <div style="text-align: justify;">
+                    <span style="display: inline-block;margin-left: 40px;"><a href="#">账号找回</a></span>
+                    <span style="display: inline-block;margin-left: 50px;"><a href="#">常见问题</a></span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="bigBox">
+            <div class="tab">
+                <div class="tab-hospital">医院
+
+                </div>
+                <div class="tab-department">科室</div>
+
+            </div>
+            <div class="tab-nav">
+                <ul>
+                    <li><a href="#">全部</a></li>
+                    <li><a href="#">东城区</a></li>
+                    <li><a href="#">西城区</a></li>
+                    <li><a href="#">朝阳区</a></li>
+                    <li><a href="#">丰台区</a></li>
+                    <li><a href="#">石景山区</a></li>
+                    <li><a href="#">海淀区</a></li>
+                    <li><a href="#">门头沟区</a></li>
+                    <li><a href="#">房山区</a></li>
+                    <li><a href="#">其他</a></li>
+                </ul>
+            </div>
+            <div class="tab-body">
+                <div class="tab-body-top">
+                    <div class="tab-body-top-left">
+                        <div>
+                            <img style="width: 110px;" src="./作业3静态页面/img/hospital-1.jpg" alt="">
+                        </div>
+                        <div>
+                            <div style="overflow: hidden;">
+                                <div style="float: left;color:#61BDEF;font-size: 14px;">北京协和医院</div>
+                                <div style="float: right;color: #ccc;">【三级甲等】</div>
+                            </div>
+                            <div>电话:东院咨询台:010-69155564..</div>
+                            <div>地址:[东院]北京市东城区帅府园一号<br> [西院]北京市西城区大木仓...</div>
+                        </div>
+                    </div>
+                    <div class="tab-body-top-right">
+                        <div>
+                            <img style="width: 110px;" src="./作业3静态页面/img/hospital-1.jpg" alt="">
+                        </div>
+                        <div>
+                            <div style="overflow: hidden;">
+                                <div style="float: left;color:#61BDEF;font-size: 14px;">北京协和医院</div>
+                                <div style="float: right;color: #ccc;">【三级甲等】</div>
+                            </div>
+                            <div>电话:东院咨询台:010-69155564..</div>
+                            <div>地址:[东院]北京市东城区帅府园一号<br> [西院]北京市西城区大木仓...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-body-center">
+                <div class="tab-body-top">
+                    <div class="tab-body-top-left">
+                        <div>
+                            <img style="width: 110px;" src="./作业3静态页面/img/hospital-1.jpg" alt="">
+                        </div>
+                        <div>
+                            <div style="overflow: hidden;">
+                                <div style="float: left;color:#61BDEF;font-size: 14px;">北京协和医院</div>
+                                <div style="float: right;color: #ccc;">【三级甲等】</div>
+                            </div>
+                            <div>电话:东院咨询台:010-69155564..</div>
+                            <div>地址:[东院]北京市东城区帅府园一号<br> [西院]北京市西城区大木仓...</div>
+                        </div>
+                    </div>
+                    <div class="tab-body-top-right">
+                        <div>
+                            <img style="width: 110px;" src="./作业3静态页面/img/hospital-1.jpg" alt="">
+                        </div>
+                        <div>
+                            <div style="overflow: hidden;">
+                                <div style="float: left;color:#61BDEF;font-size: 14px;">北京协和医院</div>
+                                <div style="float: right;color: #ccc;">【三级甲等】</div>
+                            </div>
+                            <div>电话:东院咨询台:010-69155564..</div>
+                            <div>地址:[东院]北京市东城区帅府园一号<br> [西院]北京市西城区大木仓...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-body-bottom">
+                <div class="tab-body-bottom-left">
+                    <div class="box1">
+                        <div>首都儿科研究所附属儿童医院</div>
+                        <div>【三级甲等】</div>
+                    </div>
+                    <div class="box1">
+                        <div>首都儿科研究所附属儿童医院</div>
+                        <div>【三级甲等】</div>
+                    </div>
+                    <div class="box1">
+                        <div>首都儿科研究所附属儿童医院</div>
+                        <div>【三级甲等】</div>
+                    </div>
+                </div>
+                <div class="tab-body-bottom-right">
+                    <div class="box1">
+                        <div>首都儿科研究所附属儿童医院</div>
+                        <div>【三级甲等】</div>
+                    </div>
+                    <div class="box1">
+                        <div>首都儿科研究所附属儿童医院</div>
+                        <div>【三级甲等】</div>
+                    </div>
+                    <div class="box1">
+                        <div>首都儿科研究所附属儿童医院</div>
+                        <div>【三级甲等】</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;color:#61BDEF;font-size: 14px;width: 745px;margin-top: 10px;">更多医院</div>
+        </div>
+        <div class="news">
+            <div class="news-top">
+                <div>最新公告</div>
+                <div>|更多</div>
+            </div>
+            <div class="news-bottom">
+                <div><span>1.</span> 阜外医院特需门诊暂停更新号源通...</div>
+                <div><span style="background-position: 0 -28px;">1.</span> 防护策略升级通知</div>
+                <div><span style="background-position: 0 -56px;">1.</span> 阜外医院特需门诊暂停更新号源通...</div>
+                <div><span style="background-position: 0 -84px;">1.</span> 防护策略升级通知</div>
+                <div><span style="background-position: 0 -115px;">1.</span> 阜外医院特需门诊暂停更新号源通...</div>
+                <div><span style="background-position: 0 -143px;">1.</span> 防护策略升级通知</div>
+            </div>
+        </div>
+        <div class="close">
+            <div class="close-top">
+                <div>最新公告</div>
+                <div>|更多</div>
+            </div>
+            <div class="close-bottom">
+                <div><span>1.</span> 阜外医院特需门诊暂停更新号源通...</div>
+                <div><span style="background-position: 0 -28px;">1.</span> 防护策略升级通知</div>
+                <div><span style="background-position: 0 -56px;">1.</span> 阜外医院特需门诊暂停更新号源通...</div>
+                <div><span style="background-position: 0 -84px;">1.</span> 防护策略升级通知</div>
+                <div><span style="background-position: 0 -115px;">1.</span> 阜外医院特需门诊暂停更新号源通...</div>
+                <div><span style="background-position: 0 -143px;">1.</span> 防护策略升级通知</div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <script src="./jquery.min.js"></script>
+
+    <script src="./demo5.js"></script>
+</body>
+
+</html>

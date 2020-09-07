@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .current {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>以色待人，色衰而爱弛也；以才待人，才进得久，互赏而终...</li>
+        <li>以色待人，色衰而爱弛也；以才待人，才进得久，互赏而终...</li>
+        <li>以色待人，色衰而爱弛也；以才待人，才进得久，互赏而终...</li>
+        <li>以色待人，色衰而爱弛也；以才待人，才进得久，互赏而终...</li>
+        <li>以色待人，色衰而爱弛也；以才待人，才进得久，互赏而终...</li>
+    </ul>
+    <script src="./jquery.min.js"></script>
+
+    <script>
+        $('ul>li:odd').css({
+            'backgroundColor': 'green'
+        })
+        $('ul>li:even').css({
+            'backgroundColor': 'skyblue'
+        })
+        $('ul>li').mouseover(function() {
+            // alert(1)
+            $(this).css({
+                'backgroundColor': ''
+            })
+            $(this).addClass('current').siblings().removeClass('current')
+        })
+        $('ul>li:odd').mouseout(function() {
+            $(this).css({
+                'backgroundColor': 'green'
+            })
+
+        })
+        $('ul>li:even').mouseout(function() {
+            $(this).css({
+                'backgroundColor': 'skyblue'
+            })
+
+        })
+    </script>
+</body>
+
+</html>

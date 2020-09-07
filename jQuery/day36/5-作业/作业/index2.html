@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<script src="./jquery-1.11.1.js"></script>
+<script src="./jquery.color.js"></script>
+<script>
+    $(function() {
+        $('button').on('click', function() {
+            var colors = {
+                'backgroundColor': 'blue'
+            }
+            $('div').animate(colors, 2000)
+        })
+    })
+</script>
+
+<body>
+    <button>改变背景色</button>
+    <div></div>
+</body>
+
+</html>
