@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background: #2B3043;
+    width: 1400px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.header-box {
+    width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+    overflow: hidden;
+}
+
+.header-left {
+    float: left;
+}
+
+.header-right {
+    float: right;
+}
+
+.header-left>ul {
+    overflow: hidden;
+}
+
+.header-left>ul>li {
+    float: left;
+    color: white;
+    list-style: none;
+    line-height: 60px;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.header-left>ul>li>span {
+    background: url(/day38/作业/jquery需求和素材/素材/images/login-tb.png) no-repeat;
+    background-position: -120px 0;
+    color: transparent;
+}

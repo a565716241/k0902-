@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="../案例/jquery.js"></script>
+    <script>
+        var p = new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                resolve('洗菜做饭')
+            }, 500)
+        })
+        p.then(function(res) {
+            console.log(res)
+        })
+        var p2 = new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                resolve('坐下来吃饭')
+            }, 1000)
+        })
+        p2.then(function(res) {
+            console.log(res)
+        })
+        var p3 = new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                resolve('收拾桌子洗碗')
+            }, 1500)
+        })
+        p3.then(function(res) {
+            console.log(res)
+        })
+    </script>
+</body>
+
+</html>
