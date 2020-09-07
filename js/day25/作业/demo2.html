@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: red;
+            border: 10px solid #000;
+        }
+        
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background: red;
+            border: 10px solid #000;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box">
+
+    </div>
+    <div class="box1" id="box1">
+
+    </div>
+    <script>
+        // 2两个div     第一个div隐藏(立即隐藏)
+        //  第二个div(5秒之后显示)
+
+        setTimeout(function fn() {
+            var divbox = document.getElementById('box')
+            divbox.style.display = 'none'
+        }, 1000)
+        setTimeout(function fn1() {
+            var divbox1 = document.getElementById('box1')
+            divbox1.style.display = 'block'
+        }, 5000)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="body" style="background-color: white;">
+    <button id="btn">开关灯</button>
+    <script>
+        var light = 1;
+        var btn = document.getElementById('btn')
+        btn.onclick = function() {
+            var body = document.getElementById('body')
+            var bg = body.style.backgroundColor;
+            if (bg === 'white') {
+                body.style.backgroundColor = 'black'
+            }
+            if (bg === 'black') {
+                body.style.backgroundColor = 'white'
+            }
+
+
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

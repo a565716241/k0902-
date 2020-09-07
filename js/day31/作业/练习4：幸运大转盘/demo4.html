@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divs {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            margin: 5px;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            line-height: 200px;
+            font-size: 20px;
+        }
+        
+        .div1 {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .btn1 {
+            margin-top: 100px;
+            margin-left: 30px;
+        }
+        
+        .btn2 {
+            margin-top: 100px;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <div class="divs">600元优惠券</div>
+        <div class="divs">800元优惠券</div>
+        <div class="divs">1000元优惠券</div>
+    </div>
+    <div class="div1">
+        <div class="divs">800元优惠券</div>
+        <div class="divs">
+            <button class="btn1">开始</button>
+            <button class="btn2">停止</button>
+        </div>
+        <div class="divs">600元优惠券</div>
+    </div>
+    <div class="div1">
+        <div class="divs">600元优惠券</div>
+        <div class="divs">1000元优惠券</div>
+        <div class="divs">800元优惠券</div>
+    </div>
+    <script>
+        var divs = document.querySelectorAll('.divs')
+        var btn1 = document.querySelector('.btn1')
+        btn1.onclick = function() {
+            // alert(1)
+
+        }
+    </script>
+</body>
+
+</html>

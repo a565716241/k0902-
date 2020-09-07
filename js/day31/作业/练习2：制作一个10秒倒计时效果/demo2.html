@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn1">开始</button>
+    <button class="btn2">停止</button>
+    <h1 class="time"></h1>
+</body>
+<script>
+    var start = document.querySelector('.btn1')
+    var stop = document.querySelector('.btn2')
+
+    var count = 10
+
+
+    start.onclick = function() {
+        var timeId = setInterval(fn, 1000)
+        var num = 11
+
+        function fn() {
+            if (num == 0) {
+                clearInterval(timeId)
+            } else {
+                num--
+            }
+            // fn()
+            document.querySelector('.time').innerHTML = num
+        }
+    }
+    stop.onclick = function() {
+        clearInterval(timeId)
+
+        alert('倒计时结束')
+
+    }
+</script>
+
+</html>

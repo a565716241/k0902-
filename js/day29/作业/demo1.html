@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            border: 1px solid;
+            /* overflow: hidden; */
+            height: 23px;
+            width: 200px;
+            margin: 400px auto;
+            /* transform: translateY(-30px); */
+        }
+        /* .son {
+            /* border: 1px solid; */
+        /* transform: translateY(-22px); */
+        /* } */
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son">
+            <div>1每时每刻给你新机会</div>
+            <div>2每时每刻给你新机会</div>
+            <div>3每时每刻给你新机会</div>
+            <div>4每时每刻给你新机会</div>
+            <div>5每时每刻给你新机会</div>
+            <div>6每时每刻给你新机会</div>
+            <div>7每时每刻给你新机会</div>
+            <div>8每时每刻给你新机会</div>
+            <div>9每时每刻给你新机会</div>
+            <div>10每时每刻给你新机会</div>
+        </div>
+
+    </div>
+    <script>
+        var father = document.querySelector('.father')
+        var son = document.querySelector('.son')
+        var divs = document.querySelectorAll('.son>div')
+            // console.log(father.children[1])
+            // console.log(divs)
+        setInterval(function() {
+
+            son.style.marginTop = '-21px'
+
+
+
+
+
+
+        }, 1000)
+    </script>
+</body>
+
+</html>

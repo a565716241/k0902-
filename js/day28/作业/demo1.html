@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 800px;
+            margin: 100px auto;
+            text-align: center;
+            border-collapse: collapse;
+            font-size: 14px;
+            border: 1px solid;
+        }
+        
+        thead tr {
+            height: 30px;
+            background-color: skyblue;
+            border: 1px solid;
+        }
+        
+        tbody tr {
+            height: 30px;
+            border: 1px solid;
+        }
+        
+        tbody td {
+            /* border-bottom: 1px solid #d7d7d7; */
+            font-size: 12px;
+            color: blue;
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    请输入姓名:<input type="text" id="ipt1"><br> 请输入邮箱:
+    <input type="text" id="ipt2"><br>
+    <button>添加</button>
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>邮箱</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>小黑</td>
+                <td>xiaohei@126.com</td>
+            </tr>
+            <tr>
+                <td>小白</td>
+                <td>xiaobao@itcast.cn</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var ipt1 = document.querySelector('#ipt1') //获取元素
+        var ipt2 = document.querySelector('#ipt2') //获取元素
+        var btn = document.querySelector('button') //获取元素
+        var tb = document.querySelector('tbody')
+        console.log(ipt1)
+        console.log(ipt2)
+        btn.onclick = function() {
+            if (ipt1.value.trim() == '' && ipt2.value.trim() == '') {
+                alert('啥都不输，添加个锤子')
+                return
+            }
+            var tr = document.createElement('tr')
+            var td1 = document.createElement('td')
+            var td2 = document.createElement('td')
+            td1.innerText = ipt1.value
+            td2.innerText = ipt2.value
+            tb.appendChild(tr)
+            tr.appendChild(td1)
+            tr.appendChild(td2)
+            ipt1.value = ''
+            ipt2.value = ''
+        }
+    </script>
+</body>
+
+</html>

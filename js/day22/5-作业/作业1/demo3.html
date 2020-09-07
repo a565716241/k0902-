@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function num3(a, b, c) {
+            if (a > b && a > c) {
+                document.write(a)
+            } else if (b > a && b > c) {
+                document.write(b)
+            } else if (c > b && c > a) {
+                document.write(c)
+            } else {
+                document.write(a, b, c)
+            }
+        }
+        document.write("任意三个数字的最大值是：")
+        num3(prompt("请输入第一个数"), prompt("请输入第二个数"), prompt("请输入第三个数"))
+        document.write("<br>");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr1 = [] //空数组
+        var arr2 = [1, 2, 3]
+        var arrVal1 = arr2[0]
+        console.log(arrVal1)
+        var newArr = arr2.splice(0, 1, 'hellow')
+        console.log(arr2)
+
+        var arr3 = [1, 2, 3]
+        arr3.push('hellow')
+        console.log(arr3)
+        arr3.push('world', '老王')
+        console.dir(arr3)
+        var len = arr3.length
+        console.log(len)
+
+        arr3.push('xxxx')
+        console.dir(arr3)
+    </script>
+</body>
+
+</html>

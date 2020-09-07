@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="icon/iconfont.css">
+    <style>
+        div {
+            position: relative;
+        }
+        
+        span {
+            position: absolute;
+            left: 1150px;
+            top: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="div">
+        <img src="https://img11.360buyimg.com/babel/jfs/t1/117179/27/11089/118828/5efbf05fE76ea9b45/b49b44febb9af610.jpg!q70.jpg.webp" alt="">
+        <span class="iconfont icon-butongguodechacha" id="icon"></span>
+    </div>
+    <script>
+        var span = document.getElementById('icon')
+        span.onclick = function() {
+            var div = document.getElementById('div')
+            div.style.opacity = 0
+        }
+    </script>
+</body>
+
+</html>

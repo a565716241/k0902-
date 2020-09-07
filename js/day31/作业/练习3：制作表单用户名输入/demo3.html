@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    用户名: <input type="text" placeholder="hello kgc">
+    <span></span>
+    <script>
+        var input = document.querySelector('input')
+        var span = document.querySelector('span')
+        input.onfocus = function() {
+            this.value = ' '
+            span.innerText = '至少6-12位'
+            this.style.color = 'red'
+
+        }
+    </script>
+</body>
+
+</html>

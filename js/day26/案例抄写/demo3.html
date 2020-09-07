@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1box" class="h1">hello world1</h1>
+    <h1 id="h1box" class="h1">hello world2</h1>
+    <h1 id="h1box" class="h1">hello world3</h1>
+    <div class="h1">我是div</div>
+
+    <script>
+        // //id 一个页面上相同的id只能有1个   id用于获取单个元素
+        // //class  用于获取多个元素  class相同  不管是什么类型的元素  都可以获取到
+
+        // // class获取到的元素是一个伪数组  有length属性   伪数组可以遍历
+
+        // var h1Box = document.getElementById('h1box')
+        // var h1 = document.getElementsByClassName('h1')
+        // console.log(h1Box)
+        // console.log(h1)
+        // for (i = 0; i < h1.length; i++) {
+        //     console.log(h1[i])
+        // }
+        // console.log(h1[3])
+
+
+        //id 一个页面上相同的id只能有1个   id用于获取单个元素
+        //class  用于获取多个元素  class相同  不管是什么类型的元素  都可以获取到
+
+        // class获取到的元素是一个伪数组  有length属性   伪数组可以遍历
+
+        var h1Box = document.getElementById('h1box')
+        var h1 = document.getElementsByClassName('h1')
+        console.log(h1Box)
+        console.log(h1)
+        for (i = 0; i < h1.length; i++) {
+            console.log(h1[i])
+        }
+        console.log(h1[3])
+    </script>
+</body>
+
+</html>

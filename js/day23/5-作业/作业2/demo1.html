@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var computer = {
+            color: "红色",
+            height: "100kg",
+            brand: "Apple",
+            type: "Apple-1",
+            watch: function() {
+                document.write("我在看电影<br>")
+            },
+            listen: function() {
+                document.write("我在听音乐<br>")
+            },
+            play: function() {
+                document.write("我在打游戏<br>")
+            },
+            coding: function() {
+                document.write("我在敲代码<br>")
+            }
+
+        }
+        document.write("电脑对象的颜色是:" + computer.color + "<br>")
+        document.write("电脑对象的重量是:" + computer.height + "<br>")
+        document.write("电脑对象的品牌是:" + computer.brand + "<br>")
+        document.write("电脑对象的型号是:" + computer.type + "<br>")
+        computer.watch()
+        computer.listen()
+        computer.play()
+        computer.coding()
+    </script>
+</body>
+
+</html>

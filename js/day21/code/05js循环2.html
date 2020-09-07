@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		// ☆
+		// ☆☆
+		// ☆☆☆
+		// ☆☆☆☆
+		// ☆☆☆☆☆
+
+		//   for(var i=1;i<=5;i++ ) {
+		//    for(var j=1;j<=i;j++) {
+		//      document.write("☆")
+		//    }
+		//    document.write('<br/>')
+		// }
+
+
+
+
+		for (var i = 1; i <= 9; i++) {
+			for (var j = 1; j <= i; j++) {
+				//   document.write("☆")
+				// 1*1=1
+				// 1*1=1 1*2=2
+				document.write(j + '*' + i + '=' + j * i + '&nbsp;&nbsp;')
+			}
+			document.write('<br/>')
+		}
+
+
+
+
+		for (var i = 1; i <= 5; i++) {
+			if (i == 3) {
+				console.log('这个包子有虫子，扔掉');
+				continue; // 跳出本次循环，跳出的是第3次循环 继续执行下一次循环
+			}
+			console.log('我正在吃第' + i + '个包子呢');
+		}
+
+		console.log('------------------------')
+
+		for (var i = 1; i <= 5; i++) {
+			if (i == 3) {
+				console.log('这个包子有虫子，扔掉');
+				break; // 结束整个循环
+			}
+			console.log('我正在吃第' + i + '个包子呢');
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var timeId = setInterval(fn, 1000)
+        // var count = 10;
+
+        // function fn() {
+        //     document.write(count + '<br>')
+        //     if (count == 0) {
+        //         clearInterval(timeId)
+        //     } else {
+        //         count--
+        //     }
+        // }
+        //写一个倒计时 10s 到0 后停止
+        var timeId = setInterval(fn, 1000)
+        var count = 10;
+
+        function fn() {
+            document.write(count + '<br>')
+            if (count == 0) {
+                clearInterval(timeId)
+            } else {
+                count--
+            }
+        }
+    </script>
+</body>
+
+</html>

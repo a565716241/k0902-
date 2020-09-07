@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = '大神么么哒，正好是我想要的，我的邮箱是xiaoming@qq.com小红：我老公最爱看这个了，我想给他一个惊喜，么么么哒，邮箱是xiaohong@sina.com我：好人一生平安，邮箱是wuyou@163.com'
+        var str2 = str.match(/\w+@\w+\.\w+/g)
+        document.write(str + '<br>')
+        document.write('-----------------------------' + '<br>')
+        for (key in str2) {
+            document.write(str2[key] + '<br>')
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div>
+        <textarea name="" id="" cols="40" rows="10"></textarea>
+        <span></span>
+    </div>
+    <script>
+        var textarea = document.querySelector('textarea')
+
+        var span = document.querySelector('span')
+
+
+
+
+
+        console.log(textarea)
+        textarea.addEventListener('keydown', function() {
+            // var span = document.createElement('span')
+            span.innerText = '还可以输入' + (39 - (textarea.value.length)) + '个字符'
+                // div.appendChild(span)
+            if (textarea.value.trim().length >= 39) {
+                textarea.disabled = true
+            }
+
+
+
+        })
+    </script>
+</body>
+
+</html>

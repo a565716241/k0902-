@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border: 1px solid #000;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        // var div = document.querySelector('div')
+        // console.log(div.offsetLeft) //获取自身的偏移量
+
+        // setInterval(function() {
+        //     var step = 5; //步长
+        //     div.style.left = step + div.offsetLeft + 'px' //这就是动画
+        // }, 100)
+
+        // var div=document.querySelector('div')
+        // console.log(div.offsetLeft)  //获取自身的偏移量
+
+        // setInterval(function(){
+        //     var step=5  //步长
+        //     div.style.left=step+div.offsetLeft+'px'  //这就是动画
+        // },100)
+
+
+        var div = document.querySelector('div')
+        console.log(div.offsetLeft) //获取自身的偏移量
+
+        setInterval(function() {
+            var step = 5 //步长
+            div.style.left = step + div.offsetLeft + 'px' //这就是动画
+        }, 100)
+    </script>
+</body>
+
+</html>

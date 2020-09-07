@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num = 1;
+
+        function demo() {
+            console.log(num);
+
+            function demoSon() {
+                console.log(num);
+                num = 3;
+                console.log(num);
+            }
+            var num = 2
+            demoSon();
+        }
+        demo();
+
+        document.write("代码的输出结果为undefined,2,3" + "<br>")
+        document.write("代码的运行流程为:<br>")
+        document.write("1.var num=1<br>")
+        document.write("2.demo(){}" + "<br>")
+        document.write("3.demo()" + "<br>")
+        document.write("4.var num" + "<br>")
+        document.write("5.console.log(num)" + "<br>")
+        document.write("6.demoson(){}" + "<br>")
+        document.write("7.num=2" + "<br>")
+        document.write("8.demoson()" + "<br>")
+        document.write("9.console.log(num)" + "<br>")
+        document.write("10.num=3" + "<br>")
+        document.write("11.console.log(num)" + "<br>")
+    </script>
+</body>
+
+</html>

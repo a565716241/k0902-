@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li class="current">3</li>
+        <li>4</li>
+    </ul>
+    <script src="./jquery.min.js"></script>
+    <script>
+        var isFlag = $('li:last').hasClass('current')
+        console.log(isFlag)
+        var isFlag2 = $('li').eq(2).hasClass('current')
+        console.log(isFlag2)
+
+        console.log($('li').parent().parent())
+
+        console.log($('ul').children())
+    </script>
+</body>
+
+</html>
