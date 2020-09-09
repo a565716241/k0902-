@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // {
+        //     let arr=[10,20,0,1,9,100];
+
+
+        // for(let j=0;j<arr.length;j++) {
+        //     for(let i=0;i<arr.length;i++) {
+        //       if(arr[i]<arr[i+1]) {
+        //           let tmp=arr[i];
+        //           arr[i] = arr[i+1]
+        //           arr[i+1]=tmp;
+        //       }
+        //   }
+        // }
+
+        //   console.log(arr)
+        // }
+
+
+        {
+            let arr = [10, 20, 0, 1, 9, 100];
+
+            for (let j = 0; j < arr.length; j++) {
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] < arr[i + 1]) {
+                        // 左右两边 结构一致  右边要是一个不出错的代码
+                        //  解构赋值
+                        [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
+                    }
+                }
+            }
+
+             console.log(arr)
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

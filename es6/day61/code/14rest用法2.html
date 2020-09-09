@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     let wangfei={
+           name:'王菲',
+           sings:['匆匆那年','红豆','相思','因为爱情'],
+           histroy:['窦唯','李亚鹏','谢霆锋']
+       }
+
+       let {name,sings,histroy}=wangfei;
+
+       console.log(name);
+       console.log(...sings);
+       console.log(...histroy);
+
+
+    //    let  arr=[1,2,3];  ...arr===1,2,3
+      
+      
+    let  arr1=[1,2,3];
+    let  arr2=[4,5,6];
+    let arr=[...arr1,...arr2];
+
+    console.log(arr);
+  
+
+
+    </script>
+</body>
+</html>

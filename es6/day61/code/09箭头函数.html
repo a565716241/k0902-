@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        window.onload=function() {
+            alert(1)
+        }
+
+        window.onload=()=>{
+            alert(2)
+        }
+
+
+        //  1 声明函数
+        function fn1(){
+            console.log('fn1')
+        }
+
+        fn1()
+
+         
+        let fn2=()=>{
+            console.log('fn2')
+        }
+
+        fn2()
+
+
+        //2  表达式函数 
+        var  fn3=function(a) {
+            console.log('fn3'+a)
+
+            return 3
+        }
+
+
+        fn3('hello 3')
+
+
+    let  fn4=(a)=>{
+       console.log('fn4'+a)
+
+       return 4
+    }
+
+    fn4('hello 4')
+
+
+
+    // 注意事项 
+    // 1  函数的形参只有1个的时候可以省略小括号  大于等于2个小括号不能省略
+{
+    
+    let  fn5=a=>{
+       console.log('fn5'+a)
+
+       return 5
+    }
+
+    fn5('hello 5')
+}
+
+
+
+
+
+
+
+// es6 设计函数的封装   url +methods  options
+// 1个参数直接写  
+//2个参数也是直接写 只要大于2以上的参数 变成对象或者数组去传递
+
+{
+    
+    let  fn6=arr=>{
+       console.log('fn5'+arr[0]+arr[1])
+
+       return 6
+    }
+
+
+     var arr=['hello 6','2个']
+    fn6(arr)
+}
+
+
+
+// 2  函数的体里面的代码只有1行的时候可以省略大括号  自然就会带上return;
+
+
+
+{
+    
+    // let  fn7=(a)=>{
+     
+
+    //    return 7+a
+    // }
+
+
+     
+    //   console.log(fn7(007))
+
+    // 简写 
+
+    let  fn7=a=>  7+a;
+        // console.log('xxx')
+     
+   
+
+  console.log( fn7(007));
+
+
+  let  fn8=a=>    a+8;
+
+  fn8('888')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//    rest 要剩余参数也热慈参数
+    // ...    3个点
+//   1 可以收集剩余所有的参数 
+//   2 可以解构
+
+  function fn(a,b,c,d,f){
+
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(d);
+    console.log(f);
+  }
+  fn(1,2,3,4,5);
+
+  
+
+
+  function fn1(a,b,c,d,f) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(d);
+    console.log(f);
+
+  }
+ var arr=[1,2,3,4,5];
+  fn1(...arr);  //解构
+
+
+    
+
+
+
+
+
+  
+  function fn1(a,b,...c) {  //...c 收集剩余参数 只能写在最后面 
+    console.log(a);
+    console.log(b);
+    console.log(c);
+  
+   
+  }
+ var arr=[1,2,3,4,5];
+ var arr2=['zs','lisi'];
+  fn1(...arr,...arr2);  //解构  ...arr===1,2,3,4,5,'zs','lisi'
+
+
+
+    </script>
+</body>
+</html>

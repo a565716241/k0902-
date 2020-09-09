@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var a = 10
+        // let a = 10
+
+        // console.log(a)
+
+        // // let 声明变量
+
+        // console.log(b)
+        // var b = 20
+
+        // console.log(c)
+        // let c = 30
+
+        // let的特点
+        // 1 let 声明变量没有变量提升
+        // 2 let 声明的变量有块级作用域
+        // 3 暂时性死区
+
+        // var d = 10
+
+        // if (true) {
+        //     console.log(d)
+
+        //     var f = 20
+        //     console.log(f)
+        // }
+        // console.log(f)
+
+        //块级作用域  {}
+        let d = 10
+
+        if (true) {
+            console.log(d)
+
+            let f = 20
+            console.log(f)
+        }
+        console.log(f)
+
+        {
+            let aa = 100
+        }
+        console.log(aa)
+
+        //暂时性死区
+
+        // var msg = 'zs';
+        // if (true) {
+        //     let msg = 'lisi';
+        //     console.log(msg);
+        // }
+        // console.log(msg)
+
+
+        var tmp = 123;
+        if (true) {
+            tmp = 'abc';
+            let tmp;
+            console.log(tmp)
+        }
+        console.log(tmp)
+    </script>
+</body>
+
+</html>

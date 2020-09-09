@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+{
+    
+    // 箭头函数没有this  只能定义的时候有关
+    const obj = { name: '张三' }
+        function fn() {
+            console.log(this);//this 指向 是obj对象
+            return () => {
+                console.log(this);//this 指向 的是箭头函数定义的位置，那么这个箭头函数定义在fn里面，而这个fn指向是的obj对象，所以这个this也指向是obj对象
+            }
+        }
+
+        //  call 改变this的指向  指向call()的第一个参数
+        const resFn = fn.call(obj);
+        resFn();
+
+}
+
+{
+const obj = { name: '张三' }
+        function fn() {
+            console.log(this);//this 指向 是obj对象
+            return () => {
+                console.log(this);//this 指向 的是箭头函数定义的位置，那么这个箭头函数定义在fn里面，而这个fn指向是的obj对象，所以这个this也指向是obj对象
+            }
+        }
+
+        //  call 改变this的指向  指向call()的第一个参数
+        const resFn = fn()
+        resFn();
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    
+
+    // this 指向调用 谁调用这个函数 this指向谁
+    const obj = { name: '张三' }
+        function fn() {
+            console.log(this);//this 指向 是obj对象
+            return function () {
+                console.log(this);
+            }
+        }
+
+        //  call 改变this的指向  指向call()的第一个参数
+        const resFn = fn.call(obj);
+        // console.log(resFn)
+        Window.resFn();
+}
+
+
+
+        
+    </script>
+</body>
+
+</html>

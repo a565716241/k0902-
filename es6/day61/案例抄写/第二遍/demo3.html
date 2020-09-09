@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <script>
+        var btns = document.querySelectorAll("button");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].onclick = function() {
+                alert(i)
+            }
+        }
+
+        //改造方法一
+        var btns = document.querySelectorAll("button");
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].onclick = function() {
+                alert(i)
+            }
+        }
+
+        //改造方法二  闭包的思想
+
+        // var btns=document.querySelectorAll("button");
+        // for(var i=0;i<btns.length;i++){
+        //     btns[i].onclick=(function(i){
+        //         alert(i)
+        //     })(i)
+        // }
+    </script>
+</body>
+
+</html>

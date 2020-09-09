@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// 箭头函数没有arguments 
+ {
+    let fn1 =(...ccc)=>  { 
+      //...c 收集剩余参数 只能写在最后面 
+// console.log(arguments);  
+
+    // console.log(a);
+    // console.log(b);
+    // console.log(c);
+    let sum=0;
+    for(var i=0;i<ccc.length;i++) {
+      sum+=ccc[i]
+    }
+    console.log(sum)
+  
+   
+  }
+ var arr=[1,2,3,4,5];
+ var arr2=[100,200];
+  fn1(...arr,...arr2);  //解构  ...arr===1,2,3,4,5,'zs','lisi'
+
+ }
+
+
+
+  {
+
+
+
+
+    function fn1 ()  { 
+      //...c 收集剩余参数 只能写在最后面 
+console.log(arguments);
+
+    // console.log(a);
+    // console.log(b);
+    // console.log(c);
+  
+   
+  }
+ var arr=[1,2,3,4,5];
+ var arr2=[100,200];
+  fn1(...arr,...arr2);  //解构  ...arr===1,2,3,4,5,'zs','lisi'
+
+
+  }
+
+
+    </script>
+</body>
+</html>

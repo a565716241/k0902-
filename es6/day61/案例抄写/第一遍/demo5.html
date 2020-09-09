@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //解构赋值
+        let star = ['刘德华', '张学友', '郭富城', '黎明'];
+
+        let [a, b, c, d] = star;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+
+        //解构赋值 可以解构任何东西  前提条件有一个
+        //左右两边  结构一致  右边要是一个不出错的代码
+
+        let [aa, bb, cc, [dd, ff, ee], {
+            name
+        }, xxx, flag] = [1, 2, 3, [4, 5], {
+            name: 'zs'
+        }, true]
+
+        console.log(aa, bb, cc);
+        console.log(dd, ff, ee);
+        console.log(name);
+        console.log(xxx);
+        console.log(flag);
+    </script>
+</body>
+
+</html>

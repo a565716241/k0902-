@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// let name = `zhangsan`;
+
+let name = '张三'; 
+let sayHello = `hello,my name is ${name}`; // hello, my name is zhangsan
+
+
+
+
+let result={
+    name:'zs',
+    age:19,
+    sex:'欸之'
+}
+
+let html = `<div>
+  <span>${result.name}</span>
+  <span>${result.age}</span>
+  <span>${result.sex}</span>
+ </div> `;
+
+
+
+
+
+
+
+//  可以调用函数
+
+ const sayHello = function () { 
+    return '哈哈哈哈 追不到我吧 我就是这么强大';
+ }; 
+ let greet = `${sayHello()} 哈哈哈哈`;
+ console.log(greet); // 哈哈哈哈 追不到我吧 我就是这么强大 哈哈哈哈
+
+
+
+
+    </script>
+</body>
+</html>
