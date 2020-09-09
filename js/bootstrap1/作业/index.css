@@ -1,0 +1,38 @@
+header {
+  border-bottom: 1px solid #ccc;
+  height: 50px;
+  line-height: 50px;
+}
+header .row {
+  height: 100%;
+  text-align: center;
+}
+header .row div {
+  border-right: 1px solid #ccc;
+}
+header .row div button {
+  color: #e92322;
+  padding: 3px 15px;
+  color: white;
+  margin-right: 20px;
+}
+nav {
+  height: 85px;
+}
+.navbar-nav > li > a {
+  line-height: 50px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  color: #333;
+}
+.navbar-nav > li > a:hover,
+.navbar-nav > li a:focus {
+  color: #777;
+  border-bottom: 3px solid #e92322;
+}
+.navbar-nav .active > a,
+.navbar-nav .active a:hover,
+.navbar-nav .active a:focus {
+  background-color: transparent !important;
+  border-bottom: 3px solid #e92322;
+}

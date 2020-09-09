@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+    <script>
+        //         / 为给定 ID 的 user 创建请求
+        // axios.get('/user?ID=12345')
+        //   .then(function (response) {
+        //     console.log(response);
+        //   })
+        //   .catch(function (error) {
+        //     console.log(error);
+        //   });
+
+        // // 上面的请求也可以这样做
+        // axios.get('/user', {
+        //     params: {
+        //       ID: 12345
+        //     }
+        //   })
+        //   .then(function (response) {
+        //     console.log(response);
+        //   })
+        //   .catch(function (error) {
+        //     console.log(error);
+        //   });
+        axios.post('http://www.liulongbin.top:3006/api/addbook', {
+                bookname: '我的野蛮女友',
+                author: '你猜',
+                publisher: '未知'
+            })
+            .then(function(response) {
+                console.log(response);
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+    </script>
+</body>
+
+</html>
