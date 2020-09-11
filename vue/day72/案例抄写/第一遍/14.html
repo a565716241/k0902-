@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+
+        <hr>
+
+        <input type="text" v-model='inputVal'>
+        <button @click='addData'>点击添加数据</button>
+
+        <ul>
+            <li v-for='(item,index) of brandList' :key='item.id'>
+                <span>id:{{item.id}}</span>
+                <span>名字:{{item.name}}</span>
+                <span>日期:{{item.ctime}}</span>
+            </li>
+        </ul>
+        <div @click='changeObj'>{{o.name}}</div>
+    </div>
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'hello vue',
+                inputVal: '',
+                myid: 12,
+                o: {
+                    name: 'zs'
+                },
+                brandList: [{
+                    id: 10,
+                    name: '宝马',
+                    ctime: new Date()
+                }, {
+                    id: 11,
+                    name: '奔驰',
+                    ctime: new Date()
+                }, {
+                    id: 12,
+                    name: '奥迪',
+                    ctime: new Date()
+                }, ],
+            },
+            methods: {
+                addData() {
+                    // console.log(this.inputVal)
+                    if (!this.inputVal.trim()) {
+                        alert('不能为空');
+                        return
+                    }
+                    var obj = {
+                        id: ++this.myid,
+                        name: this.inputVal,
+                        ctime: new Date()
+                    }
+                    this.brandList.unshift(obj);
+                    this.inputVal = '';
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

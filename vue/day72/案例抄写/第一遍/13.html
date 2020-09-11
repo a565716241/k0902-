@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <select v-model='mycity'>
+            <option disabled value="">请选择</option>
+            <option value="B">北京</option>
+            <option value="S">上海</option>
+            <option value="G">广州</option>
+        </select>
+        <span>selected:{{mycity}}</span>
+        <!-- mycity:体现为、B、S、G等字符串信息 -->
+    </div>
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                mycity: 'S'
+            }
+        })
+    </script>
+</body>
+
+</html>

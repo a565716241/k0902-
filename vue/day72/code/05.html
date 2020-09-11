@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 第一步引入 vue .js -->
+    <script src="./js/vue.js"></script>
+
+
+    <div id="app" class="div">
+        <!-- 插值表达式   {{}}  解析 变量-->
+         <h1>{{msg}}</h1>  
+         
+          <h1>{{num+10}}</h1>
+           
+          <h2> {{num==10?'相等':'不相等'}}</h2>
+          <h2>{{ arr.sort()}}</h2>
+
+
+    </div>
+
+
+    <script>
+
+        // vm 的作用就是连接 v  与 m  桥梁
+   
+     let vm=   new  Vue({
+       
+        el:'#app',  
+        data:{     
+           msg:'hello  vue  我来了',
+           num:10,
+           arr:[3,2,1]
+        }
+     })
+
+    </script>
+</body>
+</html>

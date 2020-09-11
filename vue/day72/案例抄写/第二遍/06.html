@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- v-model  双向数据绑定 -->
+        <input type="text" v-model='input'>
+    </div>
+    <script src="./js/vue.js"></script>
+
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                input: '我是一个输入的值'
+            }
+        })
+    </script>
+</body>
+
+</html>

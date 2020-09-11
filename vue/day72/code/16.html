@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+   * {
+       margin: 0;
+       padding: 0;
+   }
+
+
+          .bgc {
+              background-color:black;
+          }
+
+
+html,body {
+    height: 100%;
+}
+
+div {
+    height: 100%;
+}
+
+    </style>
+
+    <script src="./js/vue.js"></script>
+
+
+    <!--  这个不能用 -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+</head>
+<body>
+
+    <div id="app"   ref='divs'>
+        <h1>{{msg}}</h1>
+
+        <button @click='changeHandle'>点击开关灯</button>
+    </div>
+
+    <script>
+
+        // 不推荐你操作 dom 
+
+        let vm=new Vue({
+            el:'#app',
+            data:{
+            msg:'hello vue ',
+            isflag:true,
+            },
+            methods:{
+                changeHandle() {
+                  // 假设isflag  ==true  为开灯
+                    // this.isflag=!this.isflag
+                    if(this.isflag) {
+
+                        // 获取dom元素 this.$refs.xxx
+                        this.$refs.divs.classList.add('bgc')
+                        this.isflag=false
+               
+
+                    }else {
+                        this.$refs.divs.classList.remove('bgc')
+                        this.isflag=true
+                
+                    }
+                  
+
+
+                }
+            }
+
+        })
+    </script>
+</body>
+</html>

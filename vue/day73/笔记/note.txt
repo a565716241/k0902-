@@ -1,0 +1,70 @@
+开饭啦数据接口信息
+
+获取商品信息接口：
+请求方式：post
+参数：
+start(可选)
+length(可选)
+参数类型:int
+url:http://mengtion.vip/kfl-api/api/getproduct.php
+返回值：json
+
+商品搜索接口：
+请求方式：post
+参数：
+keyword(必选:搜索关键字)  
+start(可选：起始值) 
+length(可选：长度)
+参数类型:string int 
+url:http://mengtion.vip/kfl-api/api/searval.php
+返回值：json
+
+商品详情接口：
+请求方式：post
+参数：
+商品编号（did：必选) 
+参数类型:int
+url:http://mengtion.vip/kfl-api/api/getItem.php
+返回值：json
+
+商品的添加订单接口：
+url:http://mengtion.vip/kfl-api/api/addOrder.php
+请求方式：post
+参数：
+1.did：下单商品id (必传)  
+2.用户信息参数（必传）：
+tel：下单人电话
+uerName：下单人姓名
+sex ： 下单人性别
+address：下单人送餐地址
+参数类型: int(did 必选)  tel suerName sex address ->string必传
+返回值：json
+
+用户订单详情接口：
+请求方式：post
+参数：无
+参数类型：无
+url:http://mengtion.vip/kfl-api/api/orderinfo.php
+返回值：json
+
+登录验证与token生成接口：
+参数：
+userName:用户名
+password:密码
+参数类型：string
+url：http://mengtion.vip/kfl-api/api/loginToken.php
+返回值：json
+
+*******
+前端token 验证规则
+基于jwt
+ 1.登录成功 返回token
+ 2.每次接口请求需要 发送token 到服务器进行验证否则接口无法调用
+ 3.token 发送规则： 
+  3-1：设置请求头（headers）
+  3-2：参数 Authorization  值 "Bearer "+token
+  
+  
+
+
+

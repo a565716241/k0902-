@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    table{width:700px; margin:auto; border:1px black solid; border-collapse: collapse;}
+    td{border:1px black solid;}
+    h2 {height:40px;}
+    img{width:400px;height:40px; }
+    .showhead{width:700px; height:40px;margin:auto;
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="showhead">
+        <h2>品牌案例管理</h2>
+        <img src="./loading.gif" alt="">  
+    </div>
+    <table>
+      <tr>
+        <td>
+          <input type="text" v-model="newbrand" />
+          <button @click="add()">添加</button>
+        </td>
+        <td><input type="text" placeholder="请输入关键字"  v-model="keywords"  @keyup.enter='shai'></td>
+      </tr>
+    </table>
+
+    <!-- <button  @click='shai'>筛选</button> -->
+    <table v-if="brandList.length>0">
+      <tr>
+        <td></td>
+        <td>序号</td>
+        <td>名称</td>
+        <td>创建时间</td>
+        <td>操作</td>
+      </tr>
+ 
+
+
+      <tr v-for="(item,k) in filterData" :key="item.id">
+        <td><input type="checkbox"></td>
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.ctime }}</td>
+        <td><button @click="del(item.id)">删除</button></td>
+      </tr>
+    </table>
+    <table v-else>
+      <tr>
+        <td>没有任何记录！</td>
+      </tr>
+    </table>
+  </div>
+  <script src="./js/vue.js"></script>
+  <script>
+    var vm = new Vue({
+      el:'#app',
+      data:{
+        keywords:'',
+        newbrand:'',  // 被添加的新品牌
+        xu:13, // 已有品牌最大序号信息
+        // 定义品牌列表信息,数组对象集
+        brandList:[
+          {id:10, name:'奔驰', ctime:new Date()},
+          {id:11, name:'宝马', ctime:new Date()},
+          {id:12, name:'奥迪', ctime:new Date()}
+        ]
+      },
+       computed: {
+            filterData() {
+
+               return  this.brandList.filter(item=>{
+                    return item.name.includes(this.keywords)
+                })
+                
+            }
+       },
+
+
+      methods:{
+      
+        // 添加品牌
+        add(){
+          // 判断如果没有输入品牌这停止添加
+          if(this.newbrand.trim().length===0){return false}
+
+          // 把新品牌做成是对象格式
+          var obj = {id:this.xu++, name:this.newbrand, ctime:new Date()}
+          // 把obj通过数组元素形式添加给brandList大数组
+          // 数组.push(元素)后缀追加  数组.unshift(元素)前置追加
+          this.brandList.unshift(obj)
+
+          // 清除添加好的品牌
+          this.newbrand = ''
+        },
+        
+        //实现删除功能
+        del(id) {
+        console.log(id)
+         this.brandList=  this.brandList.filter(item=>item.id!==id)
+
+        },
+
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+
+
+        <ul @click='handlerUl'>
+
+            <!-- 阻止事件冒泡  .stop    .once - 只触发一次回调。-->
+            <li  @click.stop.once='handlerLi'>xxxxxxxxxxxx</li>
+        </ul>
+
+
+        <ul>
+            <!-- prevent  阻止默认事件   form  a  -->
+            <li><a href="http://www.baidu.com" @click.prevent='goBaidu'>xxxxxx</a></li>
+        </ul>
+
+
+
+        <input @keyup.13="onEnter">
+
+    </div>
+    
+    <script>
+
+        let vm=new Vue({
+            el:'#app',
+            data:{
+
+            },
+            methods:{
+                handlerLi() {
+                    alert('li')
+                },
+                handlerUl() {
+                    alert('ul')
+                }
+                ,
+                onEnter() {
+                   alert('enter') 
+                }
+            }
+
+        })
+    </script>
+</body>
+</html>

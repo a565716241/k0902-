@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-my-directive>
+
+        <input type="text" v-focus>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        //自定义指令 
+        //   Vue.directive('指令的名字',{
+        //       inserted:function(dom) {
+
+        //       }
+        //   })
+
+
+        //1 定义自定义指令
+        Vue.directive('my-directive', {
+            inserted: function (dom) {
+                dom.style.border = '10px solid red';
+                dom.focus();
+            }
+        })
+
+        // 2 使用自定义指令  
+        //   v-自定义指令的名字
+
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+            },
+            methods: {
+            },
+            //局部自定义指令
+            directives: {
+                focus: {
+                    // 指令的定义
+                    inserted: function (el) {
+                        el.focus()
+                    }
+                }
+            },
+            components:{
+                
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 第一步引入vue。js -->
+    <script src="./js/vue.js"></script>
+
+    <!-- mvvm思想 -->
+
+    <!-- view视图 -->
+    <div id="app" class="div">
+
+        <!-- 插值表达式{{}}解析变量 -->
+        <!-- v-show 值为true就是显示 false 就是隐藏 -->
+        <!-- <h1 v-show='isflag'>{{msg}}</h1> -->
+
+        <!-- <ul>
+            <li v-if='isflag'>{{msg}}</li>
+            <li v-else>{{msg}}+else</li>
+        </ul> -->
+
+        <ul>
+            <li v-if="a==='bb'">{{msg}}</li>
+            <li v-if-else="a==='aa'">{{a}}</li>
+        </ul>
+    </div>
+    <script>
+        //vm的作用就是连接v与m 的桥梁
+        let vm = new Vue({
+            el: '#app', //表示未来vue 语法  生效的范围
+            data: { //所有的数据都存放在data里面  m  model
+                isflag: false,
+                msg: 'hello vue',
+                a: 'aa',
+                b: 'bb',
+                c: 'cc'
+
+            }
+        })
+    </script>
+</body>
+
+</html>

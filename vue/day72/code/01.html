@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 第一步引入 vue .js -->
+    <script src="./js/vue.js"></script>
+
+
+    <!-- mvvm 思想 -->
+
+
+      <!-- view  视图 -->
+    <div id="app" class="div">
+        <!-- 插值表达式   {{}}  解析 变量-->
+         <h1>{{msg}}</h1>            
+
+
+    </div>
+
+
+    <script>
+
+        // vm 的作用就是连接 v  与 m  桥梁
+   
+     let vm=   new  Vue({
+        //  el:'选择器'  id class  h5 dom  
+        el:'#app',  // 表示未来 vue 语法 生效的范围
+        data:{      //所有的数据都存放在data里面   m  model
+           msg:'hello  vue  我来了'
+        }
+     })
+
+    </script>
+</body>
+</html>

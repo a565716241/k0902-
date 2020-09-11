@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <h1>{{city | myapp('来吧 爸爸的怀里')}}</h1>
+        <h1>{{city | myfilter}}</h1> 
+    </div>
+
+
+
+    <div id="app2">
+        <h1>{{city |  myapp2}}</h1>
+        <h1>{{city | myfilter('不想去了')}}</h1> 
+    </div>
+<script>
+    //高阶指令
+    // Vue.filter('过滤器的名字',function(value){
+    //     return value+'真冷'
+
+    // })
+
+// 全局过滤器
+// 1 定义过滤器
+    Vue.filter('myfilter',function(val,a='我是默认值'){
+        return val+'真冷'+a;
+    })
+
+ //2 使用过滤器  {{ name | 过滤器的名字}}   
+
+
+  let vm= new Vue({
+      el:'#app',
+      data:{
+          city:'北京',
+      },
+    //   局部过滤器
+      filters:{
+         'myapp':function(val,a) {
+            return   val+'我是局部过滤器 我只能自己使用'+a
+
+         },
+         'xxx':function(val) {
+             
+         }
+      }
+
+  })
+
+  
+  let vm2= new Vue({
+      el:'#app2',
+      data:{
+          city:'北京2',
+      },
+
+      filters:{
+         'myapp2':function(val) {
+            return   val+'我是app2局部过滤器 我只能自己使用'
+
+         }
+      }
+
+  })
+
+
+
+
+
+</script>
+</body>
+</html>

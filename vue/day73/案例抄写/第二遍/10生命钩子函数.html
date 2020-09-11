@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+
+        <div>{{num}}</div>
+
+        <button @click='change'>点击更改值</button>
+
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'vue',
+                list:[],
+                num:''
+            },
+            methods: {
+                aaa() {
+                    console.log('我出生了'+this.msg)
+                },
+                bbb() {
+                    
+                    console.log('从服务获取数据')
+                    return 1;
+                },
+                change() {
+                    this.msg='我是更改后的值'
+                }
+            },
+            beforeCreate() {
+                // console.log('beforeCreate')
+                // console.log(this.$el);
+                // console.log(this.$data);
+                // console.log(this.$methods)
+
+                // this.aaa()
+                
+            },
+            created() {
+                //可以从服务器发送请求 获取服务器的数据 异步 
+                console.log('created')
+                console.log(this.$el);
+                console.log(this.$data.msg);
+
+                 this.num=   this.bbb();
+              
+                // this.list.push('1');
+
+                // console.log(this.$data.list);  
+            },
+            beforeMount() {
+              
+                console.log('beforeMount')
+                console.log(this)
+                console.log(this.$el);
+             
+                console.log(this.$data.msg);
+              
+                // debugger;
+                     
+            },
+            mounted() {
+               
+                  //这里发送请求数据也是可以的 一定可以在页面上展示
+                  console.log('mounted')
+                  console.log(this.$el);
+                  console.log(this.$data);
+                 
+            },
+
+            beforeUpdate() {
+                console.log('beforeUpdate')
+
+                console.log(this.msg);
+                // debugger;
+
+            },
+            updated() {
+                console.log('updated')
+
+                
+            },
+
+            beforeDestroy() {
+
+                
+
+                console.log('beforeDestroy')
+
+                console.log(this.$el);
+                console.log(this.$data);
+                
+            },
+
+            destroyed() {
+
+                console.log('beforeDestroy')
+                console.log(this.$el);
+                console.log(this.$data);
+                
+            },
+        });
+
+
+        setTimeout(function(){
+          vm.$destroy();
+
+        //   callback&&callback({
+        //       console.log(vm)
+        //   })
+
+         
+        },3000)
+
+    </script>
+</body>
+
+</html>

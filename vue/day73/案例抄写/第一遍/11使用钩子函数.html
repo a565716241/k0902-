@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+
+        <ul>
+            <li v-for='item in newlist' :key='item.did'>
+                {{item.name}}
+            </li>
+        </ul>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'vue',
+                list:[],
+                list2:[],
+                // newlist:[]
+            },
+            methods: {
+                getData1() {
+                    axios.post('http://mengtion.vip/kfl-api/api/getproduct.php')
+                    .then(res=>{
+                        this.list=res.data.subjects
+                    })
+
+                },
+                getData2(){
+                    axios.post('http://mengtion.vip/kfl-api/api/orderinfo.php')
+                    .then(res=>{
+                        this.list2=res.data.subjects
+                    })
+
+
+                },
+
+               
+            },
+            created() {
+             this.getData1();
+             this.getData2()
+            },
+            computed: {
+                newlist() {
+                     return  [...this.list,...this.list2]
+                }
+            },
+
+           
+
+        });
+    </script>
+</body>
+
+</html>

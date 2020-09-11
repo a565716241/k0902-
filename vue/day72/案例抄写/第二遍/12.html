@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1 @click='getchange'>{{msg}}</h1>
+        <span>{{msg}}</span>
+    </div>
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'hello vue'
+            },
+            methods: {
+                // getchange() {
+                //     alert(1)
+                //     var that = this
+                //     setTimeout(function() {
+                //         that.msg = '我要改变了  哈哈 超级超级....'
+                //     }, 2000)
+                // }
+
+                //在vue 实例对象里面  vm  都和自己的this全等
+                getchange() {
+                    //函数里面调用其他的函数需要加this
+                    this.goPrint(this.msg)
+                    console.log(vm === this) //true
+                        //alart(1)
+                    setTimeout(() => {
+                        this.msg = '我要改变了  哈哈  超级超级...'
+                    }, 1000)
+                },
+                goPrint(a) {
+                    console.log(a)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

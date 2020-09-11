@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+.classA  {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.classB  {
+    /* width: 200px;
+    height: 200px; */
+   font-size: 100px;
+}
+
+
+    </style>
+</head>
+<body>
+
+   <div id="app">
+
+    <!-- v-model  双向数据绑定 -->
+    <!-- <input type="text" v-model='input'> -->
+
+
+    <!-- v-bind 绑定  动态的属性 -->
+  <!-- <img   v-bind:src="mysrc" alt=""> -->
+  <!-- v-bind 可以简写 成 : -->
+  <!-- <img  :src="mysrc" alt=""> -->
+
+
+
+  <!--  给这个div 加classA 类名 -->
+  <!-- 动态样式  强调绝对不操作dom  只操作数据 -->
+  <div :class="[ classAA,classBB] ">   xxxxxxxxxxxx</div>
+
+  <!-- 数组写vue data 定义的变量  -->
+
+
+  <!-- 对象只能写字符串 -->
+  <!--   classA  是样式    如果为true 挂载这个样式      classB: 样式  如果为false 就不挂载这个样式  -->
+  <div :class="{classA:true,classB:false} ">   xxxxxxxxxxxx</div>
+
+
+  <div v-bind:class="[ classAA,{classB:isfalgA}]">   xxxxxxxxxxxx</div>
+
+   </div>
+    <script src="./js/vue.js"></script>
+
+    <script>
+   let  vm=new Vue({
+       el:'#app',
+       data:{
+           //想尽 一切办法操作data 
+           input:'我是一个输入的值',
+           mysrc:'./img/laofu.jpg',
+           classAA:'classA',
+           classBB:'classB',
+           isflag:false,
+           isfalgA:true
+        
+
+       }
+   })
+
+
+    </script>
+</body>
+</html>

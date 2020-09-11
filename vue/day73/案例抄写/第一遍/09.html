@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            // el: '#app',
+            data: {
+                msg: 'vue'
+            },
+            template: '<h2> 我是模板</h2>',  // temnplate  模板
+            // render(aaa) {
+            //     return      aaa('第一个参数是标签名','第二个参数是渲染模板的内容')
+            // },
+             render(bb) {
+                return    bb('div',' 我是div里面的内容xxx')
+             },
+            methods: {
+            }
+        }).$mount('#app')
+    </script>
+</body>
+
+</html>

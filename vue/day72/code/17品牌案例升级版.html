@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./js/vue.js"></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+
+    <!--  这个不能用 -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>{{msg}}</h1>
+
+        <button @click='goclick'>调用按钮获取数据</button>
+
+
+        <hr>
+
+
+        <input type="text" v-model='inputVal'>
+        <button @click='addData'>点击添加数据</button>
+
+
+        <ul>
+            <li v-for="item   in  list" v-bind:key='item.id'  v-if='list.length>0'>
+                {{item.name}}
+            </li>
+        </ul>
+
+
+
+
+    </div>
+
+    <script>
+
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'hello vue ',
+                inputVal: '',
+
+                list: [],
+                id:5
+
+
+
+            },
+
+            methods: {
+                addData() {
+                    // console.log(this.inputVal)
+                    if (!this.inputVal.trim()) {
+                        alert('不能为空');
+                        return
+                    }
+
+
+                    var obj = {
+                        "id": ++this.id,
+                        "name": this.inputVal,
+                        "author": "施耐庵",
+                        "category": "文学",
+                        "desc": "108条好汉的故事"
+                    };
+                    console.log(vm=this)
+
+                      this.list.unshift(obj)
+
+
+
+
+
+                },
+
+
+                goclick() {
+
+                    this.getdata()
+
+                },
+
+
+                getdata() {
+
+                    // console.log(this.list)
+                    // axios.get('./data/data.json').then(res => {
+                       
+                    //     this.list = [...this.list,...res.data]
+
+
+                     
+                      
+                    // })
+                       console.log(this)
+                    axios.get('./data/data.json').then(function() {
+                        console.log(this)
+                    })
+                }
+
+
+
+
+                //第一种方法先定义好函数 调用 
+
+
+
+
+
+
+                //第二种方法生命周期钩子函数里面调用
+
+            }
+        })
+    </script>
+</body>
+
+</html>

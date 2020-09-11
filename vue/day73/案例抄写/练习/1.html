@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../第一遍/js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        Vue.component('com1', {
+            data() {
+                return {
+                    msg: 'com1'
+                }
+            },
+            template: `
+            <div>
+                <div>{{msg}}</div>
+                <button>点击com1</button>
+            </div>
+            `,
+            methods: {},
+        })
+    </script>
+</body>
+
+</html>
