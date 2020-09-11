@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <input type="text" placeholder='开始价格' class="start">
+    <input type="text" placeholder='结束价格' class="end">
+    <button>搜索</button>
+
+    <ul>
+        <li>
+            <span></span>
+            <span></span>
+            <span></span>
+        </li>
+    </ul>
+    <script>
+
+        var data = [{
+            id: 1,
+            pname: '小米',
+            price: 3999
+        }, {
+            id: 2,
+            pname: 'oppo',
+            price: 999
+        }, {
+            id: 3,
+            pname: '荣耀',
+            price: 1299
+        }, {
+            id: 4,
+            pname: '华为',
+            price: 1999
+        },];
+
+
+        //     1  使用forEach遍历数据并渲染到页面中
+        //     2. 根据价格筛选数据(初始价格+ 结束价格)   筛选完成了后吧筛选符合条件的数据展示到页面上
+
+
+
+
+        function getdataList(data) {
+
+            var html = '';
+
+
+
+
+            data
+                .map(item => {
+                    return (
+                        `<li>
+                            <span>${item.id}</span>
+                            <span>${item.pname}</span>
+                            <span>${item.price}</span>
+                         </li>` )
+                })
+                .forEach(item => { html += item })
+
+            console.log(html);
+
+
+            document.querySelector('ul').innerHTML = html
+        }
+
+        getdataList(data)
+
+        //筛选功能 
+
+        var btn = document.querySelector("button")
+        var start = document.querySelector('.start')
+        var end = document.querySelector('.end')
+        btn.onclick = function () {
+
+            var sval = start.value;
+            var eval = end.value;
+
+            let newData = data.filter(item => item.price >= sval && item.price <= eval)
+            console.log(newData)
+
+            getdataList(newData)
+
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

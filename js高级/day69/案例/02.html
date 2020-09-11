@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //es6 引入class      构造函数    Star   类  所有的类 首字母大写
+
+
+        class  Star {
+              constructor(name,age){
+                  this.name=name;
+                  this.age=age;
+
+              }
+              
+              sing(sings) {
+                      console.log(`${this.name}唱${sings}`)
+                  }
+
+              dancing(dances){
+                  console.log(dances)
+              }    
+        }
+
+
+          var  wyf=new Star('吴亦凡',29);
+
+        
+          console.log(wyf)
+         wyf.sing('大碗宽面')
+         wyf.dancing('循环钢管五')
+    
+
+     
+
+
+
+
+  
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

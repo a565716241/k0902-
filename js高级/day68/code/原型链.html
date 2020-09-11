@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+
+		function Star (uname, age) {
+			this.uname = uname;
+			this.age = age;
+		}
+
+		var obj = new Star('张三丰', 22);
+
+		obj.wahaha = function () {
+			console.log('123');
+		}
+
+		// Object：构造函数
+		// console.log(Star.prototype.__proto__.constructor);
+		// console.log(Star.prototype.__proto__.__proto__);
+
+		Object.prototype.wahaha = function () {
+			console.log('哇哈哈');
+		}
+
+		console.log( Object.prototype );
+
+		obj.wahaha();
+		console.log(obj)
+
+
+	</script>
+</body>
+</html>

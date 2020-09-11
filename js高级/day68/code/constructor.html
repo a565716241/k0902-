@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+
+		function Star (uname, age) {
+
+			this.uname = uname;
+			this.age = age;
+
+			// this.sing = function () {
+			// 	console.log('唱歌');
+			// }
+			// this.tiao = function () {}
+		}
+
+		// 把放到都放到这个原型对象里面，达到共享方法
+		// console.log(Star.prototype);
+		Star.prototype.chang = function () {
+			console.log('哇哈哈');
+		}
+
+		var obj = new Star('张三丰', 22);
+
+		// console.log(obj.__proto__);
+		console.log(Star.prototype.constructor);
+
+		console.log(obj);
+
+
+	</script>
+</body>
+</html>

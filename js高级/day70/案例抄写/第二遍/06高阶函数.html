@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        // function fn(a, b, callback) {
+        //     console.log(a + b)
+        //     callback()
+
+        // }
+
+        // fn(1, 2, function () {
+        //     console.log('我是一个高阶函数')
+        // })
+
+
+        var myarr = {
+            forEach: function (callback) {
+                callback()
+             }
+        }
+
+
+        myarr.forEach(function(){
+            console.log('我是一个自定义的高阶回调函数')
+        })
+
+
+
+
+
+    </script>
+</body>
+
+</html>

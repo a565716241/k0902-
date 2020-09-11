@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// 对象字面量，成员
+		// var obj = {
+		// 	name : '张三丰',
+		// 	 age : 22,
+		// 	taiji: function () {
+		// 		console.log(123);
+		// 	}
+
+		// };
+
+		// // console.log(obj.name);
+		// // console.log( obj.taiji );
+		
+		// // 遍历的时候必须用中括号
+		// for (key in obj) {
+		// 	console.log( obj[key] );
+		// }
+
+		// 自定义构造函数
+		// var obj = new Object();
+		// obj.uname = uname;
+		// obj.age = age;
+		// obj.taiji = function () {}
+
+		// var n = new Object();
+		// n.uname = uname;
+		// n.age = age;
+
+
+		// 自定义构造函数
+		// function Star (uname, age) {
+
+		// 	// 设置好属性
+		// 	this.uname = uname;
+		// 	this.age = age;
+
+		// 	// 方法
+		// 	this.chang = function () {
+		// 		console.log('唱歌');
+		// 	}
+
+		// }
+
+		// var obj = new Star('周星驰', 21);
+		// // console.log(obj);
+		// console.log(obj.uname);
+
+		// function Dog (maoColor，age) {}
+		// function Cat () {}
+
+		function Hero (uname, age, sex, wuqi) {
+			// 属性
+			this.uname = uname;
+			this.age = age;
+			this.sex = sex;
+			this.wuqi = wuqi;
+
+			// 方法
+			this.gongji = function () {
+				console.log('打打打');
+			};
+
+			this.pao = function () {
+				console.log('跑跑跑感觉跑，eqdf跑跑跑');
+			}
+
+		}
+
+
+		var obj = new Hero('皇子', 16, '男', '枪');
+		console.log(obj);
+
+	</script>
+</body>
+</html>

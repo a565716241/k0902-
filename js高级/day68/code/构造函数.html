@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// function Dog () {}
+		// function MaoMi () {}
+		// 都有属性：prototype，原型对象
+		function Star (uname, age) {
+
+			this.uname = uname;
+			this.age = age;
+
+			this.sing = function () {
+				console.log('唱歌');
+			}
+			// this.tiao = function () {}
+
+		}
+
+		var obj1 = new Star('张三丰', 22);
+
+		// console.log( Star.prototype );// 原型对象
+
+
+		// var obj2 = new Star('李寻欢', 23);
+
+		// var obj3 = new Star('鼬', 21);
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Object.defineProperty(对象，修改或新增的属性名，{
+// value:修改或新增的属性的值,
+// writable:true/false,//如果值为false 不允许修改这个属性值
+// enumerable: false,//enumerable 如果值为false 则不允许遍历
+// configurable: false //configurable 如果为false 则不允许删除这个属性 属性是否可以被删除或是否
+// 可以再次修改特性
+// })
+
+
+
+
+Object.defineProperty(obj,name,{
+    value:'zs',
+    writable:true,
+    enumerable:true,  // 可枚举属性
+    configurable:false
+})
+
+
+Object.defineProperty(obj,age,{
+    value:19,
+    writable:false,
+    enumerable:true,
+    configurable:false
+})
+
+//性能用     id:1 
+
+// var obj={
+//     name:zs,
+//     age:100
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var  obj={name:'zs',aeg:19};
+
+
+
+// obj.name='隔壁老王';
+
+
+
+// var  obj={name:'zs',age:19};
+// var aa=Object.keys(obj);
+// console.log(aa)
+
+
+
+
+
+// for(var key in  obj) {
+
+// }
+
+
+// var arr=[1,2,3]
+// for(var key of  arr) {
+//       console.log(arr[key-1])
+// }
+
+
+
+
+//  var  obj={name:'zs',aeg:19};
+
+// for(  var  key  of  obj ) {
+//     console.log(obj[key])
+// }
+
+    </script>
+</body>
+</html>

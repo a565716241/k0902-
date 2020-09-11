@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+
+    <script>
+
+
+var  btns=document.querySelectorAll('button')
+  myeach(btns,(i,item)=>{
+    //   console.log(i)
+    console.log(item)
+  })
+
+
+
+
+
+
+
+
+
+
+//是不是数组 判断是不是伪数组
+function isArrayLike ( array ) {
+        var length = array && array.length;
+        return typeof length === 'number' && length >= 0;  //兼容伪数组
+
+    }
+    
+function myeach ( array,callback ) {
+        if ( isArrayLike( array ) ) {
+            // 使用 for 循环
+            for ( var i= 0; i < array.length; i++ ) {
+                callback && callback( i, array[ i ] );
+            }
+        } else {
+            // 使用 for-in 循环
+            for ( var k in array ) {
+                callback && callback( k , array[ k ] );
+            }
+        }
+    }
+
+
+
+    function mymap ( array, callback ) {
+        var i, k,
+            res = [],
+            tmp;
+            if ( isArrayLike( array ) ) {
+            // 使用 for 循环
+            for ( i= 0; i < array.length; i++ ) {
+                tmp = callback( array[ i ], i );   // 一一对应 需要把每一次回调函数的结果给存起来              
+                if ( tmp !== undefined ) {
+                    res.push( tmp );
+                }
+            }
+        }else{
+            // 使用 for-in 循环
+            for ( k in array ) {
+                tmp = callback( array[ k ], k );
+                if ( tmp !== undefined ) {
+                    res.push( tmp );
+                }
+            }
+        } 
+        return res;   // 最后把所有的结果给返回出去
+    }    
+var arr=[70,60,50,30,100];
+    var newArr=mymap(arr,(item,i)=>{
+        return item>60?'及格':'不及格'
+    })
+    console.log(newArr)
+    </script>
+</body>
+</html>

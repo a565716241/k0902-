@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //    var o={
+        //        name:'andy'
+        //    }
+
+        //    function fn(a,b) {
+
+        //        console.log(a+b)
+        //        console.log(this)
+        //    }
+
+        //    fn(1,2);
+
+        //   //call  第一个功能 可以调用函数 第二个功能可以改变函数内部的this 指向
+        //   //高级 继承使用  封装框架使用  
+        //   fn.call(o,1,2);
+
+        //   function Person(name,age) {
+        //       this.name=name;
+        //       this.age=age;
+        //   }
+
+        //   function Student(name,age,sex) {
+        //       Person.call(this,name,age);
+        //       this.sex=sex;
+        //   }
+        //   var stud1=new Student('zs',20,'男');
+
+        //   console.log(stud1)
+
+
+
+
+        //   apply  第1个功能  可以调用函数   第2个功能 改变函数内部的this 指向 
+        // 跟call的区别：  apply 在函数调用的时候后面的参数必须是一个数组 
+
+        // var o = {
+        //     name: 'andy'
+        // }
+
+        // function fn(a, b) {
+
+        //     console.log(a + b)
+        //     console.log(this)
+        // }
+
+
+
+        //   fn.call(o,1,2);
+        //   fn.apply(o,[1,2]);
+
+
+        //apply 的使用场景 
+
+        // let max1 = Math.max(1, 2, 3);
+        // console.log(max1)  //3
+
+        // //    let  max2=Math.max([10,20,30])
+        // //    console.log(max2)   //NaN
+
+
+
+        // let max2 = Math.max(...[10, 20, 30])
+        // console.log(max2)
+
+        // let max4 = Math.max.apply(null, [10, 20, 30])
+        // console.log(max4)
+
+
+
+        // let max3 = Math.max.apply(Math, [10, 20, 30])
+        // console.log(max3)
+
+
+    
+    // bind()  第一个功能 不能调用原来的函数 但是 可以改变函数里面的this  
+    // 如果用bind包装后会重新生成一个新的函数
+      
+    var o = {
+            name: 'andy'
+        }
+
+        function fn(a, b) {
+
+            console.log(a + b)
+            console.log(this)
+        }
+
+
+         
+       let newfn=  fn.bind(o,1,2);
+    //    console.log(newfn)
+       newfn()
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

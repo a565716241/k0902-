@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //工厂函数创建对象
+        function createzhannan(name, age, sex) {
+            var person = new Object();
+            person.name1 = name;
+            person.age1 = age;
+            person.sex1 = sex
+
+            return person;
+        }
+
+        var lzx = createzhannan('罗志祥', 40, '男');
+        var zs = createzhannan('张三', 20, '男');
+
+        var arr = []
+        for (var i = 0; i < 10; i++) {
+            arr.push(createzhannan('罗志祥' + i, 40 + i, '男'))
+        }
+        console.log(arr)
+    </script>
+</body>
+
+</html>

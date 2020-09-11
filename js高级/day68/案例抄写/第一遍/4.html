@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //构造函数创建对象
+        function Person(name, age) {
+            this.name = name; //公共实例属性
+            this.age = age;
+
+            this.play3 = function() { //公共实例方法
+                console.log('play3')
+            }
+
+            function play() { //静态方法  函数内部
+                console.log('酒吧 rap')
+            }
+
+            var play2 = function() { //静态方法  函数内部
+                console.log('play2')
+            }
+        }
+
+        Person.prototype.play4 = function() {
+            console.log('play4')
+        }
+
+        // console.dir(Person)
+
+        var p1 = new Person('zs', 100)
+            // console.dir(p1)
+            // p1.play4()
+            // p1.__proto__.play4
+
+        var p2 = new Person('lisi', 200)
+
+        // console.log(p1.play4===p2.play4)
+
+        //原型对象  构造函数  实例对象   三者之间的关系
+
+        // console.log(Person.prototype===p1.__proto__)
+
+        // console.log(Person.prototype.constructor===Person)
+
+        // console.log(p1.__proto__.constructor===Person)
+        console.log(p1.__proto__.__proto__)
+        console.log(Object.prototype)
+        console.log(p1.__proto__.__proto__ == Object.prototype)
+
+        //每一个实例对象都有一个不太正规的__proto__
+        //每一个构造函数都有一个prototype
+        //实例对象身上如果本身有方法，属性  优先打印自己身上的  如果没有  先找构造函数  再找构造函数的原型对象
+    </script>
+</body>
+
+</html>

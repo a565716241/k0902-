@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+
+        function Person(name, age) {
+            this.name = name;  //公共实例属性
+            this.age = age;
+        }
+
+
+        var p1 = new Person('黑豹', 40)
+
+    
+        Person.prototype.name = '我是一个name';
+
+        Person.prototype.play = function () {
+            console.log('xxxx')
+        }
+
+
+//终极奥秘
+// p1.__proto=new Object();
+
+console.log(p1.__proto__.__proto__.__proto__)
+
+
+// console.log(Object.__proto__)
+
+    </script>
+</body>
+
+</html>

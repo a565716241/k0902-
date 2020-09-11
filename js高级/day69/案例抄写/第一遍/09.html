@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 数组方法filter过滤数组,返回值如果为真就保留   返回一个新数组 这个新数组里面的值都是符合条件  
+      var arr = [12, 66, 4, 88, 3, 7];    //===['不及格','及格','不及格']
+     
+    // let newArr= arr.filter((item,index)=>{
+    //     if(item>60) {
+    //        return  true;
+    //     }
+    //  })
+
+
+    //  console.log(newArr)
+
+
+
+    // let newArr=arr.filter(item=>  item>60);
+    // console.log(newArr)
+
+
+    //  map()//映射  一一对应   有多少个进来 就有多少个返回    
+    // let newArr= arr.map((item,index)=>{
+    //      if(item>60) {
+    //          return  '及格'
+    //      }else {
+    //          return  '不及格'
+    //      }
+    //  })
+
+    //  console.log(newArr)
+    
+
+
+
+
+// let  newArr=arr.map(item=>item>60?'及格了 oh ye':'不及格')
+// console.log(newArr)
+
+
+
+
+// some 查找数组中是否有满足条件的元素   如果只要有一个满足条件 返回值为true  这个循环就结束
+// var arr = [10, 30, 4];
+
+
+//   let  flag=arr.some((item,index)=>{
+//       console.log(item)
+//     //   console.log(index)
+//     if(item>40) {
+      
+//         return true
+//     }
+//   })
+
+
+//   console.log(flag);
+
+
+
+
+
+//   every() //每一个都必须满足条件  如果只要有1个不满足 那么返回false 
+
+var arr = [10, 30, 4];
+
+let flag=arr.every((item,index)=>{
+    console.log(item)
+       if(item>5) {
+           return true
+       }
+})
+
+console.log(flag)
+
+
+    </script>
+</body>
+</html>

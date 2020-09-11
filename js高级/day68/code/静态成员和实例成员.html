@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function Star (uname, age) {
+			this.uname = uname;
+			this.age = age;
+
+			this.say = function () {
+				console.log(123);
+			}
+		}
+
+
+		var obj = new Star('张三丰', 21);
+		// obj.uname
+		
+		Star.sex = '男';
+		// 静态成员：构造函数身上的成员，只能由构造函数使用
+		// 实例成员：构造函数里面的成员，只能由实例对象使用
+
+		// console.log(Star.sex);
+		console.log(obj.age);
+
+
+
+
+
+	</script>
+</body>
+</html>

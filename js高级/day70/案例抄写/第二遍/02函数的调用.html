@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.2函数的调用</title>
+</head>
+
+<body>
+
+    <button>点击我</button>
+
+    <script>
+        //1 全局调用
+        function fn() {
+            console.log(this)  //window
+        }
+
+        fn()
+        //2  函数表达式
+        var fn1 = function () {
+            console.log(this) //Window
+        }
+
+        fn1()
+
+        //3 对象调用
+        var obj = {
+            name: '陈冠希',
+            sing: function () {
+                console.log(this)  //obj
+                console.log('rap')
+            }
+        }
+
+        obj.sing()
+
+
+
+        //4  原生js事件绑定
+
+        var btn = document.querySelector('button')
+        btn.onclick = function () {
+            console.log(this)  //<button></button>
+        }
+
+            //5  自调用函数  
+
+            ; (function () {
+                console.log(this)  ////Window
+            })()
+
+
+        //6 定时器函数 
+
+        setTimeout(function () {
+            console.log('定时器1000')
+            console.log(this)  ////Window
+        }, 1000)
+
+
+        //7  实例对象  
+        console.log('--------------')
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+
+            console.log(this)  //指向实例对象
+        }
+
+
+        var p1 = new Person('zs', 19)
+        var p2 = new Person('老王', 19)
+
+
+
+        //8 回调函数
+                            
+        var arr=[1,2,3];
+        arr.forEach(function(item) {  //回调函数是window
+            console.log(item)
+            console.log(this)
+        })
+
+
+    </script>
+
+
+
+</body>
+
+</html>

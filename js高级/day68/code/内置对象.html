@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		// 扩展内置对象
+		// var arr = new Array(1,2,3);
+		// var arr = [1,2,3];
+		// // console.log(arr.__proto__);
+		// // console.log(Array.prototype);
+		// console.log( arr.reverse() );
+		// var arr1 = [4,5,6];
+		// console.log( arr1.reverse() );
+
+		var arr = [1,2,3];
+		// sum
+		Array.prototype.sum = function () {
+			// 求和
+			var he = 0;
+
+			// 遍历
+			for (var i = 0; i < this.length; i++) {
+				he = he + this[i];
+			}
+			// 返回值
+			return he;
+		}
+		// console.log(Array.prototype);
+		console.log(arr.sum());
+
+		var arr1 = [66,66,66];
+		console.log(arr1.sum());
+		
+		// arr.sum();
+		// arr1.sum();
+		// arr2.sum();
+
+
+
+		// var arr = [1,2,3];
+		// ==> 
+		// var arr = new Array(1,2,3);
+		// arr.push();
+		
+		// Math.random();
+		// Math.max();
+		// var Math = {
+		// 	max : function () {},
+		// 	min : function () {}
+		// }
+
+	</script>
+	
+</body>
+</html>

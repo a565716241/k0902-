@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Person(name, age) {
+            this.name = name; //公共实例属性
+            this.age = age;
+
+            //     this.play3 = function() { //公共实例方法
+            //         console.log('play3')
+            //     }
+        }
+
+        var p1 = new Person('黑豹', 40)
+
+        // Person.prototype.play3=function(){
+        //     console.log('我是构造函数原型对象身上的play3')
+        // }
+
+        // Person.prototype.__proto__.play3=function(){
+        //     console.log('play3---prototype__proto')
+        // }
+
+        // p1.play3=function(){
+        //     console.log('我是实例对象身上的play3')
+        // }
+
+
+        // console.log(p1)
+        // p1.play3()
+    </script>
+</body>
+
+</html>

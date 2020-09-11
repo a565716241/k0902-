@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  class 继承
+        class Father {
+             constructor(name,age) {
+                 this.name=name;
+                 this.age=age
+             }
+             getName() {
+                 console.log('我是爸爸  我有1000万')
+                //  return 'xxxx'
+             }
+        }
+
+
+
+ // super //  就等价于 超级变量  可以拿到父类的所有的东西
+        class Son extends  Father {
+              constructor(name,age,sex) {
+                     //   super //超级  可以实现继承  // super 必须放在this前面
+                super(name,age);
+                
+              var btn=document.querySelector('button')
+              this.btn.onclik=fn;
+             
+             
+              }
+
+
+            shopping() {
+              console.log(`我喜欢购物  ${super.getName()} 花老头的钱很开心 毕竟这会拼爹`)
+            }
+
+            getName() {
+                console.log('son 自己的 getName')
+            }
+          
+        }
+
+
+
+
+        var  zs=new Son('zs',19,'男')
+    console.log(zs)
+
+  zs.shopping();
+  zs.getName()
+
+
+
+    </script>
+</body>
+
+</html>

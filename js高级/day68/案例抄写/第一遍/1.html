@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //基本对象
+        var wbq = {
+            name: 'wbq',
+            height: 175,
+            price: '不清楚',
+            sing: function() {
+                console.log(this.name + 'love sing')
+            },
+            play: function() {
+                console.log('打高尔夫')
+            }
+        }
+
+        console.log(wbq.name);
+        console.log(wbq['height']);
+        wbq.sing()
+
+        var blackguaf = new Object();
+        blackguaf.name = '斯嘉丽 约翰逊';
+        blackguaf.sex = '女';
+        blackguaf.playMovie = function() {
+            console.log('新电影大家多多支持')
+        }
+
+        console.log(blackguaf.name)
+        blackguaf.playMovie()
+
+
+        //遍历对象
+        for (var key in wbq) {
+            // console.log(key)
+            console.log('------------')
+            console.log(wbq[key])
+        }
+    </script>
+</body>
+
+</html>

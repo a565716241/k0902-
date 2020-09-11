@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击1</button>
+    <button>点击2</button>
+    <button>点击3</button>
+
+
+    <script>
+        //需求  1  每个button 绑定一个点击事件 
+        //     2  点击当前按钮的时候 让当前按钮禁用 2s后启用
+   
+        // var btns = document.querySelectorAll('button')
+        // for (var i = 0; i < btns.length; i++) {
+
+        //     btns[i].onclick = function () {
+        //         this.disabled = true
+
+        //         setTimeout(function () {
+        //             console.log(this)
+        //             this.disabled = false
+
+        //         }.bind(this) ,2000);
+        //     }
+        // }
+
+
+    //  es6  箭头函数的this 是定义的时候就决定了
+   
+
+
+    (function  fn(){
+         
+        var btns = document.querySelectorAll('button')
+        for (var i = 0; i < btns.length; i++) {
+
+            btns[i].onclick = function () {
+                this.disabled = true
+                setTimeout(()=>{
+                    this.disabled=false
+                },2000);
+            }
+        }
+
+    })()
+
+
+    </script>
+</body>
+
+</html>

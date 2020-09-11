@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//      var arr=[1,2,3];
+//      console.log(arr)
+//       arr.__proto__.push(10)
+
+//  console.log(arr)
+
+
+// var  arr1=new Array(1,2,3);
+// arr1.push(10);
+
+// console.log(arr1)
+
+// var  mypush=Array.prototype.push;
+// console.log(mypush)
+
+
+
+//扩展内置方法 
+
+// Number.prototype.sum=function(a,b) {
+//    return a+b;
+// }
+
+
+// var a=10;
+// var b=20;
+// // a+b;
+
+// let res=a.sum(a,b);
+
+// console.log(res)
+
+
+
+Array.prototype.sum=function() {
+ var add=0;
+ for(var i=0;i<this.length;i++) {
+     add+=this[i]
+ }
+
+console.log(add)
+ return add;
+}
+
+
+
+var arr=[1,2,3]
+
+
+arr.sum()
+
+
+
+
+
+    </script>
+</body>
+</html>

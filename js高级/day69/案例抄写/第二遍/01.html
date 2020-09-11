@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.sing = function () {
+                console.log('左手右手一个慢动作')
+            }
+        }
+
+        Person.prototype.geteat = function () {
+            console.log('每次吃四碗  外号  饭老四')
+        }
+
+        function Student(name, age, supers) {
+            Person.call(this, name, age);
+            this.supers = supers;
+            this.getdress = function () {
+                console.log(this.name + 'like穿皮裤 不透气')
+            }
+
+        }
+
+
+        Student.prototype = new Person();
+        Student.prototype.constructor = Student;
+
+
+        var dzq = new Student('邓紫棋', 28, '超级猩猩')
+
+        console.log(dzq);
+        dzq.sing()
+        dzq.getdress()
+        dzq.geteat()
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

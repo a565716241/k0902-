@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <script>
+       //构造函数
+  function  Super(name,age) {
+      this.name=name;
+      this.age=age;
+      
+  }
+
+
+
+Super.prototype.paly=function() {
+    console.log('保护地球1')
+}
+
+Super.prototype.paly2=function() {
+    console.log('保护地球2')
+}
+
+Super.prototype.paly3=function() {
+    console.log('保护地球3')
+}
+
+
+
+
+//构造函数
+  function Student(name,age) {
+    
+    Super.call(this,name,age)
+      this.eat=function() {
+          console.log('吃蛋糕')
+      }
+      
+  }
+
+
+
+
+
+   var p1=new Student('zsf',100);
+   p1.__proto__=new Super();  //最最简单的继承
+   p1.__proto__.constructor=Student;
+
+console.log(p1)
+ console.log(p1.paly())
+ console.log(p1.paly2())
+ console.log(p1.paly3())
+
+
+   </script>
+
+
+</body>
+</html>

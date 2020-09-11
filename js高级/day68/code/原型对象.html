@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+
+		// 方法：不放到构造函数，放到原型对象
+		// 原型对象：就是构造函数的一个数，这个属性刚刚是另外一个对象，我们成为原型对象
+		function Star (uname, age) {
+
+			this.uname = uname;
+			this.age = age;
+
+			// this.sing = function () {
+			// 	console.log('唱歌');
+			// }
+			// this.tiao = function () {}
+		}
+
+		// 把放到都放到这个原型对象里面，达到共享方法
+		// console.log(Star.prototype);
+		Star.prototype.chang = function () {
+			console.log('哇哈哈');
+		}
+
+		// console.log(Star.prototype);
+		var obj = new Star('张三丰', 22);
+		console.log(obj);
+		obj.chang();
+
+
+
+
+
+
+
+		// var obj = new Object();
+		// obj.taiji = function () {}
+
+
+
+	</script>
+</body>
+</html>

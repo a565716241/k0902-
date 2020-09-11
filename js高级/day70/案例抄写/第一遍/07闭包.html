@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //     闭包（closure）指有权访问另一个函数作用域中变量的函数。
+        // 简单理解就是 ，一个作用域可以访问另外一个函数内 部的局部变量。
+
+        // function fn1() {
+        //     var m = 10;
+        //     // console.log(n)
+        //     function fn2() {
+        //         var n = 100;
+        //         console.log(m);
+        //     }
+
+        //     fn2()
+
+        // }
+
+        // fn1()
+
+
+
+
+
+  //     闭包（closure）指有权访问另一个函数作用域中变量的函数。
+        // 简单理解就是 ，一个作用域可以访问另外一个函数内 部的局部变量。
+       // 因为 闭包最大的优点  可以扩展函数的作用域范围   一直保持  
+        function fn1() {
+            var m = 10;
+          
+            return function () {
+                console.log(this)
+                var n = 100;
+                console.log(m);
+               // delete m;
+                
+            }
+
+        }
+
+ var f1=  fn1()
+
+//  console.log(window.m);
+// window.f1()
+f1()
+    
+
+
+
+    
+    </script>
+
+
+</body>
+
+</html>

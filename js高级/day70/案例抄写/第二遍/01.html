@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //命名函数
+        function fn() {
+            console.log('好嗨哦 已经到了人数巅峰')
+        }
+
+        fn();
+
+        //函数表达式    
+        let fn1 = function () {
+            console.log('好嗨哦 已经到了人数巅峰')
+        }
+        fn1()
+
+
+            //自调用
+            ;(function () {
+                console.log('自调用函数')
+            })();
+
+
+        let fn3 = new Function('a','b','console.log(a+b)')
+        fn3(1,2)
+
+
+
+
+      
+        // instanceof  判断复杂的数据类型    
+           console.log(fn3 instanceof Object)  // fn3 是不是Object 的实例
+        // var arr1='ni hao '
+        var arr=[1,2,3];             
+           console.log(arr instanceof Array)  
+           // h5 新的方法  isArray   判断数组类型
+         console.log(Array.isArray(arr))    
+
+
+
+    </script>
+</body>
+
+</html>
