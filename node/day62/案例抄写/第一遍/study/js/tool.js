@@ -1,0 +1,1 @@
+document.querySelector('#box').innerHTML='我是动态生成的js代码'

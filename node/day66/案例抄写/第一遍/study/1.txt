@@ -1,0 +1,5 @@
+1  express 
+2  router  get  post  
+3  中间件    全局中间件 跟单个路由的中间件
+4   mongodb/mongoose  操作数据库 
+5   模板引擎 

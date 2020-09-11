@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+    <h1>list</h1>
+
+
+    <ul>
+        <li></li>
+    </ul>
+
+
+    <button id='btn'>点击</button>
+    <script>
+        window.onload = function () {
+            // let common='http://localhost:3000'+url;
+
+
+            var btn = document.querySelector('#btn');
+            btn.onclick = function () {
+                axios('http://localhost:3000/list?name=zs').then(res => {
+                    console.log(res.data)
+
+                }).catch(err => {
+                    alert(111)
+                    console.log(err)
+                })
+
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

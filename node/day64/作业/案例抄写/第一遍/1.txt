@@ -1,0 +1,40 @@
+第一步 生成一个空的仓库  npm 的初始包 
+npm  init  -y(快速生成)   或者 npm  init  
+
+
+
+安装第三方的包 都是 npm  install  包名字   
+npm install express
+
+但是  npm  安装包非常慢  所以我们常常采用  cnpm  代替npm  
+cnpm  install  express/ body-parser  
+
+
+install  可以简写成   i  
+
+
+要用cnpm  必须先全局安装cnpm      npm install cnpm  -g  //   npm  install  -g  cnpm  
+  建议 这样全局安装  npm install -g cnpm --registry=https://registry.npm.taobao.org   
+安装完成后  检测  cnpm 是否安装成功  cnpm -v  检测 
+
+
+
+
+安装所有的第三方插件的时候   会有 开发环境以及生产环境   一般生产环境(线上环境)的越少越好 
+安装的时候有指令 区别的两者的环境 
+--save-dev  开发环境    可以减写  -D
+
+--save      线上环境 
+
+
+
+
+
+
+cnpm  i   表示 安装   package.json  里面所有的依赖包
+
+
+
+
+
+

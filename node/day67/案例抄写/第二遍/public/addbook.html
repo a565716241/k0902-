@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>添加图书</div>
+    <!-- action="/addBook" method="post" -->
+    <form>
+        名称：<input type="text" name="name" class="name"><br>
+        作者：<input type="text" name="author" class="author"><br>
+        分类：<input type="text" name="category" class="category"><br>
+        描述：<input type="text" name="desc" class="desc"><br>
+        <!-- <input type="submit" value="提交"> -->
+        <button id='btn'> 添加图书</button>
+    </form>
+
+
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <script>
+        // 1   给添加 图书按钮绑定点击事件 
+        // 2   判断input  不能为空 
+        // 3   获取input的值 
+        // 4   发送ajax 请求 
+
+//         url:'/addBook',
+// params: {
+//  	name: '零四',
+//     author: 'jiely',
+//     category: 'wenxue',
+//     desc: '牛逼',
+
+// }
+// type:   'post'
+
+
+        $(function () {
+            $('#btn').on('click', function (e) {
+                e.preventDefault() //阻止表单默认提交事件
+                //    alert(1)
+                var myname = $('.name').val().trim();
+                var author = $('.author').val().trim();
+                var category = $('.category').val().trim();
+                var desc = $('.desc').val().trim();
+                if (!myname) {
+                    alert('名字不能为空')
+                    return;
+                }
+                if (!author) {
+                    alert('作者不能为空')
+                    return;
+                }
+
+                if (!category) {
+                    alert('分类不能为空')
+                    return;
+                }
+
+                if (!desc) {
+                    alert('描述不能为空')
+                    return;
+                }
+
+
+
+                $.ajax({
+                    url:'/addBook',
+                    type:'post',
+                    data:{
+                        name:myname,
+                        author,
+                        category,
+                        desc
+                    },
+                    success:function(res) {
+                        console.log(res)
+                        if(res.status==200) {
+                            window.location.href='./index.html'
+                        }
+                    }
+                })
+
+
+
+            })
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

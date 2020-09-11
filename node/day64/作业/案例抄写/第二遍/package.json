@@ -1,0 +1,19 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01express.js",
+  "scripts": {
+    "test": "xxxx.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "md5": "^2.3.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0"
+  }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>修改图书</div>
+    <!-- action="/addBook" method="post" -->
+    <form>
+        名称：<input type="text" name="name" class="name"><br>
+        作者：<input type="text" name="author" class="author"><br>
+        分类：<input type="text" name="category" class="category"><br>
+        描述：<input type="text" name="desc" class="desc"><br>
+        <!-- <input type="submit" value="提交"> -->
+        <button id='btn'> 提交</button>
+    </form>
+
+
+    <script type="html/text" id='tmp'>
+        名称：<input type="text" name="name" class="name"  value={{name}}><br>
+        作者：<input type="text" name="author" class="author"  value={{author}}><br>
+        分类：<input type="text" name="category" class="category" value={{category}}><br>
+        描述：<input type="text" name="desc" class="desc" value={{desc}}><br>
+        <button id='btn'> 编辑图书</button>
+    
+    </script>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="/js/template-web.js"></script>
+
+    <script>
+        //  1  一进来的时候  获取当前这个编辑的数据  通过id 从数据库里面查询出来 
+        //  2  把对应的数据展示到页面上
+        //  3    点击编辑按钮  判断input的值不能为空
+        //  4  修改完数据后  重新发送请求 到后端  数据库数据更新 
+        //  5   成功后重新跳转到index.html
+        let myid = window.location.search.substr(1).split("=")[1];
+
+        // 查询 数据库 单个数据
+        //        url:'/queryBook',
+        // params: {
+        //  _id: 5f4d244ea43d352a74b25e7b,
+
+        // }
+        // type: 'get'
+        $.ajax({
+            url: '/queryBook',
+            // async: false,  //默认是true  true 表示异步    false 表示同步
+            data: {
+                id: myid
+            },
+            success: function (res) {
+                // console.log(res)
+
+                let html=template('tmp',res)
+                console.log(html)
+
+                $('form').html(html)
+            }
+
+
+
+
+
+
+
+            
+
+
+        })
+
+
+
+  
+      //更新图书功能
+
+
+//       url:'/editBook'，
+// params:{
+//  	name: '零四',
+//     author: 'jiely',
+//     category: 'wenxue',
+//     desc: '牛逼',
+// }
+// type:   'post'
+      $('form').on('click','#btn',function(e){
+
+        e.preventDefault() //阻止表单默认提交事件
+                //    alert(1)
+                var myname = $('.name').val().trim();
+                var author = $('.author').val().trim();
+                var category = $('.category').val().trim();
+                var desc = $('.desc').val().trim();
+                if (!myname) {
+                    alert('名字不能为空')
+                    return;
+                }
+                if (!author) {
+                    alert('作者不能为空')
+                    return;
+                }
+
+                if (!category) {
+                    alert('分类不能为空')
+                    return;
+                }
+
+                if (!desc) {
+                    alert('描述不能为空')
+                    return;
+                }
+
+                $.ajax({
+                    url:'/editBook',
+                    type:'post',
+                    data:{
+                        name:myname,
+                        author,
+                        category,
+                        desc,
+                        id:myid
+
+                    },
+                    success:function(res) {
+                        console.log(res)
+                        if(res.status==200) {
+                            window.location.href='./index.html'
+                        }
+                    }
+                })
+
+
+
+
+      })
+              
+
+
+
+        // 一个晚上看我照片的男人
+        // 凝视
+        // 罗大将军
+       //
+
+    </script>
+</body>
+
+</html>

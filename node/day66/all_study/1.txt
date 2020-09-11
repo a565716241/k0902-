@@ -1,0 +1,10 @@
+后端
+1  app.js   搭建服务器 
+2 public  静态资源目录 
+3 router  路由 
+4 mongoose 链接数据库 
+
+
+前端 
+index.html（发请求到后端服务器）   接口 文档   请求方式  url   需要的传递参数
+list.html

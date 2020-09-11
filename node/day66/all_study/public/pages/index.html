@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+    <!-- index.html（发请求到后端服务器）   接口 文档   请求方式  url   需要的传递参数 -->
+    <h1>index 页面</h1>
+
+
+
+    <button>点击发送请求</button>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <script>
+
+        // <!-- url='http://localhost:8080/index' -->
+        window.onload = function () {
+            var btn = document.querySelector('button')
+            btn.onclick = function () {
+                // alert(1)
+                axios('http://localhost:8080/index').then(res => {
+                   
+                    if(res.status==200) {
+                        console.log(res.data)
+                    }
+                }).catch(err => {
+                    console.log(err)
+                })
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
