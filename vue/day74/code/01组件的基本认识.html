@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+
+        ---------------------------
+        <com1></com1>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+
+//组件 每一个组件都是一个vue 实例对象     每一个组件都是new Vue()
+  //全局组件 
+// Vue.component('组件的名字','配置对象')
+// 组件里面的data 必须是一个函数
+//1 定义组件  
+Vue.component('com1',{
+    data(){
+        return {
+            msg: 'com1'
+        }
+    },
+    template:`
+    <div>
+        <div>{{msg}}</div>   
+        <button>点击com1</button>
+    </div>`,
+    methods:{},
+    mounted() {
+        
+    },
+    computed: {
+        
+    },
+
+
+})
+
+// 2 使用组件
+// 在html 使用    直接写组件的名字 注意事项  不支持驼峰的写法
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'vue'
+            },
+            methods: {
+            }
+        });
+    </script>
+</body>
+
+</html>

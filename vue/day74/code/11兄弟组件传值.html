@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+        ----------------------------------------------
+
+        <com1></com1>
+        <com2></com2>
+
+
+    </div>
+
+
+    <!-- com1 模板 -->
+    <template id='com1'>
+        <div>
+            <h1>{{msg}} -------- 接收com2组件传递过来的值: {{mycom1}} </h1>
+
+            <button @click='sendto2'>点击发送com1 值</button>
+        </div>
+    </template>
+
+
+
+    <!-- com2 模板 -->
+
+    <template id='com2'>
+        <div>
+            <h1>{{msg}} -------- 接收com1组件传递过来的值: {{mycom2}} </h1>
+
+            <button @click='sendto1'>点击发送com2 值</button>
+        </div>
+    </template>
+
+
+
+    <script src="./js/vue.js"></script>
+    <script>
+
+        // 事件总线
+        var eventBus = new Vue();
+        var com1 = {
+            template: '#com1',
+            data() {
+                return {
+                    msg: 'com1组件的值',
+                    mycom1:''
+                }
+            },
+            methods: {
+                sendto2() {
+                    //发送的时候用$emit  发送
+                    eventBus.$emit('mycom1', this.msg)
+                }
+            },
+            mounted() {
+                //  派发的时候用 $on   进行接受
+                eventBus.$on('mycom2', (val) => {
+                    console.log(val)
+                    this.mycom1=val
+                })
+            },
+        }
+
+        var com2 = {
+            template: '#com2',
+            data() {
+                return {
+                    msg: 'com2组件的值',
+                    mycom2:''
+                }
+            },
+            mounted() {
+                eventBus.$on('mycom1', (val) => {
+                    console.log(val)
+                    this.mycom2=val
+                })
+            },
+            methods: {
+                sendto1() {
+                    eventBus.$emit('mycom2', this.msg)
+
+                }
+            },
+
+        }
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'vue'
+            },
+            methods: {
+            },
+
+            components: {
+                com1,
+                com2
+            }
+
+        });
+    </script>
+</body>
+
+</html>

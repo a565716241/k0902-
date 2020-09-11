@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+
+        ------------------------
+
+        <son :fmsg='msg'></son>
+        -------------------------
+        <son2 :fmsg='msg'></son2>
+    </div>
+
+    <template id='son'>
+        <div>
+            <h1>{{msg}} ----------------{{msgfather}}</h1>
+            <!-- <button @click='changef'>点击改变父组件传递过来的值</button> -->
+            <button>点击发送自己的数据到父组件</button>
+            <button @click='changef2'>我就要改 我就要 不让我改 我就哭</button>
+        </div>
+    </template>
+
+    <script src="./js/vue.js"></script>
+    <script>
+        var son = {
+            props: ['fmsg'],
+            data() {
+                return {
+                    msg: '我是son',
+                    sonMsg: '我是传递给父亲',
+                    msgfather:'',
+                }
+            },
+            template: '#son',
+            mounted() {
+               this.msgfather=this.fmsg;
+            },
+            methods: {
+                // changef() {  // 行不通
+                //     this.fmsg='我就要改你 咋啦'
+                // }
+                changef2() {
+                    this.msgfather='嘿嘿 我偷偷的改了 你不清楚'
+
+                }
+
+            },
+        }
+
+
+
+        var  son2={
+            props: ['fmsg'],
+            data(){
+                return {}
+            },
+            template:'<div>   {{fmsg}} </div>'
+        }
+
+
+
+
+
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: '老子给你的东西 不要随便瞎改xxx'
+            },
+            methods: {
+            },
+            components: {
+                son,
+                son2
+            }
+        });
+    </script>
+</body>
+
+</html>

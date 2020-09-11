@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        .active {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="app">
+        <h1>{{msg}}</h1>
+
+        <!-- 第一种叫静态数据   动态数据传递参数 使用v-bind  :-->
+        <com1 title="我是node标题" v-bind:mymsg='msg' :list='list'></com1>
+        <com2 title="我是vue标题" :mymsg='msg'  :obj='obj'></com2>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+
+        var com1 = {
+            props: ['title', 'mymsg','list'],  //接受父组件传递过来的值
+            template: `<div>  我是com1   ----{{title}}
+            
+            <h1>{{mymsg}}</h1>
+
+            <ul>
+                    <li v-for='(item,index) in list' :key='item.id'    v-bind:class='{active:index===0}'>
+                        {{item.name}}
+                    </li>
+            </ul>
+
+
+            </div>`,
+            data() {
+                return {}
+            }
+
+        };
+        var com2 = {
+            props: ['title', 'mymsg','obj'],
+            template: `<div>  我是com2   ----{{title}}--------{{obj.name}} 牛逼 为啥不掉头发
+             
+            <h1>{{mymsg}}</h1>
+            </div>`,
+            data() {
+                return {}
+            }
+        };
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                obj:{
+                    name:'鱿鱼溪'
+                },
+                msg: '我是爸爸 ',
+                list: [
+                    {
+                        id: 1,
+                        name: 'vue 不难  记住 想尽一切办法操作 data'
+                    },
+                    {
+                        id: 2,
+                        name: 'vue 需要用心'
+                    },
+                    {
+                        id: 3,
+                        name: 'vue 不难 需要用心'
+                    },
+                    {
+                        id: 4,
+                        name: 'vue 真的不难  真的需要用心'
+                    },
+                    {
+                        id: 5,
+                        name: 'vue 真的不难  真的需要用心   思想有一点重要'
+                    },
+                ]
+            },
+            methods: {
+            },
+            components: {
+                com1,
+                com2
+            },
+            mounted() {
+                window.setTimeout(() => {
+                    this.msg = '我是马云爸爸 oh  ye'
+                }, 3000)
+            },
+        });
+    </script>
+</body>
+
+</html>

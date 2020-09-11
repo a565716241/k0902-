@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+
+
+
+        <com1></com1>
+        <com2></com2>
+        <!-- <com1></com1> -->
+        <!-- <com1/> -->
+        <!-- 这个标签后面不会再显示任何东西了 -->
+
+    </div>
+
+
+    <!-- com1 组件的模板 -->
+    <template id='mycom1'>
+        <div>
+            <h1>{{msg}}</h1>
+            <button>点击</button>
+            <ul>
+                <li>aaa</li>
+            </ul>
+        </div>
+    </template>
+
+
+
+    <!-- 这样写的目标 写html 标签有提示 -->
+    <template id='mycom2'>
+        <div>
+            <h1>{{msg}}</h1>
+            <button>点击</button>
+            <ul>
+                <li>aaa</li>
+            </ul>
+        </div>
+    </template>
+    <script src="./js/vue.js"></script>
+    <script>
+        // 全局组件的定义 
+        Vue.component('com1', {
+            data() {
+                return {
+                    msg: 'com1'
+                }
+            },
+            template: '#mycom1'
+        })
+
+        Vue.component('com2', {
+            data() {
+                return {
+                    msg: 'com2'
+                }
+            },
+            template: '#mycom2'
+        })
+
+
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'vue'
+            },
+            methods: {
+            }
+        });
+    </script>
+</body>
+
+</html>

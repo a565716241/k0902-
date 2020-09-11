@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+
+        <!-- 第一种叫静态数据   动态数据传递参数 使用v-bind  :-->
+        <com1  title="我是node标题"  v-bind:mymsg='msg'></com1>
+        <com2  title="我是vue标题"  :mymsg='msg'></com2>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+
+    var com1={
+        props:['title','mymsg'],  //接受父组件传递过来的值
+        template:`<div>  我是com1   ----{{title}}
+            
+            <h1>{{mymsg}}</h1>
+            </div>`,
+        data(){
+            return {}
+        }
+
+    } ;
+    var com2={
+        props:['title','mymsg'],
+        template:`<div>  我是com2   ----{{title}}
+             
+            <h1>{{mymsg}}</h1>
+            </div>`,
+        data(){
+            return {}
+        }
+    } ;
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: '我是爸爸 '
+            },
+            methods: {
+            },
+            components:{
+                com1,
+                com2
+            },
+            mounted() {
+                  window.setTimeout(()=>{
+                      this.msg='我是马云爸爸 oh  ye'
+                  },3000)
+            },
+        });
+    </script>
+</body>
+
+</html>

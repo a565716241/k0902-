@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{msg}} ---------{{reciveSon}}</h1>
+
+        --------------------------
+<!--  自定义方法     recivefather 这个方法写到根组件身上 -->
+        <son  @tofather='recivefather'  ></son>
+    </div>
+    <template id='son'>
+     <div>
+         <h1>{{msg}}</h1>
+         <button @click='send'>点击按钮  把自己的值传递给父亲 </button>
+     </div>
+    </template>
+    <script src="./js/vue.js"></script>
+    <script>
+// 子组件向父组件传值(本质上 是向父组件传递的一个自定义的方法 顺便把值带过去)
+      var  son={
+        data() {
+            return {
+                msg:'我是大头儿子 子组件',
+                sonMsg:'我是准备传给父亲的值'
+            }
+        },
+        template:'#son',
+        methods: {
+            send() {
+                // this.$emit() 固定写法 
+                // this.$emit('第一个参数自定义方法名','第二个参数需要传递的值')
+                //这叫子组件向父组件发送自定义方法
+                this.$emit('tofather',this.sonMsg)
+            }
+        },
+      }
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'vue',
+                reciveSon:'',
+            },
+            methods: {
+                recivefather(val) {
+                     this.reciveSon=val
+                }
+            },
+            components:{
+                son
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+
+
+        <com1></com1>
+
+        -------------------------------------
+
+       
+
+
+        <!--组件使用的时候不支持驼峰 -->
+        <!-- <hello-world></hello-world>
+        <Hello-World></Hello-World> -->
+    </div>
+
+
+
+    <!-- com1 模板 -->
+    <template id='com1'>
+        <div>
+             {{msg}}
+             我出来了吗？
+            
+             <!-- <helloworld></helloworld> -->
+             <!-- <HelloWorld></HelloWorld> -->
+
+
+             <!-- // 2.6 以上的vue  支持 大写的组件
+             //2.6 以下的 vue  不支持 大写的组件 -->
+             <hello-world></hello-world>
+
+
+        </div>
+    </template>
+
+
+        <!-- HelloWord 模板 -->
+        <template id='HelloWord'>
+            <div>
+                 {{msg}}
+
+                
+
+
+            </div>
+        </template>
+
+    <script src="./js/vue.js"></script>
+    <script>
+
+// 1 组件里面的data 必须是一个函数   这个函数必须要return 
+//2  组件里面的template  只能由1个根元素 
+//3   组件的使用   如果定义的时候 是大写驼峰 那么使用的时候把驼峰拆成 加短横线的写法
+//4  组件可以嵌套
+
+Vue.component('com1', {
+            data() {
+                return {
+                    msg: 'com1'
+                }
+            },
+            template: '#com1'
+        })
+
+
+        
+Vue.component('HelloWorld', {
+            data() {
+                return {
+                    msg: 'HelloWorld'
+                }
+            },
+            template: '#HelloWord'
+        })
+
+
+
+
+
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'vue'
+            },
+            methods: {
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+
+
+        <com1></com1>
+        <com2></com2>
+
+
+
+
+
+    </div>
+
+
+    <template id='com1'>
+        <div>
+            <h1>{{msg }}</h1>
+        </div>
+    </template>
+
+
+
+
+    <template id='com2'>
+        <div>
+            <h1>{{msg }}</h1>
+        </div>
+    </template>
+    <script src="./js/vue.js"></script>
+    <script>
+
+        var mycom1 = {
+            data() {
+                return {
+                    msg: '我是com1局部组件'
+                }
+            },
+            template: '#com1'
+        }
+        var mycom2 = {
+            data() {
+                return {
+                    msg: '我是com1局部组件'
+                }
+            },
+            template: '#com2'
+        }
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'vue'
+            },
+            methods: {
+            },
+            // 挂载组件
+            components: {
+                com1: mycom1,
+                com2: mycom2,
+
+            }
+        });
+    </script>
+</body>
+
+</html>
