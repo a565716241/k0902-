@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+        <!--  方便自己点击 实现路由切换 -->
+        <router-link to='/home'>home</router-link>
+        <router-link to='/list'>list</router-link>
+        <router-link to='/news/10'>news10</router-link>
+        <router-link to='/news/20'>news20</router-link>
+        <router-link to='/news/30'>news30</router-link>
+
+        <!-- 第四步  声明路由组件到时候显示的位置  占位符 -->
+        <router-view></router-view>
+    </div>
+    <script src="./js/vue.js"></script>
+    <!-- 第一步引入路由 -->
+    <script src="./js/vue-router_3.0.2.js"></script>
+    <script>
+        let homes = {
+            template: '<div>home</div>'
+        }
+        let lists = {
+            template: '<div>list</div>'
+        }
+
+        let news = {
+            template: '<div>news-----------{{$route.params.ids}}</div>'
+        }
+        //  VueRouter
+        // 第二步 实例化路由 
+        let router = new VueRouter({
+            routes: [       //routes 是一个数组  固定写法
+                { path: '/home', component: homes },
+                { path: '/list', component: lists }, //每一个对象就是一个配置选项 //每一个对象就是一个配置选项
+                { path: '/news/:ids', component: news } //每一个对象就是一个配置选项 //每一个对象就是一个配置选项
+            
+            ]
+        })
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'vue'
+            },
+            // 第三步挂载路由 
+            // router:router
+            router:router
+        });
+    </script>
+</body>
+
+</html>

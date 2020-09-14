@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+        <!--  方便自己点击 实现路由切换 -->
+        <router-link to='/home'>home</router-link>
+        <router-link to='/list'>list</router-link>
+        <router-link v-bind:to="{ name: 'myuser', params: { userId: 'xxx' }}">  user</router-link>
+
+        <!-- 第四步  声明路由组件到时候显示的位置  占位符 -->
+        <router-view></router-view>
+    </div>
+    <script src="./js/vue.js"></script>
+    <!-- 第一步引入路由 -->
+    <script src="./js/vue-router_3.0.2.js"></script>
+    <script>
+        let homes = {
+            template:
+                `
+        <div>
+            <div>home-----------{{$route.query.name}}</div>
+            <button @click='goList'>点击跳转到 list页面</button>
+            </div>
+        `,
+            methods: {
+                goList() {
+
+                    // this.$router.push('路径')
+                    // this.$router.push('/list')
+                    this.$router.push({
+                        name: 'mylist', params: {
+                            id: 100
+                        }
+                    })
+
+                }
+            },
+
+
+        }
+        let lists = {
+            template: `
+            
+            <div>
+                <div>list   ----{{$route.params.id}}</div>
+                <button @click='goBack'>点击回退</button>
+                </div>
+            `,
+            methods: {
+                goBack() {
+                    //正数就是往前前进 负数就是回退  
+                    // this.$router.go(-1);
+                    // this.$router.back()
+                    this.$router.push({ path: 'home', query: { name: 'zs' } })
+
+                }
+            },
+        }
+
+
+
+        let   user={
+            template:
+            `
+            <div>  user   ----{{$route.params.userId}}</div>
+            `
+        }
+        //  VueRouter
+        // 第二步 实例化路由 
+        let router = new VueRouter({
+          
+            mode: 'history',  /* 表示 H5 的模式*/
+            routes: [
+                //routes 是一个数组  固定写法
+                {
+                    path: '/user/:userId',
+                    component: user,
+                    name: 'myuser'
+                },
+
+
+                {
+                    path: '/home',
+                    component: homes,
+                    name: 'myhome'
+                },
+                {
+                    path: '/list',
+                    component: lists,
+                    name: 'mylist'
+                } //每一个对象就是一个配置选项 //每一个对象就是一个配置选项
+            ]
+        })
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'vue'
+            },
+            // 第三步挂载路由 
+            // router:router
+            router: router
+        });
+
+
+
+
+
+
+
+
+
+
+
+// // 命名的路由
+// router.push({ name: 'user', params: { userId: '123' }})
+
+// // 带查询参数，变成 /register?plan=private
+// router.push({ path: 'register', query: { plan: 'private' }})
+
+
+
+
+
+
+
+
+
+
+//1  第一个知识    编程式导航/编程式路由   
+// this.$router.push('/路径')  
+// this.$router.push({name:'myname',params:{id:100}})
+// this.$router.psuh({path:'不加/ 直接写路径',query:{userid:100}})
+
+// 2   前进与后退   this.$router.go(数字)   正数前进 负数后退 
+// 3  转换 hash 模式 与h5 模式  默认是hash 模式          mode: 'history',  /* 表示 H5 的模式*/ 
+// 4  动态 router-link     <router-link v-bind:to="{ name: 'myuser', params: { userId: 'xxx' }}">  user</router-link>  高阶动态组件渲染
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

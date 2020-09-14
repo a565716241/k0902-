@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<!--  1编程式路由  涉及传递参数  动态化参数 -->
+
+
+
+    <div id="app">
+        <h1>{{msg}}</h1>
+
+
+        <router-link to='/home'>home</router-link>
+        <router-link to='/list'>list</router-link>
+        <router-view></router-view>
+    </div>
+    <script src="./js/vue.js"></script>
+
+    <script src="./js/vue-router_3.0.2.js"></script>
+
+
+
+<!-- 
+    // // 命名的路由
+    // router.push({ name: 'user', params: { userId: '123' }})
+    
+    // // 带查询参数，变成 /register?plan=private
+    // router.push({ path: 'register', query: { plan: 'private' }})
+     -->
+
+    <script>
+     let  Home={
+         template:
+         `<div>
+            <h1> home     -----------{{$route.params.id}}</h1>
+            <button @click='goList'>点击跳转 到list </button>
+        </div>`,
+          methods: {
+            goList(){
+                this.$router.push({path:'list',query:{name:'zs'}})
+            }
+          },
+     }
+
+
+     let  List={
+         template:
+         `<div>
+            <h1> list-----------{{$route.query.name}}</h1>
+            <button  @click='goBack'>点击回退</button>
+            </div>`,
+
+            methods: {
+               goBack(){
+                   alert(1)
+                this.$router.push({name:'myhome',params:{id:120}})
+               }
+            },
+     }
+    
+     var  myrouter=new VueRouter({
+         mode:'history',
+         routes:[
+             {path:'/home',component:Home,name:'myhome'},
+             {path:'/list',component:List,name:'mylist'}
+         ]
+     })
+    
+    var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'vue'
+            },
+            methods: {
+            },
+            router: myrouter
+        
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 路由高亮 */
+        .router-link-active {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+
+
+        <router-link to="/home">home</router-link>
+        <router-link to="/list">list</router-link>
+
+        <router-view></router-view>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script src="./js/vue-router_3.0.2.js"></script>
+    <script>
+
+        var home = {
+            template: '<div>home</div>'
+        }
+        var list = {
+            template: '<div>list</div>'
+        }
+
+        var myrouter = new VueRouter({
+            routes: [
+                // 路由重定向  redirect 重定向的意思
+                { path: '/', redirect: '/home' },
+                { path: '/home', component: home },
+                { path: '/list', component: list },
+                //  404 的情况
+                { path: '*', redirect: '/home' }
+
+
+            ]
+        })
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'vue'
+            },
+            methods: {
+            },
+            router: myrouter
+        });
+    </script>
+</body>
+
+</html>
