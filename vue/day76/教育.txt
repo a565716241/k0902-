@@ -1,0 +1,12 @@
+项目选型：
+  1. vue-cli+webpack
+  2. axios数据请求 
+  3. mint-ui和echarts
+项目需求:
+  1. 首页：主要是简单的信息展示，设计的模块比较多。
+  2. 列表页：列表循环及数据处理展示
+  3. 详情页：数据渲染涉及轮播图及数据统计展示
+ 接口
+	首页：https://global.sunlands.com/frontend/web/index.php?r=home-page/h5-home
+	列表：https://global.sunlands.com/frontend/web/index.php?r=university/search&area=&sort=0&page=1&pageSize=5
+	详情：https://global.sunlands.com/frontend/web/index.php?r=university/h5-info&id=2
